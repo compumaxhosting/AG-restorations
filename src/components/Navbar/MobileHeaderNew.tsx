@@ -29,7 +29,7 @@ export default function MobileHeaderNew() {
       >
         {/* Blue Slanted Section - Primarily decorative, so screen readers can ignore it */}
         <div
-          className="absolute top-0 left-0 h-full blue-diagonal bg-[#003269] z-0"
+          className="absolute top-0 left-0 h-full blue-diagonal bg-[#e63a27] z-0"
           style={{
             clipPath: "polygon(0 0, 100% 0, 65% 100%, 0% 100%)",
           }}

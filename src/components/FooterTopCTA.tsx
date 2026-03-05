@@ -19,7 +19,7 @@ const fadeUp = (delay = 0) => ({
 export default function FooterTopCTA() {
   return (
     <div
-      className="bg-[#00254c] text-white px-4 py-10 sm:px-6 md:px-12"
+      className="bg-[#1c1c27] text-white px-4 py-10 sm:px-6 md:px-12"
       role="complementary"
       aria-labelledby="footer-cta-heading"
     >
