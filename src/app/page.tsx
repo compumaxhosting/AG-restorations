@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import OurServicesPage from "@/components/OurServicesPage"
 import VideoSection from "@/components/VideoSection"
-import OurProjects from "@/components/OurProjects";
+// import OurProjects from "@/components/OurProjects";
 import Navbar from "@/components/Navbar/Navbar";
 import Blog from "@/components/Blog";
 import StickyNavbar from "@/components/StickyNavbar";
@@ -17,7 +17,7 @@ import AreasWeServe from "@/components/AreasWeServe";
 
 export default function Home() {
   const mvalue = [0,15,0];
-  const number = "1";
+  // const number = "1";
   return (
     <>
       <Navbar />
@@ -27,7 +27,7 @@ export default function Home() {
       <OurServicesPage margin={mvalue} />
       <AboutCompanyHome />
      <Certificate />
-      <OurProjects gallery={number} />
+      {/* <OurProjects gallery={number} /> */}
       <VideoSection margin={mvalue} />
       <AreasWeServe />
       <ServiceAndFaqSection />
