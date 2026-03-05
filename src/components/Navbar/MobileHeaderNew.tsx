@@ -39,14 +39,14 @@ export default function MobileHeaderNew() {
         {/* Logo Link */}
         <Link
           href="/"
-          className="absolute top-1/2 logo-container transform -translate-x-1/2 -translate-y-1/2 z-10 w-55 h-55 sm:w-60 sm:h-60"
-          aria-label="Home - SAS Roofing & Waterproofing" // Clearly states the link's destination and context
-          role="link" // Explicitly defines the element's role for assistive technologies
+          className="absolute top-1/2 logo-container transform -translate-x-1/2 -translate-y-1/2 z-10 w-40 h-55 sm:w-60 sm:h-60"
+          aria-label="Home - AG Restorations"
+          role="link"
         >
           <Image
-            src="/Navbar/Logo.png"
+            src="/Navbar/Logo-SAS.png" // replace with your AG Restorations logo file
             fill
-            alt="SAS Roofing & Waterproofing Company Logo" // More descriptive alt text for the logo
+            alt="AG Restorations Roofing & Remodeling Company Logo"
             className="object-contain drop-shadow-md"
             priority
           />
