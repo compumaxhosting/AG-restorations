@@ -28,7 +28,7 @@ export default function FooterTopCTA() {
         <motion.div className="min-w-25 sm:min-w-30 lg:min-w-40" {...fadeUp(0)}>
           <Link href="/" aria-label="Go to AG Restorations homepage">
             <Image
-              src="/Navbar/Logo-SAS.png"
+              src="/Navbar/Logo-AG.png"
               alt="AG Restorations roofing and remodeling company logo"
               width={160}
               height={160}

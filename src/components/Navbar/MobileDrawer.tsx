@@ -10,7 +10,7 @@ import {
 } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaHome } from "react-icons/fa";
+import { FaFacebookF, FaTiktok } from "react-icons/fa";
 import MobileNavItem from "./MobileNavItem";
 import { usePathname } from "next/navigation";
 
@@ -55,16 +55,17 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
 
   const socialLinks = [
     {
-      href: "https://www.facebook.com/sasroofingwaterproofing",
+      href: "https://www.facebook.com/",
       icon: <FaFacebookF className="text-white text-lg" />,
       label: "Facebook page",
     },
     {
-      href: "https://www.houzz.com/professionals/general-contractors/sas-roofing-and-waterproofing-pfvwus-pf~849386886?",
-      icon: <FaHome className="text-white text-lg" />,
-      label: "Houzz profile",
+      href: "https://www.tiktok.com/",
+      icon: <FaTiktok className="text-white text-lg" />,
+      label: "TikTok page",
     },
   ];
+  
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -150,7 +151,7 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
           aria-label="Home page link"
         >
           <Image
-            src="/Navbar/Logo.p"
+            src="/Navbar/Logo-AG.png"
             alt=" Company Logo"
             width={260}
             height={130}

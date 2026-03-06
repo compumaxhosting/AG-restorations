@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { FaPhoneAlt, FaEnvelope, FaFacebookF, FaHome } from "react-icons/fa";
+import { FaPhoneAlt, FaEnvelope, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 export default function TopBar() {
   return (
@@ -40,7 +40,7 @@ export default function TopBar() {
             </span>
             <div className="flex items-center divide-x divide-white/30">
               <Link
-                href="https://www.facebook.com/sasroofingwaterproofing"
+                href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our Facebook page (opens in new tab)"
@@ -49,13 +49,13 @@ export default function TopBar() {
                 <FaFacebookF aria-hidden="true" />
               </Link>
               <Link
-                href="https://www.houzz.com/professionals/general-contractors/sas-roofing-and-waterproofing-pfvwus-pf~849386886?"
+                href="https://www.tiktok.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit our Houzz page (opens in new tab)"
+                aria-label="Visit our TikTok page (opens in new tab)"
                 className="pl-3 text-[#e63a27] transition-colors"
               >
-                <FaHome aria-hidden="true" />
+                <FaTiktok aria-hidden="true" />
               </Link>
             </div>
           </div>

@@ -37,14 +37,10 @@ const inter = Inter({
   weight: ["400", "500", "600", "700"],
 });
 
-export default function NavLinks({
-  setSidebarOpen,
-}: {
-  setSidebarOpen: (val: boolean) => void;
-}) {
+export default function NavLinks() {
   const [isOpen, setIsOpen] = useState(false);
   const [openSidebarDropdown, setOpenSidebarDropdown] = useState<string | null>(
-    null
+    null,
   );
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const timeoutId = useRef<NodeJS.Timeout | null>(null);
@@ -63,7 +59,7 @@ export default function NavLinks({
 
   const handleDesktopDropdownKeyDown = (
     e: KeyboardEvent<HTMLAnchorElement>,
-    label: string
+    label: string,
   ) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -75,7 +71,7 @@ export default function NavLinks({
 
   const handleSidebarServicesKeyDown = (
     e: KeyboardEvent<HTMLButtonElement>,
-    label: string
+    label: string,
   ) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -204,39 +200,6 @@ export default function NavLinks({
           </li>
 
           {/* Sidebar Trigger */}
-          <li
-            className="hidden md:flex items-center w-8 h-8 relative mt-6"
-            role="none"
-          >
-            <div
-              onClick={() => setSidebarOpen(true)}
-              onKeyPress={(e: KeyboardEvent<HTMLDivElement>) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  setSidebarOpen(true);
-                }
-              }}
-              role="button"
-              tabIndex={0}
-              aria-label="Open sidebar menu with additional information"
-              className="w-full h-full relative cursor-pointer"
-            >
-              <Image
-                src="/Navbar/menu.png"
-                alt=""
-                fill
-                className="object-contain opacity-100 hover:opacity-0 transition-opacity duration-200"
-                aria-hidden="true"
-              />
-              <Image
-                src="/Navbar/menu-hover.png"
-                alt=""
-                fill
-                className="object-contain opacity-0 hover:opacity-100 transition-opacity duration-200 absolute top-0 left-0"
-                aria-hidden="true"
-              />
-            </div>
-          </li>
         </ul>
       </nav>
 
@@ -286,7 +249,7 @@ export default function NavLinks({
           >
             {navItems.map(({ label, path, subItems }) => {
               const isSubItemActive = subItems?.some(
-                (sub) => sub.path === pathname
+                (sub) => sub.path === pathname,
               );
               const isActive = pathname === path || isSubItemActive;
 
@@ -304,7 +267,7 @@ export default function NavLinks({
                     }`}
                     onClick={() =>
                       setOpenSidebarDropdown((prev) =>
-                        prev === label ? null : label
+                        prev === label ? null : label,
                       )
                     }
                     onKeyDown={(e) => handleSidebarServicesKeyDown(e, label)}
@@ -372,7 +335,7 @@ export default function NavLinks({
 
           <div className="mt-auto flex justify-center gap-4 py-6">
             <a
-              href="https://www.facebook.com/sasroofingwaterproofing"
+              href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#e63a27] rounded-full w-10 h-10 flex items-center justify-center"
@@ -381,11 +344,11 @@ export default function NavLinks({
               <FaFacebookF className="text-white text-lg" aria-hidden="true" />
             </a>
             <a
-              href="https://www.houzz.com/professionals/general-contractors/sas-roofing-and-waterproofing-pfvwus-pf~849386886?"
+              href="https://www.tiktok.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#e63a27] rounded-full w-10 h-10 flex items-center justify-center"
-              aria-label="Visit our Houzz profile (opens in new tab)"
+              aria-label="Visit our TikTok page (opens in new tab)"
             >
               <FaHome className="text-white text-lg" aria-hidden="true" />
             </a>

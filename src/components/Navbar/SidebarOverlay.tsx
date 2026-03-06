@@ -5,11 +5,11 @@ import { IoMdClose } from "react-icons/io";
 import Swal from "sweetalert2";
 import {
   FaFacebookF,
-  FaHome,
   FaPhoneAlt,
   FaMobileAlt,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaTiktok,
 } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -157,7 +157,7 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
         <div className="flex justify-center my-6">
           <Link href="/" onClick={onClose}>
             <Image
-              src="/Navbar/Logo.pg"
+              src="/Navbar/Logo-SAS.png"
               alt=" Company Logo"
               width={240}
               height={240}
@@ -292,12 +292,12 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
           <div className="flex gap-4 mt-6">
             {[
               {
-                href: "https://www.facebook.com/sasroofingwaterproofing",
+                href: "https://www.facebook.com/",
                 icon: <FaFacebookF />,
               },
               {
-                href: "https://www.houzz.com/professionals/general-contractors/sas-roofing-and-waterproofing-pfvwus-pf~849386886?",
-                icon: <FaHome />,
+                href: "https://www.tiktok.com/",
+                icon: <FaTiktok />,
               },
             ].map(({ href, icon }, index) => (
               <Link

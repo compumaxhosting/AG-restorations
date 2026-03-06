@@ -44,7 +44,7 @@ export default function MobileHeaderNew() {
           role="link"
         >
           <Image
-            src="/Navbar/Logo-SAS.png" // replace with your AG Restorations logo file
+            src="/Navbar/Logo-AG.png" // replace with your AG Restorations logo file
             fill
             alt="AG Restorations Roofing & Remodeling Company Logo"
             className="object-contain drop-shadow-md"
