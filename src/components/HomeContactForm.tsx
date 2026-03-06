@@ -64,7 +64,7 @@ function createCaptchaDataUrl(text: string) {
       Math.random() * canvas.height,
       0.9,
       0,
-      Math.PI * 2
+      Math.PI * 2,
     );
     ctx.fillStyle = `rgba(0,0,0,${0.06 + Math.random() * 0.12})`;
     ctx.fill();
@@ -334,4 +334,3 @@ export default function ContactForm() {
     </motion.form>
   );
 }
- 

@@ -24,7 +24,6 @@ const fadeUp: Variants = {
 };
 const VideoIframe = dynamic(() => import("./VideoIframe"), { ssr: false });
 
-
 type Props = {
   margin: number[];
 };

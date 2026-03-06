@@ -26,7 +26,7 @@ export default function MobileNavItem({
   pathname,
 }: Props) {
   const isSubItemActive = item.subItems?.some(
-    (sub) => pathname === sub.href || pathname.startsWith(sub.href + "/")
+    (sub) => pathname === sub.href || pathname.startsWith(sub.href + "/"),
   );
   const isActive =
     pathname === item.href ||

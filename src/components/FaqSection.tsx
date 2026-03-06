@@ -61,7 +61,7 @@ export default function FaqSection() {
 
   const handleKeyDown = (
     e: KeyboardEvent<HTMLButtonElement>,
-    index: number
+    index: number,
   ) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -71,7 +71,7 @@ export default function FaqSection() {
 
   return (
     <section
-      className="py-10 px-5 bg-[#f9f9f9] max-w-5xl mx-auto" 
+      className="py-10 px-5 bg-[#f9f9f9] max-w-5xl mx-auto"
       aria-labelledby="faq-section-title"
     >
       <header className="mb-10 text-center">

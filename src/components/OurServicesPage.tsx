@@ -24,8 +24,6 @@ type Props = {
 export default function OurServicesPage({ margin }: Props) {
   const swiperRef = useRef<SwiperType | null>(null);
 
-
-
   return (
     <main
       style={{ marginBottom: `${margin[1]}px` }}

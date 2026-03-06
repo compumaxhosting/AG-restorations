@@ -27,7 +27,7 @@ const slides = [
     title: "MASONRY",
     description:
       "If you need paving, bluestone, brickwork, cement work, etc... or any other structure then give...",
-    image: "/Services-Slider/masonry.jpg", 
+    image: "/Services-Slider/masonry.jpg",
     link: "/masonry-services-brooklyn-ny",
   },
   {

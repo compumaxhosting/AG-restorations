@@ -10,6 +10,7 @@ import {
   FaEnvelope,
   FaMapMarkerAlt,
   FaTiktok,
+  FaInstagram,
 } from "react-icons/fa";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -24,13 +25,13 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
     message: "",
     service: "",
     otherService: "", // ✅ Added
-  });  
+  });
 
   const asideRef = useRef<HTMLElement>(null);
   const initialFocusRef = useRef<HTMLButtonElement>(null);
   const phoneNumberErrorRef = useRef<HTMLSpanElement>(null);
 
-   const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     if (form.phoneNumber.length < 10 || form.phoneNumber.length > 15) {
@@ -73,8 +74,6 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
     });
   };
 
-  
-
   const handlePhoneNumberChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const value = e.target.value.replace(/\D/g, "");
@@ -82,7 +81,7 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
         setForm((prevForm) => ({ ...prevForm, phoneNumber: value }));
       }
     },
-    []
+    [],
   );
 
   useEffect(() => {
@@ -90,7 +89,7 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
     if (currentAside) {
       initialFocusRef.current?.focus();
       const focusableElements = currentAside.querySelectorAll(
-        'button, [href], input:not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input:not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])',
       );
       const firstElement = focusableElements[0] as HTMLElement;
       const lastElement = focusableElements[
@@ -292,11 +291,15 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
           <div className="flex gap-4 mt-6">
             {[
               {
-                href: "https://www.facebook.com/",
+                href: "https://www.facebook.com/share/18KcQSnH8d/",
                 icon: <FaFacebookF />,
               },
               {
-                href: "https://www.tiktok.com/",
+                href: "https://www.instagram.com/ag.restorationslinden?igsh=cTNmYXV1enJyYXJ5",
+                icon: <FaInstagram />,
+              },
+              {
+                href: "https://www.tiktok.com/@ag.roofing.siding?_r=1&_t=ZP-94RpOT4meK6",
                 icon: <FaTiktok />,
               },
             ].map(({ href, icon }, index) => (

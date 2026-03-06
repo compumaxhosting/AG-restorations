@@ -4,14 +4,13 @@ import {
   KeyboardEvent,
   Dispatch,
   SetStateAction,
-  useState,
   useRef,
   useEffect,
 } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaTiktok } from "react-icons/fa";
-import MobileNavItem from "./MobileNavItem";
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa";
+// import MobileNavItem from "./MobileNavItem";
 import { usePathname } from "next/navigation";
 
 interface Props {
@@ -20,7 +19,6 @@ interface Props {
 }
 
 export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const pathname = usePathname();
   const drawerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -31,41 +29,34 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
     {
       name: "SERVICES",
       href: "/services",
-      subItems: [
-        { name: "Roofing", href: "/roofing-contractors-brooklyn" },
-        {
-          name: "Waterproofing",
-          href: "/waterproofing-contractors-NY",
-        },
-        { name: "Masonry", href: "/masonry-services-brooklyn-ny" },
-      ],
+      // subItems: [
+      //   { name: "Roofing", href: "/roofing-contractors-brooklyn" },
+      //   { name: "Waterproofing", href: "/waterproofing-contractors-NY" },
+      //   { name: "Masonry", href: "/masonry-services-brooklyn-ny" },
+      // ],
     },
     { name: "PROJECTS", href: "/projects" },
-    {
-      name: "TESTIMONIALS",
-      href: "/reviews",
-      subItems: [
-        { name: "Customer Reviews", href: "/reviews" },
-        { name: "FAQ", href: "/faq" },
-      ],
-    },
     { name: "CONTACT US", href: "/contact-us" },
     { name: "BLOG", href: "/blog" },
   ];
 
   const socialLinks = [
     {
-      href: "https://www.facebook.com/",
+      href: "https://www.facebook.com/share/18KcQSnH8d/",
       icon: <FaFacebookF className="text-white text-lg" />,
       label: "Facebook page",
     },
     {
-      href: "https://www.tiktok.com/",
+      href: "https://www.instagram.com/ag.restorationslinden?igsh=cTNmYXV1enJyYXJ5",
+      icon: <FaInstagram className="text-white text-lg" />,
+      label: "Instagram page",
+    },
+    {
+      href: "https://www.tiktok.com/@ag.roofing.siding?_r=1&_t=ZP-94RpOT4meK6",
       icon: <FaTiktok className="text-white text-lg" />,
       label: "TikTok page",
     },
   ];
-  
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -85,8 +76,9 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
       setIsOpen(false);
     } else if (e.key === "Tab" && isOpen && drawerRef.current) {
       const focusableElements = drawerRef.current.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
       );
+
       const first = focusableElements[0] as HTMLElement;
       const last = focusableElements[
         focusableElements.length - 1
@@ -122,6 +114,7 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
         tabIndex={0}
         aria-label="Close menu by clicking outside"
       />
+
       <div
         ref={drawerRef}
         className={`relative w-[60%] h-full bg-[#003269] text-white flex flex-col overflow-y-auto transform transition-transform duration-300 ease-in-out ${
@@ -152,7 +145,7 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
         >
           <Image
             src="/Navbar/Logo-AG.png"
-            alt=" Company Logo"
+            alt="Company Logo"
             width={260}
             height={130}
             className="object-contain"
@@ -160,20 +153,30 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
           />
         </Link>
 
+        {/* Navigation */}
         <nav className="mt-4 font-inter" aria-label="Main mobile navigation">
-          {navItems.map((item) => (
-            <MobileNavItem
-              key={item.name}
-              item={item}
-              isOpen={isOpen}
-              setIsOpen={setIsOpen}
-              pathname={pathname}
-              openDropdown={openDropdown}
-              setOpenDropdown={setOpenDropdown}
-            />
-          ))}
+          {navItems.map((item) => {
+            const isActive =
+              pathname === item.href || pathname.startsWith(item.href + "/");
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className={`block px-6 py-4 border-t border-white/20 transition-colors ${
+                  isActive
+                    ? "text-[#e63a27]"
+                    : "hover:bg-white hover:text-black"
+                }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
 
+        {/* Social Links */}
         <div
           className="mt-auto flex justify-center gap-4 py-6"
           role="contentinfo"

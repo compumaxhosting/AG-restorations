@@ -18,14 +18,14 @@ const navItems = [
     ],
   },
   { label: "PROJECTS", path: "/projects" },
-  {
-    label: "TESTIMONIALS",
-    path: "/reviews",
-    subItems: [
-      { label: "Customer Reviews", path: "/reviews" },
-      { label: "FAQ", path: "/faq" },
-    ],
-  },
+  // {
+  //   label: "TESTIMONIALS",
+  //   path: "/reviews",
+  //   subItems: [
+  //     { label: "Customer Reviews", path: "/reviews" },
+  //     { label: "FAQ", path: "/faq" },
+  //   ],
+  // },
   { label: "BLOG", path: "/blog" },
   { label: "CONTACT US", path: "/contact-us" },
 ];
@@ -47,7 +47,7 @@ export default function StickyNavbar() {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       const isOutside = Object.entries(dropdownRefs.current).every(
-        ([, ref]) => ref && !ref.contains(e.target as Node)
+        ([, ref]) => ref && !ref.contains(e.target as Node),
       );
       if (isOutside) setOpenDropdown(null);
     };

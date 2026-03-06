@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { FaPhoneAlt, FaEnvelope, FaFacebookF, FaTiktok } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaFacebookF,
+  FaTiktok,
+  FaInstagram,
+} from "react-icons/fa";
 
 export default function TopBar() {
   return (
@@ -22,10 +28,10 @@ export default function TopBar() {
             <Link
               href="tel:+1973820-5130"
               className="flex items-center text-base gap-2 pr-4 hover:text-[#e63a27] transition-colors"
-              aria-label="Call us at (973) 820-5130"
+              aria-label="Call us at 973 342 4134"
             >
               <FaPhoneAlt className="text-[#e63a27]" aria-hidden="true" />
-              <span>(973) 820-5130</span>
+              <span>973 342 4134</span>
             </Link>
             <div className="flex items-center text-base gap-2 px-4">
               <FaEnvelope className="text-[#e63a27]" aria-hidden="true" />
@@ -40,7 +46,7 @@ export default function TopBar() {
             </span>
             <div className="flex items-center divide-x divide-white/30">
               <Link
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/share/18KcQSnH8d/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our Facebook page (opens in new tab)"
@@ -48,8 +54,19 @@ export default function TopBar() {
               >
                 <FaFacebookF aria-hidden="true" />
               </Link>
+
               <Link
-                href="https://www.tiktok.com/"
+                href="https://www.instagram.com/ag.restorationslinden?igsh=cTNmYXV1enJyYXJ5"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Instagram page (opens in new tab)"
+                className="px-3 text-[#e63a27] transition-colors"
+              >
+                <FaInstagram aria-hidden="true" />
+              </Link>
+
+              <Link
+                href="https://www.tiktok.com/@ag.roofing.siding?_r=1&_t=ZP-94RpOT4meK6"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Visit our TikTok page (opens in new tab)"
