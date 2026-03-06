@@ -20,7 +20,7 @@ export default function AreasWeServe() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-4xl font-bold text-orange-600 mb-4">
+          <h2 className="text-4xl font-bold text-[#e63a27] mb-4">
             Areas We Serve
           </h2>
 

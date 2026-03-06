@@ -19,7 +19,7 @@ export default function DesktopHeader() {
           alt="Company Logo"
           width={260}
           height={120}
-          className="object-contain cursor-pointer"
+          className="object-contain cursor-pointer" 
           priority
         />
       </Link>

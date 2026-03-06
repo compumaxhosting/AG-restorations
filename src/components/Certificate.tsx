@@ -34,7 +34,7 @@ export default function Certificate() {
               className="relative group aspect-square flex flex-col items-center justify-center text-center p-6 bg-[#111827] overflow-hidden transition duration-500 hover:bg-black"
             >
               {/* orange background */}
-              <div className="absolute top-0 left-0 w-full h-full sm:h-1/2 bg-orange-600 transition-all duration-500 sm:group-hover:h-full"></div>
+              <div className="absolute top-0 left-0 w-full h-full sm:h-1/2 bg-[#e63a27] transition-all duration-500 sm:group-hover:h-full"></div>
 
               {/* content */}
               <div className="relative z-10 flex flex-col items-center">
