@@ -157,8 +157,8 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
         <div className="flex justify-center my-6">
           <Link href="/" onClick={onClose}>
             <Image
-              src="/Navbar/Logo.png"
-              alt="SAS Roofing Company Logo"
+              src="/Navbar/Logo.pg"
+              alt=" Company Logo"
               width={240}
               height={240}
               className="w-45 sm:w-50 md:w-60"
