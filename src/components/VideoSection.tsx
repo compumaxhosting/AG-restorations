@@ -38,7 +38,7 @@ const VideoSection = ({ margin }: Props) => {
         style={{ marginBottom: `${margin[1]}px` }}
       >
         <Image
-          src="/Hero-Sec/slider-7.png"
+          src="/Services-Slider/masonry.jpg"
           alt="Video background"
           fill
           priority
@@ -108,29 +108,6 @@ const VideoSection = ({ margin }: Props) => {
         </div>
 
         {/* Right Section with Video Icon */}
-        <motion.div
-          className="relative md:w-[40%] w-full overflow-hidden"
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <div className="relative w-full h-full ">
-            <div className="absolute inset-0 flex flex-col items-center justify-center z-30">
-              <GoVideo
-                className="text-white text-4xl sm:text-6xl md:text-7xl lg:text-8xl mr-16 cursor-pointer"
-                onClick={() => setIsOpen(true)}
-                aria-label="Play video of flat roof installation"
-              />
-              <div className="hidden md:block mt-1 text-white font-semibold text-lg tracking-wide mr-16 font-inter">
-                FLAT ROOF INSTALLATION
-              </div>
-            </div>
-            <div className="absolute inset-0 bg-[#e63a27] red-left-shape-1 z-20 translate-y-20">
-              <div className="w-full h-full bg-[url('/VideoSec/thm-pattern-5.png')] bg-repeat" />
-            </div>
-          </div>
-        </motion.div>
       </section>
 
       {/* Video Modal with accessibility + hydration-safe iframe */}

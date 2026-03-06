@@ -2,6 +2,7 @@ import BackToTop from "@/components/BackToTop";
 import ContactBar from "@/components/ContactBar";
 import Footer from "@/components/Footer";
 import FooterTopCTA from "@/components/FooterTopCTA";
+import Gallery from "@/components/Gallery";
 import Navbar from "@/components/Navbar/Navbar";
 import StickyNavbar from "@/components/StickyNavbar";
 
@@ -11,7 +12,7 @@ const page = () => {
       <Navbar />
       <StickyNavbar />
       <ContactBar />
-   
+   <Gallery />
       <FooterTopCTA />
       <Footer />
       <BackToTop />
