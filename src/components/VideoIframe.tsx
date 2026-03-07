@@ -2,7 +2,7 @@
 
 const VideoIframe = () => {
   const videoUrl =
-    "https://www.youtube.com/embed/Z4gunD5Wbi8?autoplay=1&rel=0&modestbranding=1";
+    "https://www.youtube.com";
 
   return (
     <iframe
