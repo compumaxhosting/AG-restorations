@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { GoVideo } from "react-icons/go";
+// import { GoVideo } from "react-icons/go";
 import { SiTicktick } from "react-icons/si";
 import { IoClose } from "react-icons/io5";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -99,7 +99,7 @@ export default function VideoSection({ margin }: Props) {
               </ul>
 
               {/* Mobile Video Button */}
-              <div className="mt-6 md:hidden flex flex-col items-start">
+              {/* <div className="mt-6 md:hidden flex flex-col items-start">
                 <GoVideo
                   size={60}
                   className="cursor-pointer"
@@ -107,7 +107,7 @@ export default function VideoSection({ margin }: Props) {
                   onClick={() => setIsOpen(true)}
                 />
                 <span className="text-sm mt-2">FLAT ROOF INSTALLATION</span>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>

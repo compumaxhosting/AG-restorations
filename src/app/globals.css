@@ -359,3 +359,12 @@ body {
 body {
   top: 0px !important;
 }
+/* Google Translate Top Bar Fix */
+
+.goog-te-banner-frame {
+  display: block !important;
+}
+
+body {
+  top: 0 !important;
+}
