@@ -11,27 +11,30 @@ import { AnimatePresence, PanInfo, motion } from "framer-motion";
 const slides = [
   {
     id: 1,
-    title: "Professional Roofing Services in Linden, New Jersey",
+    title: "Roofing Contractor in Linden, New Jersey",
     description:
-      "AG Restorations delivers expert residential and commercial roofing solutions built for durability, performance, and long-term protection.",
+      "AG Restorations provides professional residential and commercial roofing services in Linden NJ including roof repair, roof replacement, waterproofing, and exterior improvements.",
     buttonText: "View Services",
     image: "/Services-Slider/services1.jpg",
+    alt: "Professional roofing contractor providing roof repair and installation services in Linden New Jersey",
   },
   {
     id: 2,
     title: "Residential & Commercial Roofing Specialists",
     description:
-      "From shingle installation and metal roof repair to commercial flat roofs and single ply systems, we provide reliable solutions that stand the test of time.",
+      "From shingle installation and metal roof repair to commercial flat roofing systems and single-ply roofing, we deliver durable roofing solutions across Linden NJ and Union County.",
     buttonText: "Our Roofing Work",
     image: "/Services-Slider/services5.jpg",
+    alt: "Residential and commercial roofing installation including shingle and flat roof systems in New Jersey",
   },
   {
     id: 3,
-    title: "Remodeling & Exterior Improvement Experts",
+    title: "Exterior Remodeling & Property Improvements",
     description:
-      "We specialize in general remodeling, interior and exterior painting, power washing, roof insulation, sealant applications, and more — tailored to your home’s needs.",
+      "Our team specializes in remodeling, exterior painting, waterproofing systems, power washing, insulation installation, and masonry improvements for New Jersey properties.",
     buttonText: "View All Services",
     image: "/Services-Slider/masonry.jpg",
+    alt: "Exterior remodeling masonry and waterproofing contractor services in Linden New Jersey",
   },
 ];
 
@@ -81,7 +84,7 @@ export default function HeroSection() {
   return (
     <section
       className="relative w-full overflow-hidden bg-black"
-      aria-label="Roofing services carousel"
+      aria-label="Roofing contractor services in Linden New Jersey"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -104,13 +107,14 @@ export default function HeroSection() {
             >
               <Image
                 src={slide.image}
-                alt={slide.title}
+                alt={slide.alt}
                 fill
                 sizes="100vw"
                 loading={index === 0 ? "eager" : "lazy"}
                 priority={index === 0}
                 className="object-cover"
               />
+
               <div
                 className="absolute inset-0 bg-black/40 sm:bg-black/30 z-10"
                 aria-hidden="true"
@@ -130,16 +134,19 @@ export default function HeroSection() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
           >
+            {/* Main SEO Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-inter">
               {currentSlide.title}
             </h1>
 
+            {/* Supporting SEO paragraph */}
             <p className="text-lg font-light tracking-wide font-bevietnam">
               {currentSlide.description}
             </p>
 
             <Link
-              href="/aboutus"
+              href="/services"
+              aria-label="View professional roofing services in Linden NJ"
               className="inline-block border-4 border-[#003269] p-1"
             >
               <Button
@@ -156,7 +163,7 @@ export default function HeroSection() {
       <button
         onClick={scrollPrev}
         type="button"
-        aria-label="Previous slide"
+        aria-label="Previous roofing services slide"
         className="hidden md:block absolute left-5 top-1/2 -translate-y-1/2 rounded-full p-4 z-30 bg-black/40 hover:bg-[#e63a27] focus:outline-2 focus:outline-[#e63a27] transition-all"
       >
         <ChevronLeft className="text-white text-2xl" />
@@ -165,7 +172,7 @@ export default function HeroSection() {
       <button
         onClick={scrollNext}
         type="button"
-        aria-label="Next slide"
+        aria-label="Next roofing services slide"
         className="hidden md:block absolute right-5 top-1/2 -translate-y-1/2 rounded-full p-4 z-30 bg-black/40 hover:bg-[#e63a27] focus:outline-2 focus:outline-[#e63a27] transition-all"
       >
         <ChevronRight className="text-white text-2xl" />
@@ -177,7 +184,7 @@ export default function HeroSection() {
             key={i}
             type="button"
             onClick={() => emblaApi?.scrollTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
+            aria-label={`Go to roofing slide ${i + 1}`}
             aria-current={i === selectedIndex ? "true" : undefined}
             className={`h-2 w-2 rounded-full transition-colors duration-300 ${
               i === selectedIndex

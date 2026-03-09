@@ -9,7 +9,6 @@ import Footer from "@/components/Footer";
 import FooterTopCTA from "@/components/FooterTopCTA";
 import ServiceAndFaqSection from "@/components/ServiceAndFaqSection";
 import ContactBar from "@/components/ContactBar";
-import BackToTop from "@/components/BackToTop";
 import AboutCompanyHome from "@/components/AboutCompanyHome";
 import Certificate from "@/components/Certificate";
 import AreasWeServe from "@/components/AreasWeServe";
@@ -34,7 +33,7 @@ export default function Home() {
       <Blog />
       <FooterTopCTA />
       <Footer />
-      <BackToTop />
+    
     </>
   );
 } 

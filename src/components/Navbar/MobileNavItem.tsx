@@ -11,7 +11,6 @@ interface NavItem {
 
 interface Props {
   item: NavItem;
-  isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
   openDropdown: string | null;
   setOpenDropdown: Dispatch<SetStateAction<string | null>>;
@@ -25,54 +24,53 @@ export default function MobileNavItem({
   setOpenDropdown,
   pathname,
 }: Props) {
-  const isSubItemActive = item.subItems?.some(
-    (sub) => pathname === sub.href || pathname.startsWith(sub.href + "/"),
-  );
-  const isActive =
-    pathname === item.href ||
-    pathname.startsWith(item.href + "/") ||
-    isSubItemActive;
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/");
+
+  const isSubItemActive = item.subItems?.some((sub) => isActive(sub.href));
+
+  const parentActive = isActive(item.href) || isSubItemActive;
+
+  const dropdownId = `submenu-${item.name.toLowerCase().replace(/\s+/g, "-")}`;
 
   const isOpenDropdown = openDropdown === item.name;
+
   const toggleSubmenu = () => {
     setOpenDropdown(isOpenDropdown ? null : item.name);
   };
 
+  /* ---------- Item With Submenu ---------- */
+
   if (item.subItems) {
     return (
-      <div
-        className="border-t border-white/20 last:border-b font-inter"
-        role="none"
-      >
+      <div className="border-t border-white/20 last:border-b" role="none">
         <div className="flex items-center">
           <Link
             href={item.href}
             onClick={() => setIsOpen(false)}
-            className={`flex-1 px-6 py-4 text-left font-semibold transition-colors font-inter ${
-              isActive
+            className={`flex-1 px-6 py-4 font-semibold transition-colors ${
+              parentActive
                 ? "bg-white text-[#e63a27]"
                 : "hover:bg-white hover:text-black"
             }`}
-            aria-current={isActive ? "page" : undefined}
-            aria-label={`${item.name} page link`}
+            aria-current={parentActive ? "page" : undefined}
           >
             {item.name}
           </Link>
+
           <button
             onClick={toggleSubmenu}
-            className={`px-4 py-4 font-semibold transition-colors font-inter ${
-              isActive
+            className={`px-4 py-4 font-semibold transition-colors ${
+              parentActive
                 ? "bg-white text-[#e63a27]"
                 : "hover:bg-white hover:text-black"
             }`}
             aria-expanded={isOpenDropdown}
-            aria-controls={`submenu-${item.name
-              .toLowerCase()
-              .replace(/\s/g, "-")}`}
+            aria-controls={dropdownId}
             aria-label={`Toggle ${item.name} submenu`}
           >
             <span
-              className={`transform transition-transform duration-200 ${
+              className={`transition-transform duration-200 ${
                 isOpenDropdown ? "rotate-180" : ""
               }`}
               aria-hidden="true"
@@ -81,33 +79,30 @@ export default function MobileNavItem({
             </span>
           </button>
         </div>
+
+        {/* Submenu */}
         <div
-          id={`submenu-${item.name.toLowerCase().replace(/\s/g, "-")}`}
-          className={`bg-[#00244d] text-sm overflow-hidden transition-all duration-300 ease-in-out font-inter ${
+          id={dropdownId}
+          className={`bg-[#00244d] text-sm overflow-hidden transition-all duration-300 ${
             isOpenDropdown ? "max-h-96" : "max-h-0"
           }`}
           role="menu"
           aria-hidden={!isOpenDropdown}
         >
-          {item.subItems.map(({ name, href }) => (
+          {item.subItems.map((sub) => (
             <Link
-              key={name}
-              href={href}
+              key={sub.name}
+              href={sub.href}
               onClick={() => setIsOpen(false)}
-              className={`block px-8 py-3 transition-colors font-inter ${
-                pathname === href || pathname.startsWith(href + "/")
+              className={`block px-8 py-3 transition-colors ${
+                isActive(sub.href)
                   ? "bg-white text-[#e63a27]"
                   : "hover:bg-white hover:text-black"
               }`}
-              aria-current={
-                pathname === href || pathname.startsWith(href + "/")
-                  ? "page"
-                  : undefined
-              }
-              aria-label={`${name} page link`}
+              aria-current={isActive(sub.href) ? "page" : undefined}
               role="menuitem"
             >
-              {name}
+              {sub.name}
             </Link>
           ))}
         </div>
@@ -115,21 +110,18 @@ export default function MobileNavItem({
     );
   }
 
+  /* ---------- Item Without Submenu ---------- */
+
   return (
     <Link
       href={item.href}
       onClick={() => setIsOpen(false)}
-      className={`block px-6 py-4 border-t border-white/20 last:border-b transition-colors font-inter ${
-        pathname === item.href || pathname.startsWith(item.href + "/")
+      className={`block px-6 py-4 border-t border-white/20 last:border-b transition-colors ${
+        isActive(item.href)
           ? "bg-white text-[#e63a27]"
           : "hover:bg-white hover:text-black"
       }`}
-      aria-current={
-        pathname === item.href || pathname.startsWith(item.href + "/")
-          ? "page"
-          : undefined
-      }
-      aria-label={`${item.name} page link`}
+      aria-current={isActive(item.href) ? "page" : undefined}
     >
       {item.name}
     </Link>

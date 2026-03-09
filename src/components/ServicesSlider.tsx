@@ -17,25 +17,28 @@ interface Props {
 
 const slides = [
   {
-    title: "WATERPROOFING",
+    title: "Waterproofing Services",
     description:
-      "Highest quality single-ply membrane systems keeps us at the forefront of the business...",
+      "Professional waterproofing systems including single-ply membrane solutions designed to protect buildings from water damage and moisture intrusion.",
     image: "/Services-Slider/services1.jpg",
     link: "/waterproofing-contractors-NY",
+    alt: "Commercial and residential waterproofing contractor services",
   },
   {
-    title: "MASONRY",
+    title: "Masonry & Exterior Construction",
     description:
-      "If you need paving, bluestone, brickwork, cement work, etc... or any other structure then give...",
+      "Expert masonry services including brickwork, bluestone, paving, cement structures, and exterior construction improvements.",
     image: "/Services-Slider/masonry.jpg",
     link: "/masonry-services-brooklyn-ny",
+    alt: "Professional masonry contractor performing brick and paving work",
   },
   {
-    title: "ROOFING",
+    title: "Roofing Installation & Repair",
     description:
-      "We service all types of roofing big or small, from repairs to new installs, residential or...",
+      "Complete roofing services including roof repair, shingle installation, metal roofing, and commercial flat roof systems.",
     image: "/Services-Slider/services5.jpg",
     link: "/roofing-contractors-brooklyn",
+    alt: "Residential and commercial roofing installation and repair services",
   },
 ];
 
@@ -86,24 +89,25 @@ export default function ServicesSlider({ swiperRef }: Props) {
             const idx = swiper.realIndex % slides.length;
             setCurrentSlideTitle(slides[idx].title);
           }}
-          className="overflow-visible!"
         >
           {Array.from({ length: 12 }).map((_, i) => {
-            const { title, description, image, link } =
+            const { title, description, image, link, alt } =
               slides[i % slides.length];
 
             return (
               <SwiperSlide key={i}>
-                <div className="group relative h-95 flex items-end overflow-hidden rounded-md">
+                <article className="group relative h-95 flex items-end overflow-hidden rounded-md">
                   {/* Background Image */}
                   <div
+                    role="img"
+                    aria-label={alt}
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out group-hover:scale-110"
                     style={{ backgroundImage: `url(${image})` }}
                   />
 
                   {/* Content */}
                   <div className="relative z-10 w-full bg-[#f5f5f5] shadow-md p-5 min-h-32 flex flex-col">
-                    <Link href={link}>
+                    <Link href={link} aria-label={`Learn more about ${title}`}>
                       <h3 className="text-[#003269] text-sm md:text-base lg:text-lg font-bold tracking-wide font-inter hover:underline">
                         {title}
                       </h3>
@@ -115,14 +119,13 @@ export default function ServicesSlider({ swiperRef }: Props) {
                       </p>
                     </Link>
                   </div>
-                </div>
+                </article>
               </SwiperSlide>
             );
           })}
         </Swiper>
       </div>
 
-      {/* Screen reader */}
       <div className="sr-only" aria-live="polite">
         {`Current slide: ${currentSlideTitle}`}
       </div>
@@ -135,6 +138,7 @@ export default function ServicesSlider({ swiperRef }: Props) {
             <button
               key={dir}
               onClick={() => handleManualSlide(dir as "prev" | "next")}
+              aria-label={`Go to ${dir} service`}
               className="w-10 h-10 rounded-full border-2 border-[#003269] text-[#003269] flex items-center justify-center hover:bg-gray-100 transition"
             >
               <Icon className="w-5 h-5" />

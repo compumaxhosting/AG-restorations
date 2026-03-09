@@ -32,23 +32,23 @@ export default function AreasWeServe() {
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {areas.map((area, i) => (
-            <div
-              key={i}
-              className="flex items-center gap-4 bg-white border border-gray-200 rounded-xl px-6 py-5 shadow-sm hover:shadow-md transition"
+        {/* Areas Grid */}
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {areas.map((area) => (
+            <li
+              key={area}
+              className="group flex items-center gap-4 bg-white border border-gray-200 rounded-xl px-6 py-5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              {/* Icon box */}
-              <div className="flex items-center justify-center w-12 h-12 bg-orange-50 rounded-lg">
-                <MapPin className="text-orange-500" size={18} />
+              {/* Icon */}
+              <div className="flex items-center justify-center w-12 h-12 bg-orange-50 rounded-lg group-hover:bg-orange-100 transition">
+                <MapPin className="text-orange-500" size={20} />
               </div>
 
-              {/* City name */}
+              {/* Area Name */}
               <span className="text-orange-600 font-semibold">{area}</span>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

@@ -3,27 +3,27 @@
 import React, { useState, KeyboardEvent } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { AnimatePresence, motion } from "framer-motion";
-import type { Variants, Transition } from "framer-motion";
+import type { Variants } from "framer-motion";
 
 const accordionVariants: Variants = {
   open: {
     opacity: 1,
     height: "auto",
     transition: {
-      duration: 0.4,
-      ease: "easeOut" as Transition["ease"],
-      when: "beforeChildren" as Transition["when"],
+      duration: 0.35,
+      ease: "easeOut",
     },
   },
   collapsed: {
     opacity: 0,
     height: 0,
     transition: {
-      duration: 0.3,
-      ease: "easeIn" as Transition["ease"],
+      duration: 0.25,
+      ease: "easeIn",
     },
   },
 };
+
 const faqs = [
   {
     question: "What is waterproofing, and why is it important?",
@@ -53,10 +53,10 @@ const faqs = [
 ];
 
 export default function FaqSection() {
-  const [openIndex, setOpenIndex] = useState<number>(-1);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleOpen = (index: number) => {
-    setOpenIndex(openIndex === index ? -1 : index);
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   const handleKeyDown = (
@@ -74,27 +74,31 @@ export default function FaqSection() {
       className="py-10 px-5 bg-[#f9f9f9] max-w-5xl mx-auto"
       aria-labelledby="faq-section-title"
     >
+      {/* Heading */}
       <header className="mb-10 text-center">
         <div className="flex items-center justify-center gap-2 mb-2">
           <div className="w-6 h-0.5 bg-[#e63a27]" aria-hidden="true" />
-          <span className="uppercase text-sm font-bold tracking-wider text-[#e63a27] font-inter">
+          <span className="uppercase text-sm font-bold tracking-wider text-[#e63a27]">
             Common Questions & Answers
           </span>
         </div>
+
         <h2
           id="faq-section-title"
-          className="text-3xl md:text-4xl font-bold text-[#003269] font-inter"
+          className="text-3xl md:text-4xl font-bold text-[#003269]"
         >
           Frequently Asked Questions
         </h2>
       </header>
 
-      <dl className="space-y-4" role="list">
+      {/* FAQ LIST */}
+      <dl className="space-y-4">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
+
           return (
             <div
-              key={index}
+              key={faq.question}
               className="border border-gray-200 rounded-md overflow-hidden bg-white shadow-sm"
             >
               <dt>
@@ -104,20 +108,20 @@ export default function FaqSection() {
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${index}`}
                   id={`faq-question-${index}`}
-                  className={`w-full flex justify-between items-center px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#e63a27] transition-colors rounded-md ${
+                  className={`w-full flex justify-between items-center px-6 py-5 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e63a27] ${
                     isOpen
                       ? "bg-[#003269] text-white"
                       : "bg-white text-[#003269]"
                   }`}
                 >
-                  <span className="flex gap-3 font-semibold font-inter">
+                  <span className="flex gap-3 font-semibold">
                     <span className="text-[#e63a27]" aria-hidden="true">
                       Q{index + 1}.
                     </span>
                     {faq.question}
                   </span>
+
                   <motion.span
-                    initial={false}
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.25 }}
                     aria-hidden="true"
@@ -130,11 +134,10 @@ export default function FaqSection() {
               <AnimatePresence initial={false}>
                 {isOpen && (
                   <motion.dd
-                    key="content"
                     id={`faq-answer-${index}`}
                     role="region"
                     aria-labelledby={`faq-question-${index}`}
-                    className="px-6 pb-5 pt-3 text-gray-700 text-sm md:text-base leading-relaxed font-bevietnam"
+                    className="px-6 pb-5 pt-3 text-gray-700 text-sm md:text-base leading-relaxed"
                     initial="collapsed"
                     animate="open"
                     exit="collapsed"

@@ -44,7 +44,7 @@ export default function GoogleTranslate() {
   }, []);
 
   return (
-    <div className="fixed top-3 right-3 z-9999">
+    <div className="fixed top-3 right-3 z-9999W">
       <div
         id="google_translate_element"
         className="bg-white px-3 py-2 rounded shadow text-sm"
