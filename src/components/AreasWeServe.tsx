@@ -25,10 +25,11 @@ export default function AreasWeServe() {
           </h2>
 
           <p className="text-gray-600 leading-relaxed">
-            AG Restorations proudly provides professional roofing and remodeling
-            services to homeowners and businesses across New Jersey. We deliver
-            reliable workmanship and long-lasting results in every community we
-            serve.
+            AG Restorations proudly provides professional roofing, siding, and
+            gutter services to homeowners and businesses in Linden and nearby
+            Union County communities. Our experienced team delivers reliable
+            installation, repairs, and long-lasting exterior solutions across
+            New Jersey.
           </p>
         </div>
 

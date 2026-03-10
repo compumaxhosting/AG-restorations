@@ -11,33 +11,32 @@ import { AnimatePresence, PanInfo, motion } from "framer-motion";
 const slides = [
   {
     id: 1,
-    title: "Roofing Contractor in Linden, New Jersey",
+    title: "Roofing Contractor in Linden NJ – Roof Repair & Replacement",
     description:
-      "AG Restorations provides professional residential and commercial roofing services in Linden NJ including roof repair, roof replacement, waterproofing, and exterior improvements.",
-    buttonText: "View Services",
+      "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, and new roof installation for residential and commercial properties. Our experienced team delivers durable roofing systems built to withstand New Jersey weather conditions. Call 973-342-4134 for a free estimate.",
+    buttonText: "View Roofing Services",
     image: "/Services-Slider/services1.jpg",
-    alt: "Professional roofing contractor providing roof repair and installation services in Linden New Jersey",
+    alt: "Roof repair and roof installation by AG Restorations roofing contractor in Linden New Jersey",
   },
   {
     id: 2,
-    title: "Residential & Commercial Roofing Specialists",
+    title: "Professional Siding & Gutter Installation in Linden NJ",
     description:
-      "From shingle installation and metal roof repair to commercial flat roofing systems and single-ply roofing, we deliver durable roofing solutions across Linden NJ and Union County.",
-    buttonText: "Our Roofing Work",
+      "Protect your home with expert siding installation and seamless gutter systems from AG Restorations. We provide siding replacement, gutter installation, and gutter repair services for homes and businesses throughout Linden NJ and Union County.",
+    buttonText: "Our Exterior Services",
     image: "/Services-Slider/services5.jpg",
-    alt: "Residential and commercial roofing installation including shingle and flat roof systems in New Jersey",
+    alt: "Siding installation and seamless gutter system installation on residential home in Linden New Jersey",
   },
   {
     id: 3,
-    title: "Exterior Remodeling & Property Improvements",
+    title: "Roofing, Siding & Gutters With 100% Financing Available",
     description:
-      "Our team specializes in remodeling, exterior painting, waterproofing systems, power washing, insulation installation, and masonry improvements for New Jersey properties.",
-    buttonText: "View All Services",
+      "Need roofing, siding, or gutter work but worried about the cost? AG Restorations offers 100% financing options so homeowners in Linden NJ can complete important exterior improvements without upfront stress. Get reliable service and flexible payment solutions today.",
+    buttonText: "Get A Free Quote",
     image: "/Services-Slider/masonry.jpg",
-    alt: "Exterior remodeling masonry and waterproofing contractor services in Linden New Jersey",
+    alt: "New roof installation and exterior home improvement project completed by AG Restorations in Linden NJ",
   },
 ];
-
 const swipeConfidenceThreshold = 300;
 const swipePower = (offset: number, velocity: number) =>
   Math.abs(offset) * velocity;

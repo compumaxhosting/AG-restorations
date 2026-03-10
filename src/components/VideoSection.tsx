@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-// import { GoVideo } from "react-icons/go";
 import { SiTicktick } from "react-icons/si";
 import { IoClose } from "react-icons/io5";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -34,34 +33,26 @@ export default function VideoSection({ margin }: Props) {
   return (
     <div>
       <section
-        className="relative w-full flex flex-col md:flex-row overflow-hidden h-137.5 bg-[#f0482f] lg:bg-[#f9f9f9] shadow-2xl"
+        className="relative w-full flex flex-col md:flex-row overflow-hidden bg-[#f9f9f9] shadow-2xl"
         style={{ marginBottom: `${margin[1]}px` }}
       >
-        {/* Background Image */}
-        <Image
-          src="/Services-Slider/masonry.jpg"
-          alt="Roof installation background"
-          fill
-          priority
-          sizes="80vw"
-          className="object-cover z-0"
-        />
+        {/* IMAGE SIDE */}
+        <div className="relative w-full md:w-[40%] h-87.5 md:h-125">
+          <Image
+            src="/Services-Slider/services1.jpg"
+            alt="Professional roofing installation project by AG Restorations in Linden New Jersey"
+            fill
+            priority
+            sizes="(max-width:768px) 100vw, 40vw"
+            className="object-cover"
+          />
+        </div>
 
-        {/* LEFT SECTION */}
-        <div className="relative md:w-[60%] w-full h-125 md:h-auto">
-          {/* Shape Layer 1 */}
-          <div className="absolute inset-0 bg-[#c72f1c] z-20 translate-x-6 translate-y-16">
-            <div className="w-full h-full bg-[url('/VideoSec/thm-pattern-5.png')] bg-repeat" />
-          </div>
-
-          {/* Shape Layer 2 */}
-          <div className="absolute inset-0 bg-[#e63a27] z-20">
-            <div className="w-full h-full bg-[url('/VideoSec/thm-pattern-5.png')] bg-repeat" />
-          </div>
-
+        {/* CONTENT SIDE */}
+        <div className="relative md:w-[60%] w-full bg-[#e63a27]">
           <div className="flex justify-center items-center h-full">
             <motion.div
-              className="relative z-30 text-white p-10 md:p-16 lg:max-w-[80%] xl:max-w-[60%]"
+              className="text-white p-10 md:p-16 lg:max-w-[80%]"
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
@@ -70,60 +61,50 @@ export default function VideoSection({ margin }: Props) {
               {/* Small Heading */}
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-6 h-px bg-white" />
-                <h2 className="text-sm uppercase font-semibold">Video Proof</h2>
+                <h2 className="text-sm uppercase font-semibold">
+                  Our Roofing Services
+                </h2>
               </div>
 
               {/* Title */}
               <h2 className="text-3xl lg:text-5xl font-medium leading-tight mb-4">
-                Have a Look <br /> At Our Video
+                Professional Roofing Services <br /> In Linden NJ
               </h2>
 
               {/* List */}
               <ul className="space-y-2">
                 <li>
                   <SiTicktick className="inline mr-2" />
-                  Roof of the Year
+                  Roof Repair & Roof Replacement
                 </li>
                 <li>
                   <SiTicktick className="inline mr-2" />
-                  Fully supported metal
+                  Residential & Commercial Roofing
                 </li>
                 <li>
                   <SiTicktick className="inline mr-2" />
-                  Reliable & Trustworthy
+                  Siding Installation Services
                 </li>
                 <li>
                   <SiTicktick className="inline mr-2" />
-                  Dependable
+                  Seamless Gutter Installation
                 </li>
               </ul>
-
-              {/* Mobile Video Button */}
-              {/* <div className="mt-6 md:hidden flex flex-col items-start">
-                <GoVideo
-                  size={60}
-                  className="cursor-pointer"
-                  aria-label="Play flat roof installation video"
-                  onClick={() => setIsOpen(true)}
-                />
-                <span className="text-sm mt-2">FLAT ROOF INSTALLATION</span>
-              </div> */}
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* VIDEO MODAL */}
+      {/* MODAL */}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] p-0 rounded-lg border-none shadow-lg backdrop-blur-xl bg-black/40">
           <VisuallyHidden>
-            <DialogTitle>Flat Roof Installation Video</DialogTitle>
+            <DialogTitle>Roofing Project Showcase</DialogTitle>
           </VisuallyHidden>
 
           <div className="relative w-full aspect-video rounded-lg overflow-hidden">
             <VideoIframe />
 
-            {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
               className="absolute top-2 right-2 text-white text-3xl bg-black/60 rounded-full p-1"

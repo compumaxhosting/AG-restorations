@@ -9,14 +9,14 @@ export default function AboutCompany() {
     <section
       className="w-full bg-[#f3f3f3] py-16 px-6 lg:px-12"
       aria-labelledby="about-company-heading"
-      aria-label="About AG Restorations roofing contractor serving Linden New Jersey"
+      aria-label="About AG Restorations roofing siding and gutter contractor serving Linden New Jersey"
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT IMAGE */}
         <div className="w-full h-105 relative overflow-hidden">
           <Image
             src="/about-roofing.jpg"
-            alt="Professional roofing contractors installing residential roofing system in Linden New Jersey"
+            alt="AG Restorations roofing contractors installing residential roof in Linden New Jersey"
             fill
             className="object-cover"
             sizes="(max-width:768px) 100vw, 50vw"
@@ -38,7 +38,7 @@ export default function AboutCompany() {
             id="about-company-heading"
             className="text-4xl lg:text-5xl font-bold text-[#1b2a41] leading-tight mb-6"
           >
-            Trusted Roofing & Remodeling Company in Linden, New Jersey
+            Trusted Roofing, Siding & Gutter Contractor in Linden NJ
           </h2>
 
           {/* Features */}
@@ -50,40 +50,40 @@ export default function AboutCompany() {
 
             <div className="flex items-center gap-2 text-sm font-semibold text-[#1b2a41]">
               <FiCheck className="text-red-500" aria-hidden="true" />
-              ADVANCED INSTALLATION METHODS
+              EXPERIENCED PROFESSIONALS
             </div>
 
             <div className="flex items-center gap-2 text-sm font-semibold text-[#1b2a41]">
               <FiCheck className="text-red-500" aria-hidden="true" />
-              SKILLED PROFESSIONALS
+              HIGH-QUALITY MATERIALS
             </div>
           </div>
 
           {/* Paragraph */}
           <p className="text-gray-600 leading-relaxed mb-4">
             <strong>AG Restorations</strong> is a trusted roofing contractor in
-            Linden, New Jersey providing professional residential and commercial
-            roofing services. Our team specializes in roof repair, roof
-            replacement, shingle installation, metal roofing, flat roof systems,
-            single-ply membranes, torch-down roofing, modified bitumen, and
-            other advanced roofing solutions designed for durability and
-            long-term protection.
+            Linden, New Jersey specializing in professional roof repair, roof
+            replacement, and new roof installation for residential and
+            commercial properties. Our experienced roofing team installs durable
+            roofing systems designed to protect homes and businesses from harsh
+            New Jersey weather while improving long-term property value.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            In addition to roofing, we offer complete exterior remodeling
-            services including interior and exterior painting, waterproofing,
-            roof insulation, power washing, sun tunnel installation, and other
-            exterior improvements. Homeowners and businesses across Linden and
-            surrounding Union County communities trust AG Restorations for
-            reliable workmanship, high-quality materials, and long-lasting
-            results.
+            In addition to roofing, AG Restorations provides professional siding
+            installation and gutter services for homeowners and businesses
+            throughout Linden and surrounding Union County communities. From
+            seamless gutter systems to high-quality siding installation, we help
+            protect your property from water damage while improving curb appeal.
+            We also offer <strong>100% financing</strong> options so customers
+            can complete essential exterior improvements without large upfront
+            costs.
           </p>
 
           {/* Button */}
           <Link
             href="/about"
-            aria-label="Learn more about AG Restorations roofing company in Linden New Jersey"
+            aria-label="Learn more about AG Restorations roofing siding and gutter contractor in Linden New Jersey"
             className="inline-block border-2 border-red-500 text-red-500 px-8 py-3 font-semibold tracking-wide hover:bg-red-500 hover:text-white transition"
           >
             LEARN MORE

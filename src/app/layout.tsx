@@ -21,26 +21,27 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Roofing & Gutter Contractor in Linden NJ | Roof Repair & Gutter Installation | AG Restorations",
+      "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
     template: "%s | AG Restorations",
   },
 
   description:
-    "AG Restorations provides professional roofing, gutter installation, masonry, and exterior remodeling in Linden NJ. Residential & commercial roofing and gutter experts. Call 973-342-4134 for a free estimate.",
+    "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services. Residential and commercial roofing experts serving Union County NJ. Call 973-342-4134 for a free estimate. 100% financing available.",
 
   keywords: [
     "roofing contractor linden nj",
     "roof repair linden nj",
     "roof replacement linden nj",
+    "roof installation linden nj",
+    "siding contractor linden nj",
+    "siding installation linden nj",
     "gutter installation linden nj",
     "gutter repair linden nj",
     "seamless gutters linden nj",
-    "masonry contractor linden nj",
-    "flat roofing nj",
-    "metal roof repair nj",
-    "residential roofing nj",
-    "commercial roofing nj",
+    "residential roofing linden nj",
+    "commercial roofing linden nj",
     "roofing company union county nj",
+    "roofing services new jersey",
   ],
 
   robots: {
@@ -50,6 +51,16 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: "https://agrestorations.com",
+  },
+
+  openGraph: {
+    title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
+    description:
+      "Professional roofing, siding and gutter services in Linden NJ. Roof repair, roof replacement and seamless gutters for residential and commercial properties. Free estimate available.",
+    url: "https://agrestorations.com",
+    siteName: "AG Restorations",
+    locale: "en_US",
+    type: "website",
   },
 };
 
@@ -71,12 +82,30 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 name: "AG Restorations",
                 url: "https://agrestorations.com",
                 telephone: "+1-973-342-4134",
+                email: "info@agrestorations.com",
                 address: {
                   "@type": "PostalAddress",
                   addressLocality: "Linden",
                   addressRegion: "NJ",
                   addressCountry: "US",
                 },
+                areaServed: [
+                  "Linden NJ",
+                  "Elizabeth NJ",
+                  "Rahway NJ",
+                  "Plainfield NJ",
+                  "Westfield NJ",
+                  "Union County NJ",
+                ],
+                serviceType: [
+                  "Roof Repair",
+                  "Roof Replacement",
+                  "Roof Installation",
+                  "Siding Installation",
+                  "Siding Repair",
+                  "Gutter Installation",
+                  "Gutter Repair",
+                ],
               },
             ]),
           }}

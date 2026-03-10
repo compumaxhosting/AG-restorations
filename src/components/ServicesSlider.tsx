@@ -17,28 +17,28 @@ interface Props {
 
 const slides = [
   {
-      title: "Gutter Installation & Repair",
-description:
-  "Professional gutter services including gutter installation, repair, replacement, cleaning, and downspout systems to protect your home from water damage.",
-image: "/Services-Slider/services5.jpg",
-link: "/gutter-installation-repair",
-alt: "Residential gutter installation, repair, and drainage system services",
+    title: "Roof Repair & Roof Replacement in Linden NJ",
+    description:
+      "AG Restorations provides professional roof repair, roof replacement, and new roof installation for homes and commercial properties in Linden, New Jersey. Our experienced roofing contractors deliver durable roofing systems designed to protect your property for years.",
+    image: "/Services-Slider/services1.jpg",
+    link: "/roofing-services-linden-nj",
+    alt: "Roof repair and roof replacement services by AG Restorations roofing contractor in Linden New Jersey",
   },
   {
-    title: "Siding & Exterior Construction",
+    title: "Siding Installation & Siding Repair Services",
     description:
-      "Expert masonry services including brickwork, bluestone, paving, cement structures, and exterior construction improvements.",
+      "Improve your home's protection and curb appeal with professional siding installation and siding repair in Linden NJ. AG Restorations installs high-quality siding systems that protect your property from weather damage while enhancing exterior appearance.",
     image: "/Services-Slider/masonry.jpg",
-    link: "/masonry-services-brooklyn-ny",
-    alt: "Professional masonry contractor performing brick and paving work",
+    link: "/siding-installation-linden-nj",
+    alt: "Home siding installation project completed by AG Restorations siding contractor in Linden New Jersey",
   },
   {
-    title: "Roofing Installation & Repair",
+    title: "Gutter Installation & Seamless Gutter Systems",
     description:
-      "Complete roofing services including roof repair, shingle installation, metal roofing, and commercial flat roof systems.",
+      "Protect your home from water damage with professional gutter installation and gutter repair services in Linden NJ. AG Restorations installs seamless gutters and drainage systems that safely direct rainwater away from your roof and foundation.",
     image: "/Services-Slider/services5.jpg",
-    link: "/roofing-contractors-brooklyn",
-    alt: "Residential and commercial roofing installation and repair services",
+    link: "/gutter-installation-linden-nj",
+    alt: "Seamless gutter installation and gutter repair services in Linden New Jersey",
   },
 ];
 

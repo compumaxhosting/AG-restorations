@@ -1,29 +1,28 @@
 import { ShieldCheck, HardHat, BadgeCheck } from "lucide-react";
 
 export default function Certificate() {
-  const items = [
-    {
-      title: "Safety & Reliable Roofing Services",
-      desc: "Our roofing projects follow strict safety standards to ensure durable and long-lasting roofing systems for homes and businesses in Linden, New Jersey.",
-      icon: <ShieldCheck size={40} aria-hidden="true" />,
-    },
-    {
-      title: "High-Quality Roofing Materials",
-      desc: "We use premium shingles, metal roofing systems, and waterproof sealants designed to withstand harsh New Jersey weather conditions.",
-      icon: <BadgeCheck size={40} aria-hidden="true" />,
-    },
-    {
-      title: "Experienced Roofing Professionals",
-      desc: "Our skilled roofing contractors bring years of hands-on experience in residential and commercial roofing installations and repairs.",
-      icon: <HardHat size={40} aria-hidden="true" />,
-    },
-    {
-      title: "Honest & Transparent Pricing",
-      desc: "AG Restorations offers clear estimates with no hidden costs, delivering professional roofing services at fair and competitive rates.",
-      icon: <BadgeCheck size={40} aria-hidden="true" />,
-    },
-  ];
-
+const items = [
+  {
+    title: "Reliable Roofing Services",
+    desc: "Our roofing projects follow strict standards to deliver durable roof repair and roof replacement solutions for homes and businesses in Linden, New Jersey.",
+    icon: <ShieldCheck size={40} aria-hidden="true" />,
+  },
+  {
+    title: "Quality Roofing, Siding & Gutters",
+    desc: "We install high-quality roofing systems, siding, and seamless gutters designed to protect properties from harsh New Jersey weather conditions.",
+    icon: <BadgeCheck size={40} aria-hidden="true" />,
+  },
+  {
+    title: "Experienced Local Professionals",
+    desc: "Our skilled contractors bring years of experience in roofing, siding, and gutter installation for residential and commercial properties in Linden NJ.",
+    icon: <HardHat size={40} aria-hidden="true" />,
+  },
+  {
+    title: "Honest Pricing & Financing",
+    desc: "AG Restorations provides clear estimates with no hidden costs and offers 100% financing options for roofing, siding, and gutter projects.",
+    icon: <BadgeCheck size={40} aria-hidden="true" />,
+  },
+];
   return (
     <section
       className="w-full bg-[#0f172a] py-16"

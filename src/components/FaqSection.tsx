@@ -26,29 +26,29 @@ const accordionVariants: Variants = {
 
 const faqs = [
   {
-    question: "What is waterproofing, and why is it important?",
+    question: "What roofing services do you offer in Linden NJ?",
     answer:
-      "Waterproofing makes a structure resistant to water infiltration. It's essential to protect your building’s integrity and avoid long-term damage caused by leaks.",
-  },
-  {
-    question: "What types of roofing services do you offer?",
-    answer:
-      "We provide full roofing solutions—installation, repair, maintenance, and inspections for both residential and commercial properties.",
+      "AG Restorations provides professional roof repair, roof replacement, and new roof installation for residential and commercial properties in Linden and nearby Union County communities.",
   },
   {
     question: "How do I know if my roof needs repair or replacement?",
     answer:
-      "Signs like leaks, damaged shingles, sagging, or visible wear indicate potential issues. Schedule an inspection to determine your roof's condition.",
+      "Common signs include roof leaks, missing or damaged shingles, sagging areas, and visible wear. Our team can inspect your roof and recommend the best solution for your property.",
   },
   {
-    question: "What roofing materials do you work with?",
+    question: "Do you offer siding installation services?",
     answer:
-      "We work with asphalt shingles, metal roofing, slate, tiles, and flat roofing systems including TPO and EPDM.",
+      "Yes, AG Restorations installs durable siding systems designed to improve curb appeal and protect your home from weather damage across Linden NJ and surrounding areas.",
   },
   {
-    question: "How long does a roof installation take?",
+    question: "Do you provide gutter installation and repair?",
     answer:
-      "Most residential roof installs are completed in 1–3 days. Timelines vary based on size, complexity, and material.",
+      "We install seamless gutters and provide gutter repair services to help protect your roof, foundation, and landscaping from water damage.",
+  },
+  {
+    question: "Do you offer financing for roofing projects?",
+    answer:
+      "Yes. AG Restorations offers 100% financing options so homeowners can complete roofing, siding, or gutter projects without large upfront costs.",
   },
 ];
 

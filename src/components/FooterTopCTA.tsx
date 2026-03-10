@@ -37,7 +37,7 @@ export default function FooterTopCTA() {
           <Link href="/" aria-label="Go to AG Restorations homepage">
             <Image
               src="/Navbar/Logo-AG.png"
-              alt="AG Restorations roofing and remodeling company logo"
+              alt="AG Restorations roofing siding and gutter company logo in Linden New Jersey"
               width={160}
               height={160}
               className="object-contain border-2"
@@ -73,8 +73,9 @@ export default function FooterTopCTA() {
           </h2>
 
           <p className="text-sm text-white/80 leading-snug font-inter">
-            Protect your home with trusted roofing and exterior services in
-            Linden, NJ. Contact AG Restorations today for a free estimate.
+            Protect your home with professional roofing, siding, and gutter
+            services in Linden NJ. Contact AG Restorations today for a free
+            estimate.
           </p>
         </motion.div>
 
@@ -90,7 +91,7 @@ export default function FooterTopCTA() {
           <Link
             href="/contact"
             className="call-hover-button font-inter"
-            aria-label="Get a quote from AG Restorations"
+            aria-label="Get a roofing quote from AG Restorations"
           >
             GET A QUOTE
           </Link>

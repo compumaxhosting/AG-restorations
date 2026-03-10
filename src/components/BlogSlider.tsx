@@ -17,38 +17,39 @@ interface Props {
 
 const slides = [
   {
-    title: "Professional Roofing & Remodeling Services in Linden, New Jersey",
-    description: "Trusted roofing and remodeling experts serving Linden NJ",
+    title: "Roof Repair & Roof Replacement Services in Linden NJ",
+    description:
+      "Professional roofing services for homes and businesses in Linden New Jersey",
     date: "11 July",
     image: "/blog/1.jpg",
-    link: "professional-roofing-remodeling-services-linden-new-jersey-ag-restorations",
+    link: "roof-repair-roof-replacement-linden-nj-ag-restorations",
     initialLikeCount: 70,
   },
   {
-    title:
-      "Serving Linden, Elizabeth, Plainfield & Nearby NJ Communities with Quality Roofing",
-    description: "Reliable roofing services across Union County areas",
+    title: "Professional Siding Installation Services in Linden NJ",
+    description:
+      "Quality siding installation to protect and improve your home's exterior",
     date: "25 June",
     image: "/blog/roofing_blog.jpg",
-    link: "roofing-services-linden-elizabeth-plainfield-nj-ag-restorations",
+    link: "siding-installation-services-linden-nj-ag-restorations",
     initialLikeCount: 150,
   },
   {
-    title:
-      "Why Homeowners in Linden Trust AG Restorations for Roofing and Exterior Improvements",
-    description: "Licensed roofing professionals you can depend on",
+    title: "Seamless Gutter Installation & Repair in Linden NJ",
+    description:
+      "Reliable gutter systems designed to protect homes from water damage",
     date: "10 June",
     image: "/blog/roofing-contractors.jpg",
-    link: "why-homeowners-linden-nj-trust-ag-restorations-roofing",
+    link: "gutter-installation-repair-linden-nj-ag-restorations",
     initialLikeCount: 200,
   },
   {
-    title:
-      "Roof Repair, Flat Roofing & Metal Roofing Solutions for New Jersey Properties",
-    description: "Complete roofing solutions for homes and businesses",
+    title: "Why Homeowners in Linden NJ Choose AG Restorations for Roofing",
+    description:
+      "Trusted roofing contractors serving Linden and Union County communities",
     date: "29 May",
     image: "/blog/blogImage.jpg",
-    link: "roof-repair-flat-roofing-metal-roofing-new-jersey-ag-restorations",
+    link: "why-homeowners-linden-nj-choose-ag-restorations-roofing",
     initialLikeCount: 260,
   },
 ];

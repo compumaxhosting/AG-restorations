@@ -11,9 +11,10 @@ export default function Footer() {
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-6 pt-12 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">
-          Professional Roofing & Remodeling in Linden, New Jersey
+          Professional Roofing, Siding & Gutters in Linden, New Jersey
         </h2>
       </div>
+
       {/* Footer Grid */}
       <div className="max-w-7xl mx-auto px-6 pb-12 grid md:grid-cols-3 gap-10">
         {/* About */}
@@ -22,10 +23,10 @@ export default function Footer() {
           <div className="w-12 h-0.5 bg-[#e63a27] mb-4"></div>
 
           <p className="text-white/90 leading-relaxed">
-            AG Restorations is a trusted roofing and remodeling company serving
-            Linden and surrounding New Jersey areas. We specialize in
-            residential and commercial roofing, metal roof repair, flat roofing
-            systems, insulation, painting, and exterior improvements.
+            AG Restorations is a trusted roofing contractor serving Linden and
+            surrounding New Jersey communities. We specialize in residential and
+            commercial roofing, siding installation, and seamless gutter
+            services designed to protect homes and businesses.
           </p>
 
           <div className="mt-6">
@@ -118,7 +119,9 @@ export default function Footer() {
           <div className="mt-6">
             <p className="font-semibold">Service Area</p>
             <p className="text-white/90">Linden, New Jersey</p>
-            <p className="text-white/80">Serving surrounding NJ communities.</p>
+            <p className="text-white/80">
+              Serving Union County and surrounding NJ communities.
+            </p>
           </div>
 
           {/* Social Media */}
@@ -159,12 +162,14 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       {/* Bottom Bar */}
       <div className="bg-[#00254c]">
         <div className="max-w-7xl mx-auto px-6 py-4 text-center text-sm">
           © {new Date().getFullYear()} AG Restorations. All Rights Reserved.
         </div>
       </div>
+
       {/* Local Business Schema for SEO */}
       <script
         type="application/ld+json"
@@ -184,7 +189,8 @@ export default function Footer() {
           }),
         }}
       />
-       <BackToTop />
+
+      <BackToTop />
     </footer>
   );
 }

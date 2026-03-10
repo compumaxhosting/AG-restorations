@@ -12,6 +12,7 @@ import ContactBar from "@/components/ContactBar";
 import AboutCompanyHome from "@/components/AboutCompanyHome";
 import Certificate from "@/components/Certificate";
 import AreasWeServe from "@/components/AreasWeServe";
+import FinancingSection from "@/components/FinancingSection";
 
 
 export default function Home() {
@@ -20,13 +21,15 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      
+
       <StickyNavbar />
       <ContactBar />
       <HeroSection />
       <OurServicesPage margin={mvalue} />
       <AboutCompanyHome />
-     <Certificate />
+      <FinancingSection />
+      <Certificate />
+      
       {/* <OurProjects gallery={number} /> */}
       <VideoSection margin={mvalue} />
       <AreasWeServe />
@@ -34,7 +37,6 @@ export default function Home() {
       <Blog />
       <FooterTopCTA />
       <Footer />
-    
     </>
   );
 } 
