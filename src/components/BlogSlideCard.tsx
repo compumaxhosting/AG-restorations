@@ -1,24 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { FiExternalLink, FiHeart, FiFolder, FiShare2 } from "react-icons/fi";
+import { FiHeart, FiFolder, FiShare2 } from "react-icons/fi";
 import { AiFillHeart } from "react-icons/ai";
 
 interface Slide {
-  link: string;
   title: string;
   description: string;
   date: string;
   image: string;
-  // Add initialLikeCount to the Slide interface
   initialLikeCount: number;
 }
 
-// Update the component's props to include initialLikeCount
 export default function BlogSlideCard({ slide }: { slide: Slide }) {
   const [liked, setLiked] = useState(false);
-  // Initialize likeCount state with the prop value
   const [likeCount, setLikeCount] = useState(slide.initialLikeCount);
   const [isSharing, setIsSharing] = useState(false);
 
@@ -29,13 +24,13 @@ export default function BlogSlideCard({ slide }: { slide: Slide }) {
 
   const handleShare = async () => {
     if (isSharing) return;
+
     if (navigator.share) {
       setIsSharing(true);
       try {
         await navigator.share({
           title: slide.title,
           text: slide.description,
-          url: `${window.location.origin}/blog/${slide.link}`,
         });
       } catch (err) {
         console.error("Error sharing:", err);
@@ -54,11 +49,7 @@ export default function BlogSlideCard({ slide }: { slide: Slide }) {
       className="relative w-full h-107.5 rounded-sm shadow-md overflow-hidden flex flex-col font-inter"
     >
       {/* Image + Overlay */}
-      <Link
-        href={`/blog/${slide.link}`}
-        className="relative flex-1 overflow-hidden group"
-        aria-label={`Read more about ${slide.title}`}
-      >
+      <div className="relative flex-1 overflow-hidden group">
         <div
           className="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-105"
           style={{ backgroundImage: `url(${slide.image})` }}
@@ -73,41 +64,27 @@ export default function BlogSlideCard({ slide }: { slide: Slide }) {
             <FiFolder className="w-4 h-4" aria-hidden="true" />
             <span>{slide.description}</span>
           </div>
+
           <h1 className="font-bold text-base sm:text-lg md:text-xl leading-tight">
             {slide.title}
           </h1>
         </div>
-      </Link>
+      </div>
 
       {/* Card Footer */}
-      <footer
-        className="bg-white px-4 py-3 flex justify-between items-center border border-gray-400 text-sm"
-        aria-label="Card footer with actions"
-      >
-        {/* More Details Link */}
-        <Link
-          href={`/blog/${slide.link}`}
-          className="flex items-center gap-1 font-bold text-[#003269]"
-          aria-label="More details about blog post"
-        >
-          <FiExternalLink className="w-4 h-4" aria-hidden="true" />
-          <span>MORE DETAILS</span>
-        </Link>
+      <footer className="bg-white px-4 py-3 flex justify-between items-center border border-gray-400 text-sm">
+        <span className="font-bold text-[#003269]">ROOFING BLOG</span>
 
-        {/* Like and Share Buttons */}
+        {/* Like + Share */}
         <div className="flex items-center gap-4">
           <button
             onClick={handleLike}
             className="flex items-center gap-1 text-[#e63a27]"
-            aria-label={liked ? "Unlike this post" : "Like this post"}
           >
             {liked ? (
-              <AiFillHeart className="w-5 h-5" aria-hidden="true" />
+              <AiFillHeart className="w-5 h-5" />
             ) : (
-              <FiHeart
-                className="w-5 h-5 hover:text-[#e63a27]"
-                aria-hidden="true"
-              />
+              <FiHeart className="w-5 h-5 hover:text-[#e63a27]" />
             )}
             <span>{likeCount}</span>
           </button>
@@ -115,10 +92,9 @@ export default function BlogSlideCard({ slide }: { slide: Slide }) {
           <button
             onClick={handleShare}
             disabled={isSharing}
-            className="hover:text-[#e63a27] transition-colors"
-            aria-label="Share this post"
+            className="hover:text-[#e63a27]"
           >
-            <FiShare2 className="w-4 h-4" aria-hidden="true" />
+            <FiShare2 className="w-4 h-4" />
           </button>
         </div>
       </footer>

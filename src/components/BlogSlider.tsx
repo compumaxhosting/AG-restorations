@@ -22,7 +22,6 @@ const slides = [
       "Professional roofing services for homes and businesses in Linden New Jersey",
     date: "11 July",
     image: "/blog/1.jpg",
-    link: "roof-repair-roof-replacement-linden-nj-ag-restorations",
     initialLikeCount: 70,
   },
   {
@@ -31,7 +30,6 @@ const slides = [
       "Quality siding installation to protect and improve your home's exterior",
     date: "25 June",
     image: "/blog/roofing_blog.jpg",
-    link: "siding-installation-services-linden-nj-ag-restorations",
     initialLikeCount: 150,
   },
   {
@@ -40,7 +38,6 @@ const slides = [
       "Reliable gutter systems designed to protect homes from water damage",
     date: "10 June",
     image: "/blog/roofing-contractors.jpg",
-    link: "gutter-installation-repair-linden-nj-ag-restorations",
     initialLikeCount: 200,
   },
   {
@@ -49,7 +46,6 @@ const slides = [
       "Trusted roofing contractors serving Linden and Union County communities",
     date: "29 May",
     image: "/blog/blogImage.jpg",
-    link: "why-homeowners-linden-nj-choose-ag-restorations-roofing",
     initialLikeCount: 260,
   },
 ];
@@ -77,6 +73,7 @@ export default function BlogSlider({ swiperRef }: Props) {
     } else {
       swiper.slidePrev();
     }
+
     autoplayTimeout.current = setTimeout(() => {
       swiper.autoplay?.start();
     }, 2000);
@@ -136,6 +133,7 @@ export default function BlogSlider({ swiperRef }: Props) {
         >
           <FiChevronLeft className="w-5 h-5" aria-hidden="true" />
         </button>
+
         <button
           type="button"
           onClick={() => handleManualSlide("next")}

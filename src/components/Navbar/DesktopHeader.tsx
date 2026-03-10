@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function DesktopHeader() {
   return (
-    <header className="relative z-50 hidden md:block">
+    <header className="relative z-50 hidden md:block" suppressHydrationWarning>
       {/* Logo Section */}
       <div className="absolute left-0 top-0 h-full z-10">
         <Link

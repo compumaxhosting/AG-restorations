@@ -21,7 +21,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-
       <StickyNavbar />
       <ContactBar />
       <HeroSection />
@@ -29,7 +28,6 @@ export default function Home() {
       <AboutCompanyHome />
       <FinancingSection />
       <Certificate />
-      
       {/* <OurProjects gallery={number} /> */}
       <VideoSection margin={mvalue} />
       <AreasWeServe />

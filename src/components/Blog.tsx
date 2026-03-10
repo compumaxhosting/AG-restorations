@@ -39,7 +39,7 @@ export default function Blog() {
             <div className="w-6 h-px bg-[#e63a27]" aria-hidden="true" />
 
             <span className="text-sm font-bold text-[#e63a27] uppercase tracking-widest">
-              News & Updates
+              Roofing News & Updates
             </span>
 
             <div className="w-6 h-px bg-[#e63a27]" aria-hidden="true" />
@@ -49,14 +49,14 @@ export default function Blog() {
             id="blog-section-title"
             className="text-4xl lg:text-5xl font-bold text-[#003269]"
           >
-            Latest Roofing & Waterproofing News & Tips
+            Roofing, Siding & Gutter Tips for Linden NJ Homeowners
           </h2>
         </header>
 
         <div
           role="region"
           aria-roledescription="carousel"
-          aria-label="Blog carousel section"
+          aria-label="Roofing blog carousel"
         >
           <BlogSlider swiperRef={swiperRef} />
         </div>
