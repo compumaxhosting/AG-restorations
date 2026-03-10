@@ -20,11 +20,11 @@ export default function AreasWeServe() {
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-4xl font-bold text-[#e63a27] mb-4">
+          <h2 className="text-4xl font-bold text-[#e63a27] mb-4 font-inter">
             Areas We Serve
           </h2>
 
-          <p className="text-gray-600 leading-relaxed">
+          <p className="text-gray-600 leading-relaxed font-inter">
             AG Restorations proudly provides professional roofing, siding, and
             gutter services to homeowners and businesses in Linden and nearby
             Union County communities. Our experienced team delivers reliable
