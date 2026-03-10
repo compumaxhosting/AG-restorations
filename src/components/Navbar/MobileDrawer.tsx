@@ -117,7 +117,7 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
 
       <div
         ref={drawerRef}
-        className={`relative w-[60%] h-full bg-[#003269] text-white flex flex-col overflow-y-auto transform transition-transform duration-300 ease-in-out ${
+        className={`relative w-[60%] h-full bg-[#000000] text-white flex flex-col overflow-y-auto transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
         role="dialog"

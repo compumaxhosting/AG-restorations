@@ -21,12 +21,27 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Roofing Contractor in Linden NJ | Roof Repair & Waterproofing | AG Restorations",
+      "Roofing & Gutter Contractor in Linden NJ | Roof Repair & Gutter Installation | AG Restorations",
     template: "%s | AG Restorations",
   },
 
   description:
-    "AG Restorations provides professional roofing, waterproofing, masonry, and exterior remodeling in Linden NJ. Residential & commercial roofing experts. Call 973-342-4134 for a free estimate.",
+    "AG Restorations provides professional roofing, gutter installation, masonry, and exterior remodeling in Linden NJ. Residential & commercial roofing and gutter experts. Call 973-342-4134 for a free estimate.",
+
+  keywords: [
+    "roofing contractor linden nj",
+    "roof repair linden nj",
+    "roof replacement linden nj",
+    "gutter installation linden nj",
+    "gutter repair linden nj",
+    "seamless gutters linden nj",
+    "masonry contractor linden nj",
+    "flat roofing nj",
+    "metal roof repair nj",
+    "residential roofing nj",
+    "commercial roofing nj",
+    "roofing company union county nj",
+  ],
 
   robots: {
     index: true,

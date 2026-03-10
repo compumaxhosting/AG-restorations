@@ -252,9 +252,8 @@ export default function ContactForm() {
         </option>
         <option value="roofing">Roofing</option>
         <option value="waterproofing">Waterproofing</option>
-        <option value="masonry">Masonry</option>
-        <option value="general-contractors">General Contractors</option>
-        <option value="other">Others</option>
+        <option value="Gutters">Gutters</option>
+       
       </select>
 
       {service === "other" && (

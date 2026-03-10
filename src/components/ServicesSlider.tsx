@@ -17,15 +17,15 @@ interface Props {
 
 const slides = [
   {
-    title: "Waterproofing Services",
-    description:
-      "Professional waterproofing systems including single-ply membrane solutions designed to protect buildings from water damage and moisture intrusion.",
-    image: "/Services-Slider/services1.jpg",
-    link: "/waterproofing-contractors-NY",
-    alt: "Commercial and residential waterproofing contractor services",
+      title: "Gutter Installation & Repair",
+description:
+  "Professional gutter services including gutter installation, repair, replacement, cleaning, and downspout systems to protect your home from water damage.",
+image: "/Services-Slider/services5.jpg",
+link: "/gutter-installation-repair",
+alt: "Residential gutter installation, repair, and drainage system services",
   },
   {
-    title: "Masonry & Exterior Construction",
+    title: "Siding & Exterior Construction",
     description:
       "Expert masonry services including brickwork, bluestone, paving, cement structures, and exterior construction improvements.",
     image: "/Services-Slider/masonry.jpg",
