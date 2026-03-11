@@ -82,7 +82,7 @@ export default function AboutCompany() {
 
           {/* Button */}
           <Link
-            href="/about"
+            href="/aboutus"
             aria-label="Learn more about AG Restorations roofing siding and gutter contractor in Linden New Jersey"
             className="inline-block border-2 border-red-500 text-red-500 px-8 py-3 font-semibold tracking-wide hover:bg-red-500 hover:text-white transition"
           >

@@ -29,7 +29,7 @@ const slides = [
     description:
       "Quality siding installation to protect and improve your home's exterior",
     date: "25 June",
-    image: "./Services-slider/masonry.jpg",
+    image: "/Services-Slider/masonry.jpg",
     initialLikeCount: 150,
   },
   {

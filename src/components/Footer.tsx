@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           <Link
-            href="/about"
+            href="/aboutus"
             className="inline-block mt-6 bg-[#e63a27] px-6 py-3 font-semibold hover:bg-red-600 transition-colors duration-300"
           >
             Learn More

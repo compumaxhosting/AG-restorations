@@ -89,7 +89,7 @@ export default function FooterTopCTA() {
           viewport={{ once: true }}
         >
           <Link
-            href="/contact"
+            href="/contact-us "
             className="call-hover-button font-inter"
             aria-label="Get a roofing quote from AG Restorations"
           >
