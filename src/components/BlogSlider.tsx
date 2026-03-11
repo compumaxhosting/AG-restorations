@@ -21,7 +21,7 @@ const slides = [
     description:
       "Professional roofing services for homes and businesses in Linden New Jersey",
     date: "11 July",
-    image: "/blog/1.jpg",
+    image: "/1.jpg",
     initialLikeCount: 70,
   },
   {
@@ -29,7 +29,7 @@ const slides = [
     description:
       "Quality siding installation to protect and improve your home's exterior",
     date: "25 June",
-    image: "/blog/roofing_blog.jpg",
+    image: "./Services-slider/masonry.jpg",
     initialLikeCount: 150,
   },
   {
@@ -45,7 +45,7 @@ const slides = [
     description:
       "Trusted roofing contractors serving Linden and Union County communities",
     date: "29 May",
-    image: "/blog/blogImage.jpg",
+    image: "/blogImage.jpg",
     initialLikeCount: 260,
   },
 ];

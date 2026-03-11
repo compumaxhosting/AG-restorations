@@ -7,7 +7,10 @@ import BackToTop from "./BackToTop";
 
 export default function Footer() {
   return (
-    <footer role="contentinfo" className="bg-[#1c1c27] text-white text-sm">
+    <footer
+      role="contentinfo"
+      className="bg-[#1c1c27] text-white text-sm border-t border-white/10"
+    >
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-6 pt-12 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">
@@ -36,7 +39,7 @@ export default function Footer() {
 
           <Link
             href="/about"
-            className="inline-block mt-6 bg-[#e63a27] px-6 py-3 font-semibold hover:bg-red-600 transition duration-300"
+            className="inline-block mt-6 bg-[#e63a27] px-6 py-3 font-semibold hover:bg-red-600 transition-colors duration-300"
           >
             Learn More
           </Link>
@@ -49,38 +52,55 @@ export default function Footer() {
 
           <ul className="space-y-3">
             <li>
-              <Link href="/" className="hover:text-[#e63a27] transition">
+              <Link
+                href="/"
+                className="hover:text-[#e63a27] transition-colors duration-300"
+              >
                 Home
               </Link>
             </li>
+
             <li>
-              <Link href="/about" className="hover:text-[#e63a27] transition">
+              <Link
+                href="/about"
+                className="hover:text-[#e63a27] transition-colors duration-300"
+              >
                 About Us
               </Link>
             </li>
+
             <li>
               <Link
                 href="/services"
-                className="hover:text-[#e63a27] transition"
+                className="hover:text-[#e63a27] transition-colors duration-300"
               >
                 Services
               </Link>
             </li>
+
             <li>
               <Link
                 href="/projects"
-                className="hover:text-[#e63a27] transition"
+                className="hover:text-[#e63a27] transition-colors duration-300"
               >
                 Projects
               </Link>
             </li>
+
             <li>
-              <Link href="/reviews" className="hover:text-[#e63a27] transition">
+              <Link
+                href="/reviews"
+                className="hover:text-[#e63a27] transition-colors duration-300"
+              >
                 Reviews
               </Link>
             </li>
+
             <li>
-              <Link href="/contact" className="hover:text-[#e63a27] transition">
+              <Link
+                href="/contact"
+                className="hover:text-[#e63a27] transition-colors duration-300"
+              >
                 Contact
               </Link>
             </li>
@@ -133,27 +153,27 @@ export default function Footer() {
                 href="https://www.facebook.com/share/18KcQSnH8d/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                aria-label="Visit our Facebook page"
+                aria-label="AG Restorations Facebook"
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 <FaFacebookF className="text-white text-lg" />
               </a>
 
               <a
-                href="https://www.instagram.com/ag.restorationslinden?igsh=cTNmYXV1enJyYXJ5"
+                href="https://www.instagram.com/ag.restorationslinden"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                aria-label="Visit our Instagram page"
+                aria-label="AG Restorations Instagram"
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 <FaInstagram className="text-white text-lg" />
               </a>
 
               <a
-                href="https://www.tiktok.com/@ag.roofing.siding?_r=1&_t=ZP-94RpOT4meK6"
+                href="https://www.tiktok.com/@ag.roofing.siding"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                aria-label="Visit our TikTok page"
+                aria-label="AG Restorations TikTok"
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 <FaTiktok className="text-white text-lg" />
@@ -170,7 +190,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Local Business Schema for SEO */}
+      {/* Local Business Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -178,8 +198,10 @@ export default function Footer() {
             "@context": "https://schema.org",
             "@type": "RoofingContractor",
             name: "AG Restorations",
+            url: "https://agrestorations.com",
             telephone: "+1-973-342-4134",
             email: "info@agrestorations.com",
+            areaServed: "Union County, New Jersey",
             address: {
               "@type": "PostalAddress",
               addressLocality: "Linden",

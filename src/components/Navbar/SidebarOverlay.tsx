@@ -157,10 +157,10 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
           <Link href="/" onClick={onClose}>
             <Image
               src="/Navbar/Logo-SAS.png"
-              alt=" Company Logo"
-              width={240}
-              height={240}
-              className="w-45 sm:w-50 md:w-60"
+              alt="AG Restorations Company Logo"
+              width={220}
+              height={120}
+              className="w-45 sm:w-50 md:w-55 h-auto"
               priority
             />
           </Link>
