@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services. Residential and commercial roofing experts serving Union County NJ. Call 973-342-4134 for a free estimate. 100% financing available.",
+    "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services. Call 973-342-4134 for a free estimate.",
 
   keywords: [
     "roofing contractor linden nj",
@@ -36,12 +36,7 @@ export const metadata: Metadata = {
     "siding contractor linden nj",
     "siding installation linden nj",
     "gutter installation linden nj",
-    "gutter repair linden nj",
-    "seamless gutters linden nj",
-    "residential roofing linden nj",
-    "commercial roofing linden nj",
-    "roofing company union county nj",
-    "roofing services new jersey",
+    "union county roofing contractor",
   ],
 
   robots: {
@@ -56,11 +51,28 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
     description:
-      "Professional roofing, siding and gutter services in Linden NJ. Roof repair, roof replacement and seamless gutters for residential and commercial properties. Free estimate available.",
+      "Professional roofing, siding and gutter services in Linden NJ. Roof repair, roof replacement and seamless gutters for residential and commercial properties.",
     url: "https://agrestorations.com",
     siteName: "AG Restorations",
     locale: "en_US",
     type: "website",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "AG Restorations Roofing, Siding and Gutter Services in Linden NJ",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
+    description:
+      "Trusted roofing contractor in Linden NJ providing roof repair, roof replacement, siding installation and gutter services.",
+    images: ["/og-image.jpg"],
   },
 };
 
