@@ -183,7 +183,7 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
           aria-label="Social media links"
         >
           {socialLinks.map(({ href, icon, label }, i) => (
-            <Link
+            <Link 
               key={i}
               href={href}
               target="_blank"

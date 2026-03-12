@@ -32,7 +32,7 @@ const slides = [
     title: "Roofing, Siding & Gutters With 100% Financing Available",
     description:
       "Need roofing, siding, or gutter work but worried about the cost? AG Restorations offers 100% financing options so homeowners in Linden NJ can complete important exterior improvements without upfront stress. Get reliable service and flexible payment solutions today.",
-    buttonText: "Get A Free Quote",
+    buttonText: "Our roofing services",
     image: "/Services-Slider/masonry.jpg",
     alt: "New roof installation and exterior home improvement project completed by AG Restorations in Linden NJ",
   },

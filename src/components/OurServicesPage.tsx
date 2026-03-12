@@ -11,12 +11,13 @@ const fadeUp: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {       
+    transition: {
       duration: 0.6,
-      ease: [0.25, 0.1, 0.25, 1], // valid easing type
+      ease: [0.25, 0.1, 0.25, 1],
     },
   },
 };
+
 type Props = {
   margin: number[];
 };
@@ -30,7 +31,7 @@ export default function OurServicesPage({ margin }: Props) {
       className="shadow-2xl px-4 sm:px-6 lg:px-12 pt-10 pb-12 sm:pb-16 lg:pb-20 bg-[#f9f9f9]"
       role="main"
       tabIndex={-1}
-      aria-label="Overview of  AG Restorations services"
+      aria-label="Overview of AG Restorations services"
     >
       <div className="mx-auto max-w-7xl space-y-12">
         {/* Header Section */}

@@ -53,17 +53,30 @@ export default function ServicesSlider({ swiperRef }: Props) {
     }
   }, [swiperRef]);
 
-  const handleManualSlide = (direction: "prev" | "next") => {
-    if (!swiperInstanceRef.current) return;
-    const swiper = swiperInstanceRef.current;
+ const handleManualSlide = (direction: "prev" | "next") => {
+   if (!swiperInstanceRef.current) return;
 
-    swiper.autoplay?.stop();
-    if (direction === "next") swiper.slideNext();
-    else swiper.slidePrev();
+   const swiper = swiperInstanceRef.current;
 
-    clearTimeout(autoplayTimeout.current!);
-    autoplayTimeout.current = setTimeout(() => swiper.autoplay?.start(), 2000);
-  };
+   // stop autoplay before manual navigation
+   swiper.autoplay?.stop();
+
+   if (direction === "next") {
+     swiper.slideNext();
+   } else {
+     swiper.slidePrev();
+   }
+
+   // clear previous timeout safely
+   if (autoplayTimeout.current) {
+     clearTimeout(autoplayTimeout.current);
+   }
+
+   // restart autoplay after delay
+   autoplayTimeout.current = setTimeout(() => {
+     swiper.autoplay?.start();
+   }, 2000);
+ };
 
   return (
     <div className="flex flex-col items-center px-4 sm:px-6 mb-5">
