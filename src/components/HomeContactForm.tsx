@@ -4,6 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Swal from "sweetalert2";
 import Image from "next/image";
+import {
+  contactFormSchema,
+  mapZodFieldErrors,
+  type ContactFormFieldErrors,
+} from "@/lib/contact-schema";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -51,6 +56,7 @@ export default function ContactForm() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [service, setService] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<ContactFormFieldErrors>({});
 
   const [captchaValue, setCaptchaValue] = useState("");
   const [captchaImage, setCaptchaImage] = useState("");
@@ -74,11 +80,40 @@ export default function ContactForm() {
   const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.replace(/\D/g, "");
     setPhoneNumber(value);
+    setFieldErrors((prev) => ({ ...prev, phoneNumber: undefined }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setFieldErrors({});
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: String(formData.get("name") || ""),
+      email: String(formData.get("email") || ""),
+      phoneNumber,
+      service,
+      message: String(formData.get("message") || ""),
+    };
+
+    const clientValidation = contactFormSchema.safeParse(payload);
+
+    if (!clientValidation.success) {
+      setIsSubmitting(false);
+      setFieldErrors(mapZodFieldErrors(clientValidation.error));
+
+      Swal.fire({
+        icon: "error",
+        title: "Please Check Your Form",
+        text: "Some fields are invalid. Please correct them and try again.",
+        confirmButtonColor: "#e63a27",
+      });
+
+      return;
+    }
 
     if (captchaInput.trim() !== captchaValue) {
       setIsSubmitting(false);
@@ -94,22 +129,11 @@ export default function ContactForm() {
       return;
     }
 
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      phoneNumber,
-      service,
-      message: formData.get("message"),
-    };
-
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(clientValidation.data),
       });
 
       const result = await response.json();
@@ -125,12 +149,22 @@ export default function ContactForm() {
         form.reset();
         setPhoneNumber("");
         setService("");
+        setFieldErrors({});
         regenerateCaptcha();
       } else {
+        if (result?.fieldErrors && typeof result.fieldErrors === "object") {
+          setFieldErrors(result.fieldErrors as ContactFormFieldErrors);
+        }
+
+        const apiErrorText =
+          typeof result?.reason === "string"
+            ? `${result.error || "Something went wrong."} (${result.reason})`
+            : result.error || "Something went wrong.";
+
         Swal.fire({
           icon: "error",
           title: "Failed",
-          text: result.error || "Something went wrong.",
+          text: apiErrorText,
           confirmButtonColor: "#e63a27",
         });
 
@@ -159,6 +193,7 @@ export default function ContactForm() {
       whileInView="visible"
       viewport={{ once: true }}
       onSubmit={handleSubmit}
+      noValidate
       className="bg-[#f5f5f5] w-full max-w-md p-6 md:p-12 shadow-xl flex flex-col gap-4"
       aria-labelledby="form-heading"
     >
@@ -177,8 +212,18 @@ export default function ContactForm() {
         placeholder="Name"
         required
         autoComplete="name"
+        onChange={() =>
+          setFieldErrors((prev) => ({ ...prev, name: undefined }))
+        }
+        aria-invalid={Boolean(fieldErrors.name)}
+        aria-describedby={fieldErrors.name ? "name-error" : undefined}
         className="p-3 border border-gray-300 rounded-md"
       />
+      {fieldErrors.name && (
+        <p id="name-error" className="text-sm text-red-600">
+          {fieldErrors.name}
+        </p>
+      )}
 
       {/* Email */}
       <label htmlFor="email" className="sr-only">
@@ -191,8 +236,18 @@ export default function ContactForm() {
         placeholder="Email Address"
         required
         autoComplete="email"
+        onChange={() =>
+          setFieldErrors((prev) => ({ ...prev, email: undefined }))
+        }
+        aria-invalid={Boolean(fieldErrors.email)}
+        aria-describedby={fieldErrors.email ? "email-error" : undefined}
         className="p-3 border border-gray-300 rounded-md"
       />
+      {fieldErrors.email && (
+        <p id="email-error" className="text-sm text-red-600">
+          {fieldErrors.email}
+        </p>
+      )}
 
       {/* Phone */}
       <label htmlFor="phone" className="sr-only">
@@ -207,8 +262,15 @@ export default function ContactForm() {
         onChange={handlePhoneNumberChange}
         required
         autoComplete="tel"
+        aria-invalid={Boolean(fieldErrors.phoneNumber)}
+        aria-describedby={fieldErrors.phoneNumber ? "phone-error" : undefined}
         className="p-3 border border-gray-300 rounded-md"
       />
+      {fieldErrors.phoneNumber && (
+        <p id="phone-error" className="text-sm text-red-600">
+          {fieldErrors.phoneNumber}
+        </p>
+      )}
 
       {/* Service */}
       <label htmlFor="service" className="sr-only">
@@ -218,8 +280,13 @@ export default function ContactForm() {
         id="service"
         name="service"
         value={service}
-        onChange={(e) => setService(e.target.value)}
+        onChange={(e) => {
+          setService(e.target.value);
+          setFieldErrors((prev) => ({ ...prev, service: undefined }));
+        }}
         required
+        aria-invalid={Boolean(fieldErrors.service)}
+        aria-describedby={fieldErrors.service ? "service-error" : undefined}
         className="p-3 rounded-md bg-[#003269] text-white"
       >
         <option value="" disabled>
@@ -229,6 +296,11 @@ export default function ContactForm() {
         <option value="waterproofing">Waterproofing</option>
         <option value="gutters">Gutters</option>
       </select>
+      {fieldErrors.service && (
+        <p id="service-error" className="text-sm text-red-600">
+          {fieldErrors.service}
+        </p>
+      )}
 
       {/* Message */}
       <label htmlFor="message" className="sr-only">
@@ -240,8 +312,18 @@ export default function ContactForm() {
         placeholder="Your Requirements..."
         rows={4}
         required
+        onChange={() =>
+          setFieldErrors((prev) => ({ ...prev, message: undefined }))
+        }
+        aria-invalid={Boolean(fieldErrors.message)}
+        aria-describedby={fieldErrors.message ? "message-error" : undefined}
         className="p-3 border border-gray-300 rounded-md"
       />
+      {fieldErrors.message && (
+        <p id="message-error" className="text-sm text-red-600">
+          {fieldErrors.message}
+        </p>
+      )}
 
       {/* Captcha */}
       <div className="flex flex-col gap-2" aria-live="polite">
