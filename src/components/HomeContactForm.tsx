@@ -156,15 +156,10 @@ export default function ContactForm() {
           setFieldErrors(result.fieldErrors as ContactFormFieldErrors);
         }
 
-        const apiErrorText =
-          typeof result?.reason === "string"
-            ? `${result.error || "Something went wrong."} (${result.reason})`
-            : result.error || "Something went wrong.";
-
         Swal.fire({
           icon: "error",
           title: "Failed",
-          text: apiErrorText,
+          text: result.error || "Something went wrong.",
           confirmButtonColor: "#e63a27",
         });
 
