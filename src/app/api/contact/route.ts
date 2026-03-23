@@ -88,7 +88,7 @@ export async function POST(request: Request) {
             <tr>
               <td style="padding:20px 24px;background:#003269;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;">
                 <div style="font-size:20px;line-height:1.2;font-weight:700;color:#ffffff;">AG Restorations</div>
-                <div style="font-size:13px;line-height:1.5;color:#dbeafe;margin-top:4px;">New Website Lead</div>
+                <div style="font-size:13px;line-height:1.5;color:#dbeafe;margin-top:4px;">New Query</div>
               </td>
             </tr>
             <tr>
