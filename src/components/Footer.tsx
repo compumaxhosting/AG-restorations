@@ -137,8 +137,18 @@ export default function Footer() {
           </p>
 
           <div className="mt-6">
-            <p className="font-semibold">Service Area</p>
-            <p className="text-white/90">Linden, New Jersey</p>
+            <p className="font-semibold">Location</p>
+
+            <a
+              href="https://maps.google.com/?q=117+Grant+St,+Linden,+NJ+07036"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/90 hover:underline"
+              aria-label="View AG Restorations location on Google Maps"
+            >
+              117 Grant St, Linden, NJ 07036, USA
+            </a>
+
             <p className="text-white/80">
               Serving Union County and surrounding NJ communities.
             </p>
