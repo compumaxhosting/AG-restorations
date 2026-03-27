@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import GoogleTranslateWidget from "../GoogleTranslateWidget";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -39,6 +40,10 @@ export default function TopBar() {
             </div>
           </address>
 
+          <div className="pr-4">
+            <GoogleTranslateWidget />
+          </div>
+
           {/* Mobile Social Icons */}
           <div className="flex items-center pl-4 text-white text-base">
             <span className="mr-3" aria-hidden="true">
@@ -76,7 +81,7 @@ export default function TopBar() {
               </Link>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   );

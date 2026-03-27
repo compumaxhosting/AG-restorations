@@ -352,19 +352,42 @@ body {
   display: none !important;
 }
 
-.goog-te-gadget {
+.translate-widget .goog-te-gadget {
   font-size: 0;
+}
+
+.translate-widget .goog-te-gadget-simple {
+  background-color: #1c1c27 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 9999px !important;
+  padding: 5px 10px !important;
+  line-height: 1 !important;
+}
+
+.translate-widget .goog-te-menu-value {
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.translate-widget .goog-te-menu-value span,
+.translate-widget .goog-te-menu-value a {
+  color: #ffffff !important;
+}
+
+.translate-widget .goog-te-gadget-simple span,
+.translate-widget .goog-te-gadget-simple a,
+.translate-widget .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed,
+.translate-widget .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+  color: #ffffff !important;
+}
+
+.translate-widget img {
+  display: none !important;
 }
 
 body {
   top: 0px !important;
-}
-/* Google Translate Top Bar Fix */
-
-.goog-te-banner-frame {
-  display: block !important;
-}
-
-body {
-  top: 0 !important;
 }
