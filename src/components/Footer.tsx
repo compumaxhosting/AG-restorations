@@ -14,7 +14,7 @@ export default function Footer() {
       {/* Heading */}
       <div className="max-w-7xl mx-auto px-6 pt-12 text-center">
         <h2 className="text-2xl md:text-3xl font-bold mb-12">
-          Professional Roofing, Siding & Gutters in Linden, New Jersey
+          Professional Roofing, Siding & Gutters in Bayonne, New Jersey
         </h2>
       </div>
 
@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="w-12 h-0.5 bg-[#e63a27] mb-4"></div>
 
           <p className="text-white/90 leading-relaxed">
-            AG Restorations is a trusted roofing contractor serving Linden and
+            AG Restorations is a trusted roofing contractor serving Bayonne and
             surrounding New Jersey communities. We specialize in residential and
             commercial roofing, siding installation, and seamless gutter
             services designed to protect homes and businesses.
@@ -140,13 +140,13 @@ export default function Footer() {
             <p className="font-semibold">Location</p>
 
             <a
-              href="https://maps.google.com/?q=117+Grant+St,+Linden,+NJ+07036"
+              href="https://maps.google.com/?q=837+Kennedy+Blvd,+Bayonne,+NJ+07002"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/90 hover:underline"
               aria-label="View AG Restorations location on Google Maps"
             >
-              117 Grant St, Linden, NJ 07036, USA
+              837 Kennedy Blvd, Bayonne, NJ 07002, USA
             </a>
 
             <p className="text-white/80">
@@ -214,7 +214,9 @@ export default function Footer() {
             areaServed: "Union County, New Jersey",
             address: {
               "@type": "PostalAddress",
-              addressLocality: "Linden",
+              streetAddress: "837 Kennedy Blvd",
+              postalCode: "07002",
+              addressLocality: "Bayonne",
               addressRegion: "NJ",
               addressCountry: "US",
             },

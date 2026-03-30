@@ -271,7 +271,7 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
           <ul className="text-sm space-y-3">
             <li className="flex gap-3 items-start">
               <FaMapMarkerAlt className="text-[#e63a27] mt-1 shrink-0" />
-              <address>552 Rugby Rd, Brooklyn, NY 11230</address>
+              <address>837 Kennedy Blvd, Bayonne, NJ 07002</address>
             </li>
             <li className="flex gap-3 items-center">
               <FaPhoneAlt className="text-[#e63a27]" />

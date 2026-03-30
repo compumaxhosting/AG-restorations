@@ -36,7 +36,7 @@ export default function TopBar() {
             </Link>
             <div className="flex items-center text-base gap-2 px-4">
               <FaEnvelope className="text-[#e63a27]" aria-hidden="true" />
-              <span>Linden, New Jersey</span>
+              <span>Bayonne, New Jersey</span>
             </div>
           </address>
 
