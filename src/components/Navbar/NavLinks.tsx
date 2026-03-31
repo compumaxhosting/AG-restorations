@@ -6,12 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 const navItems = [
   { label: "HOME", path: "/" },
@@ -26,7 +20,6 @@ export default function NavLinks() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  /* Prevent background scroll when menu is open */
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
@@ -41,9 +34,7 @@ export default function NavLinks() {
         className="flex items-center h-full w-full justify-end"
         aria-label="Primary Navigation"
       >
-        <ul
-          className={`flex gap-5 text-sm font-semibold text-[#003269] items-stretch h-full w-full justify-end ${inter.className}`}
-        >
+        <ul className="flex gap-5 text-sm font-semibold text-[#003269] items-stretch h-full w-full justify-end">
           {navItems.map(({ label, path }) => (
             <li key={label} className="hidden md:flex items-center h-full">
               <Link
@@ -94,19 +85,16 @@ export default function NavLinks() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        {/* Overlay */}
         <div
           className="w-full bg-black/40 backdrop-blur-sm"
           onClick={() => setIsOpen(false)}
         />
 
-        {/* Sidebar */}
         <div
           className={`w-[85%] max-w-sm h-full bg-[#003269] text-white relative flex flex-col transition-transform duration-300 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          {/* Close Button */}
           <button
             onClick={() => setIsOpen(false)}
             aria-label="Close mobile navigation menu"
@@ -115,7 +103,6 @@ export default function NavLinks() {
             ✕
           </button>
 
-          {/* Logo */}
           <Link
             href="/"
             className="flex justify-center p-6"
@@ -130,7 +117,6 @@ export default function NavLinks() {
             />
           </Link>
 
-          {/* Mobile Nav Links */}
           <nav className="flex flex-col mt-4">
             {navItems.map(({ label, path }) => (
               <Link
@@ -148,13 +134,11 @@ export default function NavLinks() {
             ))}
           </nav>
 
-          {/* Social Icons */}
           <div className="mt-auto flex justify-center gap-4 py-6">
             <a
               href="https://www.facebook.com/share/18KcQSnH8d/"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              aria-label="Visit our Facebook page"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaFacebookF className="text-white text-lg" />
@@ -164,17 +148,15 @@ export default function NavLinks() {
               href="https://www.instagram.com/ag.restorationslinden"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              aria-label="Visit our Instagram page"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaInstagram className="text-white text-lg" />
             </a>
 
             <a
-              href="https://www.tiktok.com/@ag.roofing.siding?_r=1&_t=ZP-94RpOT4meK6"
+              href="https://www.tiktok.com/@ag.roofing.siding"
               target="_blank"
               rel="noopener noreferrer nofollow"
-              aria-label="Visit our TikTok page"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaTiktok className="text-white text-lg" />
