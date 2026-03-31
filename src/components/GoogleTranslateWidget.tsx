@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState } from "react";
 
 const TRANSLATE_SCRIPT_ID = "google-translate-script";
 const TRANSLATE_CONTAINER_ID = "google_translate_element";
 
+/* ✅ Proper types (no `any`) */
 type TranslateElementOptions = {
   pageLanguage: string;
   includedLanguages?: string;
@@ -31,16 +32,16 @@ declare global {
 }
 
 export default function GoogleTranslateWidget() {
-  useEffect(() => {
+  const [loaded, setLoaded] = useState(false);
+
+  const loadTranslate = () => {
+    if (loaded) return;
+
+    // init function
     window.googleTranslateElementInit = () => {
       const Widget = window.google?.translate?.TranslateElement;
-      const mountTarget = document.getElementById(TRANSLATE_CONTAINER_ID);
 
-      if (!Widget || !mountTarget) {
-        return;
-      }
-
-      mountTarget.innerHTML = "";
+      if (!Widget) return;
 
       new Widget(
         {
@@ -53,9 +54,8 @@ export default function GoogleTranslateWidget() {
       );
     };
 
-    const existingScript = document.getElementById(TRANSLATE_SCRIPT_ID);
-
-    if (!existingScript) {
+    // inject script ONLY when needed
+    if (!document.getElementById(TRANSLATE_SCRIPT_ID)) {
       const script = document.createElement("script");
       script.id = TRANSLATE_SCRIPT_ID;
       script.src =
@@ -66,10 +66,23 @@ export default function GoogleTranslateWidget() {
       window.googleTranslateElementInit?.();
     }
 
-    return () => {
-      delete window.googleTranslateElementInit;
-    };
-  }, []);
+    setLoaded(true);
+  };
 
-  return <div id={TRANSLATE_CONTAINER_ID} className="translate-widget" />;
+  return (
+    <div className="translate-widget">
+      {/* ✅ Lazy trigger button */}
+      {!loaded && (
+        <button
+          onClick={loadTranslate}
+          className="px-3 py-1 text-sm bg-black text-white rounded"
+        >
+          Translate
+        </button>
+      )}
+
+      {/* Widget mounts here */}
+      <div id={TRANSLATE_CONTAINER_ID} />
+    </div>
+  );
 }

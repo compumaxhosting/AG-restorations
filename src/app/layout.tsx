@@ -8,12 +8,14 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-inter",
+  display: "swap", // 🚀 prevents font blocking
 });
 
 const bevietnam = Be_Vietnam_Pro({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-bevietnam",
+  display: "swap", // 🚀 prevents font blocking
 });
 
 export const metadata: Metadata = {
@@ -55,27 +57,25 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
     description:
-      "Professional roofing, siding and gutter services in Linden NJ. Roof repair, roof replacement and seamless gutters for residential and commercial properties.",
+      "Professional roofing, siding and gutter services in Linden NJ.",
     url: "https://agrestorations.com",
     siteName: "AG Restorations",
     locale: "en_US",
     type: "website",
-
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "AG Restorations Roofing, Siding and Gutter Services in Linden NJ",
+        alt: "AG Restorations Roofing Services",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
-    description:
-      "Trusted roofing contractor in Linden NJ providing roof repair, roof replacement, siding installation and gutter services.",
+    title: "Roofing Contractor Linden NJ | AG Restorations",
+    description: "Roof repair, replacement, siding & gutters in Linden NJ.",
     images: ["/og-image.jpg"],
   },
 };
@@ -84,20 +84,20 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
       <body className={`${inter.variable} ${bevietnam.variable}`}>
-        {/* Google Tag Manager (noscript) */}
+        {/* GTM (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TCSLWCWZ"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
+          />
         </noscript>
 
         {children}
 
-        {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="afterInteractive">
+        {/* 🚀 DELAYED Google Tag Manager */}
+        <Script id="gtm-script" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -107,12 +107,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           `}
         </Script>
 
-        {/* Google Analytics */}
+        {/* 🚀 DELAYED Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-QR7FYXT3QL"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -121,7 +122,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           `}
         </Script>
 
-        {/* Schema */}
+        {/* ✅ Schema (keep early for SEO) */}
         <Script
           id="schema"
           type="application/ld+json"

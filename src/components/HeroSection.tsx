@@ -6,18 +6,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import dynamic from "next/dynamic";
-
-// 🚀 Lazy load framer-motion (performance)
-const MotionDiv = dynamic(() =>
-  import("framer-motion").then((mod) => mod.motion.div),
-);
-const MotionArticle = dynamic(() =>
-  import("framer-motion").then((mod) => mod.motion.article),
-);
-const AnimatePresence = dynamic(() =>
-  import("framer-motion").then((mod) => mod.AnimatePresence),
-);
 
 const slides = [
   {
@@ -52,7 +40,6 @@ const slides = [
 export default function HeroSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
 
   const currentSlide = useMemo(() => slides[selectedIndex], [selectedIndex]);
 
@@ -70,115 +57,74 @@ export default function HeroSection() {
     onSelect();
   }, [emblaApi, onSelect]);
 
-  // autoplay (clean + non-blocking)
   useEffect(() => {
-    if (!emblaApi || isHovered) return;
+    if (!emblaApi) return;
     const id = setInterval(() => emblaApi.scrollNext(), 6000);
     return () => clearInterval(id);
-  }, [emblaApi, isHovered]);
+  }, [emblaApi]);
 
   return (
-    <section
-      className="relative w-full overflow-hidden bg-black"
-      aria-label="Roofing contractor services in Linden New Jersey"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* SLIDER */}
-      <MotionDiv className="embla" ref={emblaRef}>
-        <ul className="flex">
+    <section className="relative w-full overflow-hidden bg-black">
+      <div className="embla" ref={emblaRef}>
+        <div className="flex">
           {slides.map((slide, index) => (
-            <li
+            <div
               key={slide.id}
-              className="relative flex-[0_0_100%] w-full max-sm:h-[70vh] sm:h-screen overflow-hidden"
+              className="relative flex-[0_0_100%] w-full max-sm:h-[70vh] sm:h-screen"
             >
               <Image
                 src={slide.image}
                 alt={slide.alt}
                 fill
                 sizes="100vw"
-                quality={70}
+                quality={60} // 🔥 reduced
                 priority={index === 0}
                 fetchPriority={index === 0 ? "high" : "auto"}
-                placeholder="blur"
-                blurDataURL="/blur.jpg"
+                loading={index === 0 ? "eager" : "lazy"}
                 className="object-cover"
               />
-
-              <div className="absolute inset-0 bg-black/50 sm:bg-black/30 z-10" />
-            </li>
+              <div className="absolute inset-0 bg-black/40 z-10" />
+            </div>
           ))}
-        </ul>
-      </MotionDiv>
+        </div>
+      </div>
 
-      {/* TEXT CONTENT */}
-      <div className="absolute inset-0 z-20 flex flex-col justify-center items-start max-sm:px-4 md:px-20 text-white pointer-events-none">
-        <AnimatePresence mode="wait">
-          <MotionArticle
-            key={selectedIndex}
-            className="max-w-3xl space-y-6 pt-6 md:ml-14 pointer-events-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
+      {/* TEXT */}
+      <div className="absolute inset-0 z-20 flex flex-col justify-center items-start max-sm:px-4 md:px-20 text-white">
+        <div className="max-w-3xl space-y-6 pt-6 md:ml-14">
+          <h1 className="max-sm:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            {currentSlide.title}
+          </h1>
+
+          <p className="max-sm:text-sm sm:text-lg font-light tracking-wide">
+            {currentSlide.description}
+          </p>
+
+          <Link
+            href="/services"
+            className="inline-block border-4 border-[#003269] p-1"
           >
-            <h1 className="max-sm:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-inter leading-tight">
-              {currentSlide.title}
-            </h1>
-
-            <p className="max-sm:text-sm sm:text-lg font-light tracking-wide font-bevietnam">
-              {currentSlide.description}
-            </p>
-
-            {/* ✅ FIXED BUTTON (restored design) */}
-            <Link
-              href="/services"
-              aria-label="View professional roofing services in Linden NJ"
-              className="inline-block border-4 border-[#003269] p-1"
-            >
-              <Button className="Hero_hover-button max-sm:text-xs sm:text-base lg:text-lg font-inter px-5 py-2 uppercase">
-                {currentSlide.buttonText}
-              </Button>
-            </Link>
-          </MotionArticle>
-        </AnimatePresence>
+            <Button className="max-sm:text-xs sm:text-base lg:text-lg px-5 py-2 uppercase">
+              {currentSlide.buttonText}
+            </Button>
+          </Link>
+        </div>
       </div>
 
       {/* ARROWS */}
       <button
         onClick={scrollPrev}
-        type="button"
-        aria-label="Previous slide"
-        className="hidden md:block absolute left-5 top-1/2 -translate-y-1/2 rounded-full p-4 z-30 bg-black/40 hover:bg-[#e63a27] transition-all"
+        className="hidden md:block absolute left-5 top-1/2 -translate-y-1/2 z-30 bg-black/40 p-4 rounded-full"
       >
-        <ChevronLeft className="text-white text-2xl" />
+        <ChevronLeft className="text-white" />
       </button>
 
       <button
         onClick={scrollNext}
-        type="button"
-        aria-label="Next slide"
-        className="hidden md:block absolute right-5 top-1/2 -translate-y-1/2 rounded-full p-4 z-30 bg-black/40 hover:bg-[#e63a27] transition-all"
+        className="hidden md:block absolute right-5 top-1/2 -translate-y-1/2 z-30 bg-black/40 p-4 rounded-full"
       >
-        <ChevronRight className="text-white text-2xl" />
+        <ChevronRight className="text-white" />
       </button>
-
-      {/* DOTS */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 z-30">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            onClick={() => emblaApi?.scrollTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            className={`h-2 w-2 rounded-full transition-colors duration-300 ${
-              i === selectedIndex
-                ? "bg-[#e63a27]"
-                : "bg-white/70 hover:bg-white"
-            }`}
-          />
-        ))}
-      </div>
     </section>
   );
 }
