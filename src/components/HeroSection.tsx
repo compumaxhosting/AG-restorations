@@ -65,24 +65,25 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full overflow-hidden bg-black">
-      <div className="embla" ref={emblaRef}>
+      {/* ✅ FIXED EMBLA STRUCTURE */}
+      <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
-              className="relative flex-[0_0_100%] w-full max-sm:h-[70vh] sm:h-screen"
+              className="relative min-w-full max-sm:h-[70vh] sm:h-screen"
             >
               <Image
-                src={slide.image}
+                src={slide.image} // ✅ correct image per slide
                 alt={slide.alt}
                 fill
-                sizes="100vw"
-                quality={45} // 🔥 reduced
-                priority={index === 0}
-                fetchPriority={index === 0 ? "high" : "auto"}
+                sizes="(max-width: 768px) 100vw, 1200px"
+                priority={index === 0} // only first slide
                 loading={index === 0 ? "eager" : "lazy"}
+                quality={40}
                 className="object-cover"
               />
+
               <div className="absolute inset-0 bg-black/40 z-10" />
             </div>
           ))}

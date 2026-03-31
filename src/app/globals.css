@@ -44,10 +44,12 @@ body {
   content: "";
   position: absolute;
   inset: 0;
+
+  /* ❌ REMOVE heavy background if unused */
   /* background-image: url("/pattern.png"); */
-  background-size: cover;
-  opacity: 0.1;
-  z-index: 0;
+
+  opacity: 0.05; /* lighter = less paint */
+  pointer-events: none; /* avoid layout interaction */
 }
 
 .hover-button {
@@ -269,17 +271,21 @@ body {
 }
 
 .feature-card {
-  background-color: #003269; /* Dark blue */
-  background-image: linear-gradient(
-    to bottom,
-    #012750 100%,
-    #013164 0%
-  ); /* Light blue to dark blue gradient */
-  background-size: 100% 0%; /* Start with no light blue */
+  background-color: #003269;
+  background-image: linear-gradient(to bottom, #012750 100%, #013164 0%);
+  background-size: 100% 100%; /* ✅ no animation on size */
   background-repeat: no-repeat;
   background-position: top;
-  transition: background-size 0.6s ease-in-out, color 0.6s ease-in-out;
-  color: white; /* Text color initially white */
+
+  transition: transform 0.3s ease, opacity 0.3s ease; /* ✅ GPU-friendly */
+  will-change: transform; /* 🚀 hint for browser */
+
+  color: white;
+}
+
+/* optional hover effect (smooth + cheap) */
+.feature-card:hover {
+  transform: translateY(-4px);
 }
 
 .feature-card:hover {

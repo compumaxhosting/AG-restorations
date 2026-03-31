@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    formats: ["image/avif", "image/webp"], // 🚀 HUGE win (smaller images)
+    minimumCacheTTL: 60, // cache images
+  },
+
   async redirects() {
     return [
       {
@@ -36,11 +41,6 @@ const nextConfig: NextConfig = {
       {
         source: "/roofing-contractors-brooklyn.html",
         destination: "/roofing-contractors-brooklyn",
-        permanent: true,
-      },
-      {
-        source: "/masonry-services-brooklyn-ny.html",
-        destination: "/masonry-services-brooklyn-ny",
         permanent: true,
       },
       {
