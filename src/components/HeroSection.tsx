@@ -1,51 +1,60 @@
 "use client";
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState, useMemo } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { AnimatePresence, PanInfo, motion } from "framer-motion";
+import dynamic from "next/dynamic";
+
+// 🚀 Lazy load framer-motion (performance)
+const MotionDiv = dynamic(() =>
+  import("framer-motion").then((mod) => mod.motion.div),
+);
+const MotionArticle = dynamic(() =>
+  import("framer-motion").then((mod) => mod.motion.article),
+);
+const AnimatePresence = dynamic(() =>
+  import("framer-motion").then((mod) => mod.AnimatePresence),
+);
 
 const slides = [
   {
     id: 1,
     title: "Roofing Contractor in Linden NJ – Roof Repair & Replacement",
     description:
-      "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, and new roof installation for residential and commercial properties. Our experienced team delivers durable roofing systems built to withstand New Jersey weather conditions. Call 973-342-4134 for a free estimate.",
+      "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, and new roof installation for residential and commercial properties.",
     buttonText: "View Roofing Services",
-    image: "/Services-Slider/services1.jpg",
+    image: "/Services-Slider/services1.webp",
     alt: "Roof repair and roof installation by AG Restorations roofing contractor in Linden New Jersey",
   },
   {
     id: 2,
     title: "Professional Siding & Gutter Installation in Linden NJ",
     description:
-      "Protect your home with expert siding installation and seamless gutter systems from AG Restorations. We provide siding replacement, gutter installation, and gutter repair services for homes and businesses throughout Linden NJ and Union County.",
+      "Protect your home with expert siding installation and seamless gutter systems from AG Restorations.",
     buttonText: "Our Exterior Services",
-    image: "/Services-Slider/services5.jpg",
-    alt: "Siding installation and seamless gutter system installation on residential home in Linden New Jersey",
+    image: "/Services-Slider/services5.webp",
+    alt: "Siding installation and seamless gutter system installation",
   },
   {
     id: 3,
     title: "Roofing, Siding & Gutters With 100% Financing Available",
     description:
-      "Need roofing, siding, or gutter work but worried about the cost? AG Restorations offers 100% financing options so homeowners in Linden NJ can complete important exterior improvements without upfront stress. Get reliable service and flexible payment solutions today.",
-    buttonText: "Our roofing services",
-    image: "/Services-Slider/masonry.jpg",
-    alt: "New roof installation and exterior home improvement project completed by AG Restorations in Linden NJ",
+      "AG Restorations offers 100% financing options so homeowners can complete improvements without upfront stress.",
+    buttonText: "Our Roofing Services",
+    image: "/Services-Slider/masonry.webp",
+    alt: "New roof installation and exterior home improvement project",
   },
 ];
-
-const swipeConfidenceThreshold = 300;
-const swipePower = (offset: number, velocity: number) =>
-  Math.abs(offset) * velocity;
 
 export default function HeroSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+
+  const currentSlide = useMemo(() => slides[selectedIndex], [selectedIndex]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -58,28 +67,15 @@ export default function HeroSection() {
   useEffect(() => {
     if (!emblaApi) return;
     emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
     onSelect();
   }, [emblaApi, onSelect]);
 
+  // autoplay (clean + non-blocking)
   useEffect(() => {
     if (!emblaApi || isHovered) return;
-    const autoplay = setInterval(() => emblaApi.scrollNext(), 5000);
-    return () => clearInterval(autoplay);
+    const id = setInterval(() => emblaApi.scrollNext(), 6000);
+    return () => clearInterval(id);
   }, [emblaApi, isHovered]);
-
-  const handleDragEnd = (
-    e: MouseEvent | TouchEvent | PointerEvent,
-    info: PanInfo,
-  ) => {
-    if (!emblaApi) return;
-    const power = swipePower(info.offset.x, info.velocity.x);
-    if (power < -swipeConfidenceThreshold) emblaApi.scrollNext();
-    else if (power > swipeConfidenceThreshold) emblaApi.scrollPrev();
-    else emblaApi.scrollTo(selectedIndex);
-  };
-
-  const currentSlide = slides[selectedIndex];
 
   return (
     <section
@@ -88,21 +84,12 @@ export default function HeroSection() {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <motion.div
-        className="embla"
-        ref={emblaRef}
-        drag="x"
-        dragElastic={0.15}
-        onDragEnd={handleDragEnd}
-        style={{ cursor: "grab" }}
-        whileTap={{ cursor: "grabbing" }}
-      >
-        <ul className="flex" aria-live="polite">
+      {/* SLIDER */}
+      <MotionDiv className="embla" ref={emblaRef}>
+        <ul className="flex">
           {slides.map((slide, index) => (
             <li
               key={slide.id}
-              aria-label={`Slide ${index + 1} of ${slides.length}`}
-              aria-hidden={index !== selectedIndex}
               className="relative flex-[0_0_100%] w-full max-sm:h-[70vh] sm:h-screen overflow-hidden"
             >
               <Image
@@ -110,8 +97,11 @@ export default function HeroSection() {
                 alt={slide.alt}
                 fill
                 sizes="100vw"
-                loading={index === 0 ? "eager" : "lazy"}
+                quality={70}
                 priority={index === 0}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                placeholder="blur"
+                blurDataURL="/blur.jpg"
                 className="object-cover"
               />
 
@@ -119,47 +109,46 @@ export default function HeroSection() {
             </li>
           ))}
         </ul>
-      </motion.div>
+      </MotionDiv>
 
       {/* TEXT CONTENT */}
       <div className="absolute inset-0 z-20 flex flex-col justify-center items-start max-sm:px-4 md:px-20 text-white pointer-events-none">
         <AnimatePresence mode="wait">
-          <motion.article
+          <MotionArticle
             key={selectedIndex}
-            className="max-w-3xl max-sm:max-w-[90%] space-y-6 pt-6 md:ml-14 xl:ml-46 pointer-events-auto"
+            className="max-w-3xl space-y-6 pt-6 md:ml-14 pointer-events-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            {/* Heading */}
-            <h1 className="max-sm:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-inter">
+            <h1 className="max-sm:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-inter leading-tight">
               {currentSlide.title}
             </h1>
 
-            {/* Description */}
-            <p className="max-sm:text-sm sm:text-lg font-light tracking-wide font-bevietnam max-sm:leading-relaxed">
+            <p className="max-sm:text-sm sm:text-lg font-light tracking-wide font-bevietnam">
               {currentSlide.description}
             </p>
 
+            {/* ✅ FIXED BUTTON (restored design) */}
             <Link
               href="/services"
               aria-label="View professional roofing services in Linden NJ"
               className="inline-block border-4 border-[#003269] p-1"
             >
-              <Button className="Hero_hover-button max-sm:text-xs sm:text-base lg:text-lg font-inter px-5 py-2">
-                {currentSlide.buttonText.toUpperCase()}
+              <Button className="Hero_hover-button max-sm:text-xs sm:text-base lg:text-lg font-inter px-5 py-2 uppercase">
+                {currentSlide.buttonText}
               </Button>
             </Link>
-          </motion.article>
+          </MotionArticle>
         </AnimatePresence>
       </div>
 
-      {/* ARROWS (desktop only) */}
+      {/* ARROWS */}
       <button
         onClick={scrollPrev}
         type="button"
-        aria-label="Previous roofing services slide"
+        aria-label="Previous slide"
         className="hidden md:block absolute left-5 top-1/2 -translate-y-1/2 rounded-full p-4 z-30 bg-black/40 hover:bg-[#e63a27] transition-all"
       >
         <ChevronLeft className="text-white text-2xl" />
@@ -168,7 +157,7 @@ export default function HeroSection() {
       <button
         onClick={scrollNext}
         type="button"
-        aria-label="Next roofing services slide"
+        aria-label="Next slide"
         className="hidden md:block absolute right-5 top-1/2 -translate-y-1/2 rounded-full p-4 z-30 bg-black/40 hover:bg-[#e63a27] transition-all"
       >
         <ChevronRight className="text-white text-2xl" />
@@ -181,8 +170,7 @@ export default function HeroSection() {
             key={i}
             type="button"
             onClick={() => emblaApi?.scrollTo(i)}
-            aria-label={`Go to roofing slide ${i + 1}`}
-            aria-current={i === selectedIndex ? "true" : undefined}
+            aria-label={`Go to slide ${i + 1}`}
             className={`h-2 w-2 rounded-full transition-colors duration-300 ${
               i === selectedIndex
                 ? "bg-[#e63a27]"

@@ -62,7 +62,7 @@ export default function Footer() {
 
             <li>
               <Link
-                href="/about"
+                href="/aboutus"
                 className="hover:text-[#e63a27] transition-colors duration-300"
               >
                 About Us
@@ -87,18 +87,18 @@ export default function Footer() {
               </Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link
                 href="/reviews"
                 className="hover:text-[#e63a27] transition-colors duration-300"
               >
                 Reviews
               </Link>
-            </li>
+            </li> */}
 
             <li>
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="hover:text-[#e63a27] transition-colors duration-300"
               >
                 Contact
