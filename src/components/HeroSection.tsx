@@ -77,7 +77,7 @@ export default function HeroSection() {
                 alt={slide.alt}
                 fill
                 sizes="100vw"
-                quality={60} // 🔥 reduced
+                quality={45} // 🔥 reduced
                 priority={index === 0}
                 fetchPriority={index === 0 ? "high" : "auto"}
                 loading={index === 0 ? "eager" : "lazy"}

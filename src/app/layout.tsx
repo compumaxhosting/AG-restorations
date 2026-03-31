@@ -8,14 +8,14 @@ const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-inter",
-  display: "swap", // 🚀 prevents font blocking
+  display: "swap",
 });
 
 const bevietnam = Be_Vietnam_Pro({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-bevietnam",
-  display: "swap", // 🚀 prevents font blocking
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services. Call 973-342-4134 for a free estimate.",
+    "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services.",
 
   keywords: [
     "roofing contractor linden nj",
@@ -83,6 +83,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
+      {/* ✅ ADD HEAD HERE */}
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
+
       <body className={`${inter.variable} ${bevietnam.variable}`}>
         {/* GTM (noscript) */}
         <noscript>
@@ -122,7 +132,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           `}
         </Script>
 
-        {/* ✅ Schema (keep early for SEO) */}
+        {/* ✅ Schema */}
         <Script
           id="schema"
           type="application/ld+json"
@@ -142,23 +152,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   addressRegion: "NJ",
                   addressCountry: "US",
                 },
-                areaServed: [
-                  "Linden NJ",
-                  "Elizabeth NJ",
-                  "Rahway NJ",
-                  "Plainfield NJ",
-                  "Westfield NJ",
-                  "Union County NJ",
-                ],
-                serviceType: [
-                  "Roof Repair",
-                  "Roof Replacement",
-                  "Roof Installation",
-                  "Siding Installation",
-                  "Siding Repair",
-                  "Gutter Installation",
-                  "Gutter Repair",
-                ],
               },
             ]),
           }}

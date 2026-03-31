@@ -14,7 +14,9 @@ const AreasWeServe = dynamic(() => import("@/components/AreasWeServe"));
 const ServiceAndFaqSection = dynamic(
   () => import("@/components/ServiceAndFaqSection"),
 );
-const Blog = dynamic(() => import("@/components/Blog"));
+const Blog = dynamic(() => import("@/components/Blog"), {
+  loading: () => null,
+});
 const FooterTopCTA = dynamic(() => import("@/components/FooterTopCTA"));
 const Footer = dynamic(() => import("@/components/Footer"));
 
