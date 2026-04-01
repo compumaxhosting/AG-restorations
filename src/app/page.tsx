@@ -14,7 +14,7 @@ export default function Home() {
       <HeroSection />
 
       {/* LAZY (Client) */}
-      <HomeClient />
+  <HomeClient />
     </>
   );
 }
