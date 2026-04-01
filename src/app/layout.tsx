@@ -20,16 +20,13 @@ const bevietnam = Be_Vietnam_Pro({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://agrestorations.com"),
-
   title: {
     default:
       "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
     template: "%s | AG Restorations",
   },
-
   description:
     "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services.",
-
   keywords: [
     "roofing contractor linden nj",
     "roof repair linden nj",
@@ -40,20 +37,16 @@ export const metadata: Metadata = {
     "gutter installation linden nj",
     "union county roofing contractor",
   ],
-
   verification: {
     google: "q2XHSPZ7u7GImYWMR2Bi8HtkkEr9i4KpLmutYhKZM90",
   },
-
   robots: {
     index: true,
     follow: true,
   },
-
   alternates: {
     canonical: "https://agrestorations.com",
   },
-
   openGraph: {
     title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
     description:
@@ -71,7 +64,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Roofing Contractor Linden NJ | AG Restorations",
@@ -83,18 +75,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
-      {/* ✅ ADD HEAD HERE */}
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
-
       <body className={`${inter.variable} ${bevietnam.variable}`}>
-        {/* GTM (noscript) */}
+        {/* GTM noscript (keep for SEO/tracking fallback) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TCSLWCWZ"
@@ -106,33 +88,24 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         {children}
 
-        {/* 🚀 DELAYED Google Tag Manager */}
-        <Script id="gtm-script" strategy="lazyOnload">
+        {/* 🚀 Ultra-delayed GTM (better than lazyOnload) */}
+        <Script id="gtm-script" strategy="afterInteractive">
           {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-TCSLWCWZ');
+            window.addEventListener('load', function() {
+              setTimeout(function(){
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-TCSLWCWZ');
+              }, 3000); // delay 3s
+            });
           `}
         </Script>
 
-        {/* 🚀 DELAYED Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-QR7FYXT3QL"
-          strategy="lazyOnload"
-        />
+        {/* ❌ REMOVE separate gtag.js (GTM already handles it) */}
 
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-QR7FYXT3QL');
-          `}
-        </Script>
-
-        {/* ✅ Schema */}
+        {/* ✅ Schema (lightweight, keep it) */}
         <Script
           id="schema"
           type="application/ld+json"

@@ -10,6 +10,7 @@ import type { Swiper as SwiperType } from "swiper";
 import type { RefObject } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   swiperRef?: RefObject<SwiperType | null>;
@@ -53,30 +54,27 @@ export default function ServicesSlider({ swiperRef }: Props) {
     }
   }, [swiperRef]);
 
- const handleManualSlide = (direction: "prev" | "next") => {
-   if (!swiperInstanceRef.current) return;
+  const handleManualSlide = (direction: "prev" | "next") => {
+    if (!swiperInstanceRef.current) return;
 
-   const swiper = swiperInstanceRef.current;
+    const swiper = swiperInstanceRef.current;
 
-   // stop autoplay before manual navigation
-   swiper.autoplay?.stop();
+    swiper.autoplay?.stop();
 
-   if (direction === "next") {
-     swiper.slideNext();
-   } else {
-     swiper.slidePrev();
-   }
+    if (direction === "next") {
+      swiper.slideNext();
+    } else {
+      swiper.slidePrev();
+    }
 
-   // clear previous timeout safely
-   if (autoplayTimeout.current) {
-     clearTimeout(autoplayTimeout.current);
-   }
+    if (autoplayTimeout.current) {
+      clearTimeout(autoplayTimeout.current);
+    }
 
-   // restart autoplay after delay
-   autoplayTimeout.current = setTimeout(() => {
-     swiper.autoplay?.start();
-   }, 2000);
- };
+    autoplayTimeout.current = setTimeout(() => {
+      swiper.autoplay?.start();
+    }, 2000);
+  };
 
   return (
     <div className="flex flex-col items-center px-4 sm:px-6 mb-5">
@@ -87,6 +85,7 @@ export default function ServicesSlider({ swiperRef }: Props) {
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           allowTouchMove={false}
           modules={[Autoplay]}
+          watchSlidesProgress={true}
           breakpoints={{
             0: { slidesPerView: 1, spaceBetween: 14 },
             640: { slidesPerView: 1, spaceBetween: 18 },
@@ -103,20 +102,25 @@ export default function ServicesSlider({ swiperRef }: Props) {
             setCurrentSlideTitle(slides[idx].title);
           }}
         >
-          {Array.from({ length: 12 }).map((_, i) => {
-            const { title, description, image, link, alt } =
-              slides[i % slides.length];
+          {slides.map((slide, i) => {
+            const { title, description, image, link, alt } = slide;
 
             return (
               <SwiperSlide key={i}>
-                <article className="group relative h-95 flex items-end overflow-hidden rounded-md">
-                  {/* Background Image */}
-                  <div
-                    role="img"
-                    aria-label={alt}
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-out group-hover:scale-110"
-                    style={{ backgroundImage: `url(${image})` }}
-                  />
+                <article className="group relative h-[380px] sm:h-[420px] lg:h-[450px] flex items-end overflow-hidden rounded-md">
+                  {/* Optimized Image */}
+                  <div className="absolute inset-0">
+                    <Image
+                      src={image}
+                      alt={alt}
+                      fill
+                      priority={i === 0}
+                      fetchPriority={i === 0 ? "high" : "auto"}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      quality={60}
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
+                    />
+                  </div>
 
                   {/* Content */}
                   <div className="relative z-10 w-full bg-[#f5f5f5] shadow-md p-5 min-h-32 flex flex-col">
