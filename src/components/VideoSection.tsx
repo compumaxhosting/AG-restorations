@@ -39,7 +39,7 @@ export default function VideoSection({ margin }: Props) {
         {/* IMAGE SIDE */}
         <div className="relative w-full md:w-[40%] h-87.5 md:h-125">
           <Image
-            src="/Services-Slider/services1.jpg"
+            src="/Services-Slider/services1.webp"
             alt="Professional roofing installation project by AG Restorations in Linden New Jersey"
             fill
             priority
