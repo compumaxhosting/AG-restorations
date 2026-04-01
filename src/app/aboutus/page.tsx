@@ -1,4 +1,5 @@
-import AboutCompany from '@/components/AboutCompanyHome';
+
+import AboutCompanySection from '@/components/AboutCompanySection';
 import AreasWeServe from '@/components/AreasWeServe';
 import BackToTop from '@/components/BackToTop';
 import Certificate from '@/components/Certificate';
@@ -16,7 +17,7 @@ const page = () => {
       <Navbar />
       <StickyNavbar />
       <ContactBar />
-      <AboutCompany />
+     <AboutCompanySection />
       <FinancingSection />
       <Certificate />
       <AreasWeServe />

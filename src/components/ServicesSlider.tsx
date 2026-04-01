@@ -107,36 +107,39 @@ export default function ServicesSlider({ swiperRef }: Props) {
 
             return (
               <SwiperSlide key={i}>
-                <article className="group relative h-[380px] sm:h-[420px] lg:h-[450px] flex items-end overflow-hidden rounded-md">
-                  {/* Optimized Image */}
-                  <div className="absolute inset-0">
-                    <Image
-                      src={image}
-                      alt={alt}
-                      fill
-                      priority={i === 0}
-                      fetchPriority={i === 0 ? "high" : "auto"}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      quality={60}
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
-                    />
-                  </div>
+                {/* ✅ FULL CARD CLICKABLE */}
+                <Link
+                  href={link}
+                  aria-label={`Go to ${title}`}
+                  className="block"
+                >
+                  <article className="group relative h-95 sm:h-105 lg:h-112.5 flex items-end overflow-hidden rounded-md cursor-pointer">
+                    {/* Image */}
+                    <div className="absolute inset-0">
+                      <Image
+                        src={image}
+                        alt={alt}
+                        fill
+                        priority={i === 0}
+                        fetchPriority={i === 0 ? "high" : "auto"}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        quality={60}
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
+                      />
+                    </div>
 
-                  {/* Content */}
-                  <div className="relative z-10 w-full bg-[#f5f5f5] shadow-md p-5 min-h-32 flex flex-col">
-                    <Link href={link} aria-label={`Learn more about ${title}`}>
-                      <h3 className="text-[#003269] text-sm md:text-base lg:text-lg font-bold tracking-wide font-inter hover:underline">
+                    {/* Content */}
+                    <div className="relative z-10 w-full bg-[#f5f5f5] shadow-md p-5 min-h-32 flex flex-col">
+                      <h3 className="text-[#003269] text-sm md:text-base lg:text-lg font-bold tracking-wide font-inter group-hover:underline">
                         {title}
                       </h3>
-                    </Link>
 
-                    <Link href={link}>
-                      <p className="text-sm text-gray-600 mt-2 leading-snug line-clamp-3 font-bevietnam hover:text-[#003269]">
+                      <p className="text-sm text-gray-600 mt-2 leading-snug line-clamp-3 font-bevietnam group-hover:text-[#003269]">
                         {description}
                       </p>
-                    </Link>
-                  </div>
-                </article>
+                    </div>
+                  </article>
+                </Link>
               </SwiperSlide>
             );
           })}

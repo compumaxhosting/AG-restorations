@@ -12,7 +12,7 @@ export default function AboutCompany() {
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT IMAGE */}
-        <div className="w-full h-[420px] relative overflow-hidden">
+        <div className="w-full h-105 relative overflow-hidden">
           <Image
             src="/about-roofing.webp"
             alt="AG Restorations roofing contractors installing residential roof in Linden New Jersey"
@@ -39,7 +39,7 @@ export default function AboutCompany() {
             id="about-company-heading"
             className="text-4xl lg:text-5xl font-bold text-[#1b2a41] leading-tight mb-6"
           >
-            About AG Restorations: Your Local Exterior Specialists
+            AG Restorations: Trusted Linden Roofing & Exterior Specialists
           </h2>
 
           {/* Features */}
@@ -62,72 +62,70 @@ export default function AboutCompany() {
 
           {/* Paragraphs */}
           <p className="text-gray-600 leading-relaxed mb-4">
-            When you’re looking for someone to work on your home, you want more
-            than just a contractor—you want a neighbor who knows the area.
-            That’s exactly who we are. Based right here in Linden, New Jersey,
-            AG Restorations is a local team dedicated to keeping homes and
-            businesses throughout Union County safe, dry, and looking their
-            best.
+            Your home is your most significant investment. At AG Restorations,
+            we provide the expert craftsmanship and durable materials necessary
+            to protect it from New Jersey’s unpredictable elements. Based in
+            Linden, New Jersey, our team specializes in high-quality roofing,
+            siding, and gutter services designed to enhance your property’s curb
+            appeal and structural integrity.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-4">
-            We’ve spent years on roofs and ladders across towns like Elizabeth,
-            Rahway, and Westfield. We know how tough the Jersey weather can be,
-            which is why we specialize in high-quality roof installation for
-            residential and commercial properties, along with expert{" "}
-            <Link href="/siding-installation-linden-nj">
-              siding installation
-            </Link>{" "}
-            and reliable gutter services. We only use materials we’d trust on
-            our own homes because, for us, it’s about building a reputation for
-            being honest, reliable, and easy to work with.
+            Whether you are dealing with storm damage or planning a modern
+            exterior upgrade, we offer a seamless, stress-free experience. Our
+            local expertise in Union County ensures that every project meets
+            specific regional building standards and climate demands.
           </p>
 
-          <p className="text-gray-600 leading-relaxed mb-4">
-            <Link href="/" className="text-inherit no-underline">
-              AG Restorations
-            </Link>{" "}
-            offers professional Roof Repair & Replacement, Gutter Installation &
-            Seamless Gutter Systems, Siding Installation & Repair in Linden, New
-            Jersey, for homeowners who want reliable, high-quality exterior
-            care. Our service covers everything from full installations to
-            precision repairs, ensuring your home stays protected. Enjoy peace
-            of mind and better curb appeal with our expert local team.
+          <p className="text-3xl lg:text-4xl font-bold text-[#1b2a41] leading-tight mb-6">
+            Why AG Restorations?
           </p>
 
           {/* FAQ Style */}
           <ul className="text-gray-600 space-y-3 mb-6">
             <li>
-              • <strong>What specific services do you provide?</strong> We
-              handle full roof installations for both homes and businesses,
-              professional siding setups, and complete gutter services to keep
-              water away from your foundation.
+              • <strong>Local Expertise: </strong> Serving Linden, Elizabeth,
+              and Rahway for [X] years.
             </li>
             <li>
-              • <strong>Where do you work?</strong> We’re based in Linden, but
-              we’re out every day serving neighbors in Rahway, Roselle,
-              Elizabeth, and the rest of Union County.
+              • <strong>Certified Quality:</strong> Fully licensed and insured
+              NJ contractors.
+            </li>
+            <li>
+              • <strong>Direct Communication: </strong>: Owner-led project
+              management for total transparency.
             </li>
           </ul>
-
+          <p className="text-3xl lg:text-4xl font-bold text-[#1b2a41] leading-tight mb-6">
+            Linden Service Summary-
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            AG Restorations provides professional roofing, siding, and gutter
+            services for homeowners and businesses in Linden, New Jersey. Our
+            expert team specializes in durable storm repairs and high-quality
+            installations, ensuring long-lasting protection and enhanced curb
+            appeal for properties throughout the Union County region.
+          </p>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            <strong>
+              {" "}
+              What exterior services do you offer in Linden, NJ?{" "}
+            </strong>
+            We provide complete roofing replacements, vinyl siding installation,
+            and seamless gutter repairs tailored to Linden’s local architecture.
+          </p>
           {/* CTA */}
-          <p className="text-gray-600 mb-8">
-            Got a question about your roof, siding, or gutters?{" "}
-            <Link
-              href="/contact"
-              className="text-red-500 font-semibold hover:underline"
-            >
-              Reach out for a free estimate
-            </Link>{" "}
-            — we’re happy to take a look and give you an honest assessment.
+          <p className="text-gray-600 mb-8 font-bold">
+            Ready to protect your home?{" "}
+            
           </p>
 
           {/* Button */}
           <Link
-            href="/aboutus"
+            href="/contact"
             className="inline-block border-2 border-red-500 text-red-500 px-8 py-3 font-semibold tracking-wide hover:bg-red-500 hover:text-white transition"
           >
-            LEARN MORE
+            Schedule Your Free Estimate
           </Link>
         </div>
       </div>
