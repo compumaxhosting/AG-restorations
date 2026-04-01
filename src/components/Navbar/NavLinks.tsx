@@ -109,7 +109,7 @@ export default function NavLinks() {
             onClick={() => setIsOpen(false)}
           >
             <Image
-              src="/Navbar/Logo.png"
+              src="/Navbar/Logo-AG.png"
               alt="AG Restorations Company Logo"
               width={220}
               height={120}

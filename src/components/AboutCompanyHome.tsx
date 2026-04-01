@@ -12,17 +12,14 @@ export default function AboutCompany() {
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         {/* LEFT IMAGE */}
-        <div className="w-full h-105 relative overflow-hidden">
+        <div className="w-full h-[420px] relative overflow-hidden">
           <Image
-            src="/about-roofing.webp" // ✅ convert to webp
+            src="/about-roofing.webp"
             alt="AG Restorations roofing contractors installing residential roof in Linden New Jersey"
             fill
             sizes="(max-width:768px) 100vw, 50vw"
-            quality={70} // ✅ compress
-            loading="lazy" // ✅ below-the-fold
-            decoding="async" // ✅ faster render
-            placeholder="blur"
-            blurDataURL="/blur.jpg" // tiny base64 or small image
+            quality={70}
+            loading="lazy"
             className="object-cover"
           />
         </div>

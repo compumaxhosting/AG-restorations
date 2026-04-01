@@ -23,7 +23,7 @@ export default function Navbar() {
 
   // Prevent layout shift before detection
   if (isMobile === null) {
-    return <div className="h-[80px]" />; // reserve space
+    return <div className="h-20" />; // reserve space
   }
 
   return (
