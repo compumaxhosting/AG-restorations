@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Contact AG Restorations | Free Estimate",
     description:
       "Get in touch with AG Restorations for roofing, siding, and gutter services in Linden NJ.",
-    url: "https://www.agrestorations.com/contact",
+    url: "https://www.agrestorations.com/contact-us",
     siteName: "AG Restorations",
     images: [
       {

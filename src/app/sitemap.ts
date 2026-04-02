@@ -3,42 +3,62 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://agrestorations.com";
 
-  return [
+  const routes: {
+    path: string;
+    priority: number;
+    changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+  }[] = [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      path: "",
       priority: 1,
-    },
-    {
-      url: `${baseUrl}/aboutus`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/projects`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.9,
     },
     {
-      url: `${baseUrl}/contact-us`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
+      path: "/aboutus",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/services",
+      priority: 0.9,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/projects",
+      priority: 0.8,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/blog",
+      priority: 0.9,
+      changeFrequency: "weekly",
+    },
+    {
+      path: "/contact-us",
       priority: 0.7,
+      changeFrequency: "yearly",
+    },
+    {
+      path: "/roofing-services-linden-nj",
+      priority: 0.9,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/siding-installation-linden-nj",
+      priority: 0.9,
+      changeFrequency: "monthly",
+    },
+    {
+      path: "/gutter-installation-linden-nj",
+      priority: 0.9,
+      changeFrequency: "monthly",
     },
   ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified: new Date(),
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }));
 }
