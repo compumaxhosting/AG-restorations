@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 60,
+    formats: ["image/avif", "image/webp"], // 🚀 HUGE win (smaller images)
+    minimumCacheTTL: 60, // cache images
   },
 
   async redirects() {
@@ -46,18 +46,6 @@ const nextConfig: NextConfig = {
       {
         source: "/waterproofing-contractors-NY.html",
         destination: "/waterproofing-contractors-NY",
-        permanent: true,
-      },
-
-      // ✅ ADD THESE TWO
-      {
-        source: "/clean-roof",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/metal-roof-paint",
-        destination: "/",
         permanent: true,
       },
     ];
