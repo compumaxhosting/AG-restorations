@@ -2,43 +2,42 @@
 
 import React, { useEffect, useState, useMemo } from "react";
 import dynamic from "next/dynamic";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-// 🚀 Lazy load Embla ONLY after mount
+// 🚀 Lazy load carousel AFTER LCP
 const EmblaCarousel = dynamic(() => import("./HeroSliderEmbla"), {
   ssr: false,
 });
 
-const slides = [
+const slidesData = [
   {
     id: 1,
     title: "Roofing Contractor in Linden NJ – Roof Repair & Replacement",
     description:
-      "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, and new roof installation for residential and commercial properties.",
+      "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair and replacement.",
     buttonText: "View Roofing Services",
     image: "/Services-Slider/services1.webp",
-    alt: "Roof repair and roof installation by AG Restorations roofing contractor in Linden New Jersey",
+    alt: "Roof repair and roof installation by AG Restorations",
   },
   {
     id: 2,
     title: "Professional Siding & Gutter Installation in Linden NJ",
     description:
-      "Protect your home with expert siding installation and seamless gutter systems from AG Restorations.",
+      "Protect your home with expert siding installation and seamless gutter systems.",
     buttonText: "Our Exterior Services",
     image: "/Services-Slider/services5.webp",
-    alt: "Siding installation and seamless gutter system installation",
+    alt: "Siding and gutter installation",
   },
   {
     id: 3,
-    title: "Roofing, Siding & Gutters With 100% Financing Available",
+    title: "Roofing, Siding & Gutters With 100% Financing",
     description:
-      "AG Restorations offers 100% financing options so homeowners can complete improvements without upfront stress.",
+      "AG Restorations offers financing options so homeowners can improve without stress.",
     buttonText: "Our Roofing Services",
     image: "/Services-Slider/masonry.webp",
-    alt: "New roof installation and exterior home improvement project",
+    alt: "Exterior home improvement project",
   },
 ];
 
@@ -50,28 +49,29 @@ export default function HeroSection() {
     setMounted(true);
   }, []);
 
-  const currentSlide = useMemo(() => slides[index], [index]);
+  const slides = useMemo(() => slidesData, []);
+  const currentSlide = slides[index];
 
   return (
     <section className="relative w-full overflow-hidden bg-black">
-      {/* 🚀 STEP 1: STATIC HERO (FAST LCP) */}
+      {/* 🚀 FAST LCP STATIC HERO */}
       {!mounted && (
         <div className="relative w-full max-sm:h-[70vh] sm:h-screen">
           <Image
-            src={slides[0].image}
+            src="/hero.webp" // ✅ dedicated optimized hero image
             alt={slides[0].alt}
             fill
             priority
-            fetchPriority="high"
-            quality={60}
+            quality={55}
             sizes="100vw"
+            placeholder="empty"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black/40 z-10" />
         </div>
       )}
 
-      {/* 🚀 STEP 2: LOAD CAROUSEL AFTER */}
+      {/* 🚀 LOAD CAROUSEL AFTER */}
       {mounted && <EmblaCarousel slides={slides} setIndex={setIndex} />}
 
       {/* TEXT */}

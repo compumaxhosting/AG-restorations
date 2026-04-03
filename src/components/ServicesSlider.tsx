@@ -3,7 +3,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/autoplay";
 
 import { useEffect, useRef, useState } from "react";
 import type { Swiper as SwiperType } from "swiper";
@@ -20,7 +19,7 @@ const slides = [
   {
     title: "Roof Repair & Roof Replacement in Linden NJ",
     description:
-      "AG Restorations provides professional roof repair, roof replacement, and new roof installation for homes and commercial properties in Linden, New Jersey. Our experienced roofing contractors deliver durable roofing systems designed to protect your property for years.",
+      "AG Restorations provides professional roof repair, roof replacement, and new roof installation for homes and commercial properties in Linden, New Jersey.",
     image: "/Services-Slider/services1.webp",
     link: "/roofing-services-linden-nj",
     alt: "Roof repair and roof replacement services by AG Restorations roofing contractor in Linden New Jersey",
@@ -28,7 +27,7 @@ const slides = [
   {
     title: "Siding Installation & Siding Repair Services",
     description:
-      "Improve your home's protection and curb appeal with professional siding installation and siding repair in Linden NJ. AG Restorations installs high-quality siding systems that protect your property from weather damage while enhancing exterior appearance.",
+      "Improve your home's protection and curb appeal with professional siding installation and siding repair in Linden NJ.",
     image: "/Services-Slider/masonry.webp",
     link: "/siding-installation-linden-nj",
     alt: "Home siding installation project completed by AG Restorations siding contractor in Linden New Jersey",
@@ -36,7 +35,7 @@ const slides = [
   {
     title: "Gutter Installation & Seamless Gutter Systems",
     description:
-      "Protect your home from water damage with professional gutter installation and gutter repair services in Linden NJ. AG Restorations installs seamless gutters and drainage systems that safely direct rainwater away from your roof and foundation.",
+      "Protect your home from water damage with professional gutter installation and gutter repair services in Linden NJ.",
     image: "/Services-Slider/services5.webp",
     link: "/gutter-installation-linden-nj",
     alt: "Seamless gutter installation and gutter repair services in Linden New Jersey",
@@ -61,11 +60,7 @@ export default function ServicesSlider({ swiperRef }: Props) {
 
     swiper.autoplay?.stop();
 
-    if (direction === "next") {
-      swiper.slideNext();
-    } else {
-      swiper.slidePrev();
-    }
+    direction === "next" ? swiper.slideNext() : swiper.slidePrev();
 
     if (autoplayTimeout.current) {
       clearTimeout(autoplayTimeout.current);
@@ -80,7 +75,7 @@ export default function ServicesSlider({ swiperRef }: Props) {
     <div className="flex flex-col items-center px-4 sm:px-6 mb-5">
       <div className="w-10/12 overflow-hidden">
         <Swiper
-          loop
+          loop={false} // ✅ prevents duplicate image loads
           speed={1000}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           allowTouchMove={false}
@@ -107,7 +102,6 @@ export default function ServicesSlider({ swiperRef }: Props) {
 
             return (
               <SwiperSlide key={i}>
-                {/* ✅ FULL CARD CLICKABLE */}
                 <Link
                   href={link}
                   aria-label={`Go to ${title}`}
@@ -120,10 +114,10 @@ export default function ServicesSlider({ swiperRef }: Props) {
                         src={image}
                         alt={alt}
                         fill
-                        priority={i === 0}
-                        fetchPriority={i === 0 ? "high" : "auto"}
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        quality={60}
+                        priority={i === 0} // ✅ only first image priority
+                        sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw"
+                        quality={50} // ✅ reduced size
+                        placeholder="empty"
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
                       />
                     </div>

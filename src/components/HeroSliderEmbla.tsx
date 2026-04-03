@@ -55,7 +55,8 @@ export default function HeroSliderEmbla({
                 fill
                 sizes="100vw"
                 loading="lazy"
-                quality={40}
+                quality={35} // ✅ more compression
+                placeholder="empty"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black/40 z-10" />

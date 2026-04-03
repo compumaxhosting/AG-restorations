@@ -150,7 +150,7 @@ export default function Footer() {
             </a>
 
             <p className="text-white/80">
-              Serving Union County and surrounding NJ communities.
+              Serving Union County and surrounding New Jersey communities.
             </p>
           </div>
 
