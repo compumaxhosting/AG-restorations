@@ -1,11 +1,16 @@
 "use client";
 
-import React, { useCallback, useEffect, useState, useMemo } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useEffect, useState, useMemo } from "react";
+import dynamic from "next/dynamic";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+
+// 🚀 Lazy load Embla ONLY after mount
+const EmblaCarousel = dynamic(() => import("./HeroSliderEmbla"), {
+  ssr: false,
+});
 
 const slides = [
   {
@@ -38,57 +43,36 @@ const slides = [
 ];
 
 export default function HeroSection() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const currentSlide = useMemo(() => slides[selectedIndex], [selectedIndex]);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+  const [mounted, setMounted] = useState(false);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", onSelect);
-    onSelect();
-  }, [emblaApi, onSelect]);
+    setMounted(true);
+  }, []);
 
-  useEffect(() => {
-    if (!emblaApi) return;
-    const id = setInterval(() => emblaApi.scrollNext(), 6000);
-    return () => clearInterval(id);
-  }, [emblaApi]);
+  const currentSlide = useMemo(() => slides[index], [index]);
 
   return (
     <section className="relative w-full overflow-hidden bg-black">
-      {/* ✅ FIXED EMBLA STRUCTURE */}
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex">
-          {slides.map((slide, index) => (
-            <div
-              key={slide.id}
-              className="relative min-w-full max-sm:h-[70vh] sm:h-screen"
-            >
-              <Image
-                src={slide.image} // ✅ correct image per slide
-                alt={slide.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, 1200px"
-                priority={index === 0} // only first slide
-                loading={index === 0 ? "eager" : "lazy"}
-                quality={40}
-                className="object-cover"
-              />
-
-              <div className="absolute inset-0 bg-black/40 z-10" />
-            </div>
-          ))}
+      {/* 🚀 STEP 1: STATIC HERO (FAST LCP) */}
+      {!mounted && (
+        <div className="relative w-full max-sm:h-[70vh] sm:h-screen">
+          <Image
+            src={slides[0].image}
+            alt={slides[0].alt}
+            fill
+            priority
+            fetchPriority="high"
+            quality={60}
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40 z-10" />
         </div>
-      </div>
+      )}
+
+      {/* 🚀 STEP 2: LOAD CAROUSEL AFTER */}
+      {mounted && <EmblaCarousel slides={slides} setIndex={setIndex} />}
 
       {/* TEXT */}
       <div className="absolute inset-0 z-20 flex flex-col justify-center items-start max-sm:px-4 md:px-20 text-white">
@@ -111,21 +95,6 @@ export default function HeroSection() {
           </Link>
         </div>
       </div>
-
-      {/* ARROWS */}
-      <button
-        onClick={scrollPrev}
-        className="hidden md:block absolute left-5 top-1/2 -translate-y-1/2 z-30 bg-black/40 p-4 rounded-full"
-      >
-        <ChevronLeft className="text-white" />
-      </button>
-
-      <button
-        onClick={scrollNext}
-        className="hidden md:block absolute right-5 top-1/2 -translate-y-1/2 z-30 bg-black/40 p-4 rounded-full"
-      >
-        <ChevronRight className="text-white" />
-      </button>
     </section>
   );
 }

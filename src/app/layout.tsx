@@ -4,11 +4,13 @@ import { Inter, Be_Vietnam_Pro } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
+// 🚀 Optimized fonts
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
 });
 
 const bevietnam = Be_Vietnam_Pro({
@@ -16,6 +18,7 @@ const bevietnam = Be_Vietnam_Pro({
   weight: ["400", "500", "700"],
   variable: "--font-bevietnam",
   display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -75,8 +78,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
-      <body className={`${inter.variable} ${bevietnam.variable}`}>
-        {/* GTM noscript (keep for SEO/tracking fallback) */}
+      <body className="font-sans">
+        {/* ✅ GTM fallback */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TCSLWCWZ"
@@ -88,24 +91,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         {children}
 
-        {/* 🚀 Ultra-delayed GTM (better than lazyOnload) */}
-        <Script id="gtm-script" strategy="afterInteractive">
+        {/* 🚀 Optimized GTM (clean + delayed) */}
+        <Script id="gtm-script" strategy="lazyOnload">
           {`
-            window.addEventListener('load', function() {
-              setTimeout(function(){
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','GTM-TCSLWCWZ');
-              }, 3000); // delay 3s
-            });
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-TCSLWCWZ');
           `}
         </Script>
 
-        {/* ❌ REMOVE separate gtag.js (GTM already handles it) */}
-
-        {/* ✅ Schema (lightweight, keep it) */}
+        {/* ✅ Lightweight schema */}
         <Script
           id="schema"
           type="application/ld+json"
