@@ -4,32 +4,68 @@ import Navbar from "@/components/Navbar/Navbar";
 import StickyNavbar from "@/components/StickyNavbar";
 import ContactBar from "@/components/ContactBar";
 
-// ✅ Remove ssr:false
-const OurServicesPage = dynamic(() => import("@/components/OurServicesPage"));
-const AboutCompanyHome = dynamic(() => import("@/components/AboutCompanyHome"));
-const FinancingSection = dynamic(() => import("@/components/FinancingSection"));
-const Certificate = dynamic(() => import("@/components/Certificate"));
-const VideoSection = dynamic(() => import("@/components/VideoSection"));
-const AreasWeServe = dynamic(() => import("@/components/AreasWeServe"));
+// 👇 ABOVE THE FOLD (keep normal)
+
+// 👇 BELOW THE FOLD (lazy load properly)
+const OurServicesPage = dynamic(() => import("@/components/OurServicesPage"), {
+  loading: () => null,
+});
+
+const AboutCompanyHome = dynamic(
+  () => import("@/components/AboutCompanyHome"),
+  {
+    loading: () => null,
+  },
+);
+
+const FinancingSection = dynamic(
+  () => import("@/components/FinancingSection"),
+  {
+    loading: () => null,
+  },
+);
+
+const Certificate = dynamic(() => import("@/components/Certificate"), {
+  loading: () => null,
+});
+
+const VideoSection = dynamic(() => import("@/components/VideoSection"), {
+  loading: () => null,
+});
+
+const AreasWeServe = dynamic(() => import("@/components/AreasWeServe"), {
+  loading: () => null,
+});
+
 const ServiceAndFaqSection = dynamic(
   () => import("@/components/ServiceAndFaqSection"),
+  { loading: () => null },
 );
+
 const Blog = dynamic(() => import("@/components/Blog"), {
   loading: () => null,
 });
-const FooterTopCTA = dynamic(() => import("@/components/FooterTopCTA"));
-const Footer = dynamic(() => import("@/components/Footer"));
+
+const FooterTopCTA = dynamic(() => import("@/components/FooterTopCTA"), {
+  loading: () => null,
+});
+
+const Footer = dynamic(() => import("@/components/Footer"), {
+  loading: () => null,
+});
 
 export default function Home() {
   const mvalue = [0, 15, 0];
 
   return (
     <>
+      {/* 🚀 ABOVE THE FOLD ONLY */}
       <Navbar />
       <StickyNavbar />
       <ContactBar />
       <HeroSection />
 
+      {/* 🚀 BELOW THE FOLD (lazy hydration) */}
       <OurServicesPage margin={mvalue} />
       <AboutCompanyHome />
       <FinancingSection />
