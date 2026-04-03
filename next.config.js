@@ -1,9 +1,11 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    formats: ["image/avif", "image/webp"], // 🚀 HUGE win (smaller images)
-    minimumCacheTTL: 60, // cache images
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000, // 🚀 better caching (1 year)
+
+    // ✅ FIX your warnings
+    qualities: [40, 60, 70, 75],
   },
 
   async redirects() {
@@ -48,8 +50,19 @@ const nextConfig: NextConfig = {
         destination: "/waterproofing-contractors-NY",
         permanent: true,
       },
+
+      {
+        source: "/clean-roof",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/metal-roof-paint",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
