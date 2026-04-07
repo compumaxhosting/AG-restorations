@@ -12,14 +12,14 @@ export default function GutterInstallationContent() {
         <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-12">
           {/* IMAGE */}
           <div className="w-full h-full">
-            <div className="relative w-full h-full min-h-100 overflow-hidden rounded-lg shadow-lg">
+            <div className="relative w-full h-full min-h-100 overflow-hidden rounded-lg ">
               <Image
                 src="/Gutter Installation.webp" // 👈 your image
                 alt="Gutter installation in Linden NJ"
                 fill
                 sizes="(max-width:768px) 100vw, 50vw"
                 quality={70}
-                className="object-contain bg-white"
+                className="object-contain bg-[#f3f3f3]"
               />
             </div>
           </div>
