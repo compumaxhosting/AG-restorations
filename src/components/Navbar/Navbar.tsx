@@ -18,7 +18,7 @@ export default function Navbar() {
     checkScreen();
     window.addEventListener("resize", checkScreen);
 
-    return () => window.removeEventListener("resize", checkScreen);
+    return () => window.removeEventListener("resize", checkScreen); 
   }, []);
 
   // Prevent layout shift before detection

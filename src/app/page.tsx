@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection";
-import Navbar from "@/components/Navbar/Navbar";
 import StickyNavbar from "@/components/StickyNavbar";
 import ContactBar from "@/components/ContactBar";
+import Headerto from "@/components/Navbar/Headerto";
 
 // 👇 ABOVE THE FOLD (keep normal)
 
@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <>
       {/* 🚀 ABOVE THE FOLD ONLY */}
-      <Navbar />
+      <Headerto />
       <StickyNavbar />
       <ContactBar />
       <HeroSection />

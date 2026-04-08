@@ -62,7 +62,7 @@ export default function HeroSection() {
             alt={slides[0].alt}
             fill
             priority
-            quality={55}
+            quality={40}
             sizes="100vw"
             placeholder="empty"
             className="object-cover"
