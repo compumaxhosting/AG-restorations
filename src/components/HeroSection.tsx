@@ -58,15 +58,17 @@ export default function HeroSection() {
       {!mounted && (
         <div className="relative w-full max-sm:h-[70vh] sm:h-screen">
           <Image
-            src="/hero.webp" // ✅ dedicated optimized hero image
+            src="/hero.webp"
             alt={slides[0].alt}
             fill
             priority
+            fetchPriority="high" // 🔥 ADD THIS
             quality={40}
             sizes="100vw"
             placeholder="empty"
             className="object-cover"
           />
+
           <div className="absolute inset-0 bg-black/40 z-10" />
         </div>
       )}

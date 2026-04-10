@@ -4,13 +4,12 @@ import { Inter, Be_Vietnam_Pro } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-// 🚀 Optimized fonts
+// 🚀 Optimized fonts (no render blocking)
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-inter",
   display: "swap",
-  preload: true,
 });
 
 const bevietnam = Be_Vietnam_Pro({
@@ -18,7 +17,6 @@ const bevietnam = Be_Vietnam_Pro({
   weight: ["400", "500", "700"],
   variable: "--font-bevietnam",
   display: "swap",
-  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -30,59 +28,13 @@ export const metadata: Metadata = {
   },
   description:
     "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services.",
-  keywords: [
-    "roofing contractor linden nj",
-    "roof repair linden nj",
-    "roof replacement linden nj",
-    "roof installation linden nj",
-    "siding contractor linden nj",
-    "siding installation linden nj",
-    "gutter installation linden nj",
-    "union county roofing contractor",
-  ],
-  verification: {
-    google: "q2XHSPZ7u7GImYWMR2Bi8HtkkEr9i4KpLmutYhKZM90",
-    other: {
-      "p:domain_verify": "b89282f6601ede3605e86b787b00fe6d",
-    },
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: "https://agrestorations.com",
-  },
-  openGraph: {
-    title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
-    description:
-      "Professional roofing, siding and gutter services in Linden NJ.",
-    url: "https://agrestorations.com",
-    siteName: "AG Restorations",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "AG Restorations Roofing Services",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Roofing Contractor Linden NJ | AG Restorations",
-    description: "Roof repair, replacement, siding & gutters in Linden NJ.",
-    images: ["/og-image.jpg"],
-  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
-      <body className="font-sans">
-        {/* ✅ GTM fallback */}
+      <body className={`${inter.className}`}>
+        {/* GTM fallback */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-TCSLWCWZ"
@@ -94,7 +46,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         {children}
 
-        {/* 🚀 Optimized GTM (clean + delayed) */}
+        {/* 🚀 Delayed GTM */}
         <Script id="gtm-script" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -105,7 +57,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           `}
         </Script>
 
-        {/* ✅ Lightweight schema */}
+        {/* Schema */}
         <Script
           id="schema"
           type="application/ld+json"
@@ -118,13 +70,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 name: "AG Restorations",
                 url: "https://agrestorations.com",
                 telephone: "+1-973-342-4134",
-                email: "info@agrestorations.com",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Linden",
-                  addressRegion: "NJ",
-                  addressCountry: "US",
-                },
               },
             ]),
           }}

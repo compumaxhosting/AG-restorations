@@ -42,7 +42,7 @@ export default function VideoSection({ margin }: Props) {
             src="/Services-Slider/services1.webp"
             alt="Professional roofing installation project by AG Restorations in Linden New Jersey"
             fill
-            priority
+            quality={40}
             sizes="(max-width:768px) 100vw, 40vw"
             className="object-cover"
           />

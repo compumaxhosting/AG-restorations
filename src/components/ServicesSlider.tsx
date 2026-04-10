@@ -114,9 +114,8 @@ export default function ServicesSlider({ swiperRef }: Props) {
                         src={image}
                         alt={alt}
                         fill
-                        priority={i === 0} // ✅ only first image priority
                         sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw"
-                        quality={50} // ✅ reduced size
+                        quality={40}
                         placeholder="empty"
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
                       />
