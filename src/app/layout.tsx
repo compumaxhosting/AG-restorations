@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
-      <body className={`${inter.className}`}>
+      <body className={`${inter.className} ${bevietnam.className}`}>
         {/* GTM fallback */}
         <noscript>
           <iframe
