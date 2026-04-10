@@ -61,7 +61,7 @@ export default function VideoSection({ margin }: Props) {
               {/* Small Heading */}
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-6 h-px bg-white" />
-                <h2 className="text-sm uppercase font-semibold">
+                <h2 className="text-sm sm:text-md md:text-lg uppercase font-semibold">
                   Our Roofing Services
                 </h2>
               </div>

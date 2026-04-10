@@ -29,7 +29,7 @@ export default function AboutCompany() {
           {/* Small Heading */}
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-0.5 bg-red-500"></div>
-            <span className="text-sm font-semibold text-red-500 uppercase tracking-wide">
+            <span className="text-sm sm:text-md md:text-lg font-semibold text-red-500 uppercase tracking-wide">
               About AG Restorations
             </span>
           </div>
@@ -101,10 +101,7 @@ export default function AboutCompany() {
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">
             AG Restorations provides professional{" "}
-            <Link
-              href="/roofing-services-linden-nj"
-              className="text-inherit "
-            >
+            <Link href="/roofing-services-linden-nj" className="text-inherit ">
               roofing
             </Link>
             , siding, and gutter services for homeowners and businesses in

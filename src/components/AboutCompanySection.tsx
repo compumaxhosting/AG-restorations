@@ -120,7 +120,7 @@ export default function AboutCompanySection() {
             href="/aboutus"
             className="inline-block border-2 border-red-500 text-red-500 px-8 py-3 font-semibold tracking-wide hover:bg-red-500 hover:text-white transition"
           >
-            LEARN MORE
+            Learn more about AG Restorations roofing services
           </Link>
         </div>
       </div>

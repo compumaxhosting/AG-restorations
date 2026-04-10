@@ -135,32 +135,32 @@ export default function NavLinks() {
           </nav>
 
           <div className="mt-auto flex justify-center gap-4 py-6">
-            <a
+            <Link
               href="https://www.facebook.com/share/18KcQSnH8d/"
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaFacebookF className="text-white text-lg" />
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="https://www.instagram.com/ag.restorationslinden"
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaInstagram className="text-white text-lg" />
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="https://www.tiktok.com/@ag.roofing.siding"
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaTiktok className="text-white text-lg" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

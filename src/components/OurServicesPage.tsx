@@ -49,7 +49,7 @@ export default function OurServicesPage({ margin }: Props) {
               aria-hidden="true"
             >
               <div className="w-6 h-px bg-[#e63a27]" />
-              <span className="text-xs sm:text-sm md:text-base font-bold text-[#e63a27] uppercase font-inter">
+              <span className="text-sm sm:text-md md:text-lg font-bold text-[#e63a27] uppercase font-inter">
                 Our Services
               </span>
               <div className="md:hidden w-6 h-px bg-[#e63a27]" />
