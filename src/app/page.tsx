@@ -42,9 +42,6 @@ const ServiceAndFaqSection = dynamic(
   { loading: () => null },
 );
 
-const Blog = dynamic(() => import("@/components/Blog"), {
-  loading: () => null,
-});
 
 const FooterTopCTA = dynamic(() => import("@/components/FooterTopCTA"), {
   loading: () => null,
@@ -59,7 +56,6 @@ export default function Home() {
 
   return (
     <>
-      {/* 🚀 ABOVE THE FOLD ONLY */}
       <Headerto />
       <StickyNavbar />
       <ContactBar />
@@ -73,7 +69,6 @@ export default function Home() {
       <VideoSection margin={mvalue} />
       <AreasWeServe />
       <ServiceAndFaqSection />
-      <Blog />
       <FooterTopCTA />
       <Footer />
     </>

@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
-  title: "Gutter Installation Linden, NJ | Seamless Gutter Installers",
+  title:
+    "Gutter Installation in Linden NJ | Seamless Gutters & Repair | AG Restorations",
 
   description:
-    "Top-rated gutter installation in Linden, NJ. Specialized in seamless gutters, downspout replacement, and residential drainage. Get a free estimate today!",
+    "Professional gutter installation in Linden NJ by AG Restorations. We offer seamless gutter installation, gutter repair, and replacement services to protect your home from water damage. Serving residential and commercial properties across Union County NJ. Get a free estimate today.",
 
   keywords: [
     "gutter installation Linden NJ",
-    "gutter installer near me",
-    "seamless gutter installation",
-    "professional gutter installation Linden",
-    "affordable gutter installers",
+    "seamless gutters Linden NJ",
+    "gutter repair Linden NJ",
+    "gutter replacement NJ",
+    "gutter contractor Linden NJ",
+    "rain gutter installation NJ",
+    "gutter services Union County NJ",
+    "residential gutter installation NJ",
+    "commercial gutters NJ",
   ],
 
   authors: [{ name: "AG Restorations" }],
@@ -29,16 +33,18 @@ export const metadata: Metadata = {
     canonical: "https://www.agrestorations.com/gutter-installation-linden-nj",
   },
 
+  themeColor: "#ffffff",
+
   openGraph: {
     type: "website",
-    title: "Best Gutter Installation Company in Linden, NJ | AG Restorations",
+    title: "Gutter Installation in Linden NJ | AG Restorations",
     description:
-      "Protect your foundation with expert seamless gutter installation and replacement services. Serving Linden and all of Union County.",
+      "Reliable gutter installation and repair in Linden NJ. Seamless gutters designed to protect your home from leaks, water damage, and foundation issues.",
     url: "https://www.agrestorations.com/gutter-installation-linden-nj",
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/images/gutter-installation-linden.jpg",
+        url: "https://www.agrestorations.com/gutter-installation.webp",
         width: 1200,
         height: 630,
         alt: "Gutter Installation Linden NJ",
@@ -48,15 +54,12 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Seamless Gutter Installation Experts in Linden, NJ",
+    title: "Gutter Installation Linden NJ | AG Restorations",
     description:
-      "Affordable gutter installation and downspout services. Protect your home from water damage today.",
-    images: [
-      "https://www.agrestorations.com/images/gutter-installation-linden.jpg",
-    ],
+      "Expert seamless gutter installation and repair in Linden NJ. Protect your home with trusted local contractors.",
+    images: ["https://www.agrestorations.com/Gutter Installation.webp"],
+    site: "@agrestorations",
   },
-
-  referrer: "strict-origin-when-cross-origin",
 };
 
 export default function GutterLayout({
@@ -68,59 +71,7 @@ export default function GutterLayout({
     <>
       {children}
 
-      {/* SCHEMA */}
-      <Script
-        id="gutter-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HomeAndConstructionBusiness",
-            name: "AG Restorations",
-            url: "https://www.agrestorations.com/gutter-installation-linden-nj",
-            telephone: "+1-973-342-4134",
-
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "117 Grant St",
-              addressLocality: "Linden",
-              addressRegion: "NJ",
-              postalCode: "07036",
-              addressCountry: "US",
-            },
-
-            geo: {
-              "@type": "GeoCoordinates",
-              latitude: 40.6385,
-              longitude: -74.2443,
-            },
-
-            description:
-              "Expert seamless gutter installation and replacement services in Linden, NJ. We specialize in residential gutter systems and downspout installation.",
-
-            image: "https://www.agrestorations.com/logo.png",
-
-            priceRange: "$$",
-
-            openingHoursSpecification: [
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday",
-                ],
-                opens: "08:00",
-                closes: "18:00",
-              },
-            ],
-          }),
-        }}
-      />
+     
     </>
   );
 }

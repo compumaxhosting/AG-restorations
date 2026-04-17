@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
-import type { ReactNode } from "react";
-import { Inter, Be_Vietnam_Pro } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
+import { Inter, Be_Vietnam_Pro } from "next/font/google";
+import type { Metadata } from "next";
 
-// 🚀 Optimized fonts (no render blocking)
+// ✅ Fonts
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -19,59 +17,115 @@ const bevietnam = Be_Vietnam_Pro({
   display: "swap",
 });
 
+// ✅ SEO Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agrestorations.com"),
-  title: {
-    default:
-      "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
-    template: "%s | AG Restorations",
-  },
+  title: "Roofing Contractor Linden NJ | Roof Repair & Replacement Experts",
+
   description:
-    "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services.",
+    "Trusted roofing contractor in Linden NJ offering roof repair, replacement, siding, and gutter installation. Serving Union County NJ with reliable residential & commercial roofing services. Get a free estimate today.",
+
+  keywords: [
+    "roofing contractor Linden NJ",
+    "roof repair Linden NJ",
+    "roof replacement Linden NJ",
+    "roofing company Union County NJ",
+    "emergency roof repair NJ",
+    "flat roof repair Linden NJ",
+    "siding installation Linden NJ",
+    "gutter installation Linden NJ",
+    "seamless gutters NJ",
+  ],
+
+  authors: [{ name: "AG Restorations" }],
+
+  metadataBase: new URL("https://www.agrestorations.com"),
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    type: "website",
+    title: "Roofing Contractor Linden NJ | Roof Repair & Replacement Experts",
+    description:
+      "Professional roofing, siding, and gutter services in Linden NJ. Reliable, affordable, and trusted across Union County.",
+    url: "https://www.agrestorations.com/",
+    siteName: "AG Restorations",
+    images: [
+      {
+        url: "https://www.agrestorations.com/about-roofing.webp",
+        width: 1200,
+        height: 630,
+        alt: "AG Restorations Roofing Services",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Roofing Contractor Linden NJ | Roof Repair Experts",
+    description:
+      "Need roof repair or replacement in Linden NJ? Contact trusted local roofing experts today.",
+    images: ["https://www.agrestorations.com/about-roofing.webp"],
+    site: "@yourhandle",
+  },
+
+  referrer: "strict-origin-when-cross-origin",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+// ✅ Structured Data (Schema)
+const jsonLdSchema = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "AG Restorations",
+  url: "https://www.agrestorations.com/",
+  telephone: "+1 973 342 4134",
+  email: "info@agrestorations.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "837 Kennedy Blvd",
+    addressLocality: "Bayonne",
+    addressRegion: "NJ",
+    postalCode: "07002",
+    addressCountry: "US",
+  },
+  areaServed: [
+    "Linden, NJ",
+    "Elizabeth, NJ",
+    "Plainfield, NJ",
+    "Rahway, NJ",
+    "Westfield, NJ",
+    "Fanwood, NJ",
+    "Garwood, NJ",
+    "Kenilworth, NJ",
+    "Mountainside, NJ",
+    "New Providence, NJ",
+    "Roselle, NJ",
+    "Roselle Park, NJ",
+    "Union County, New Jersey",
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
-      <body className={`${inter.className} ${bevietnam.className}`}>
-        {/* GTM fallback */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TCSLWCWZ"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
-
+      <body>
         {children}
 
-        {/* 🚀 Delayed GTM */}
-        <Script id="gtm-script" strategy="lazyOnload">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-TCSLWCWZ');
-          `}
-        </Script>
-
-        {/* Schema */}
-        <Script
-          id="schema"
+        {/* ✅ JSON-LD Schema (non-blocking, best placement) */}
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "RoofingContractor",
-                name: "AG Restorations",
-                url: "https://agrestorations.com",
-                telephone: "+1-973-342-4134",
-              },
-            ]),
+            __html: JSON.stringify(jsonLdSchema),
           }}
         />
       </body>

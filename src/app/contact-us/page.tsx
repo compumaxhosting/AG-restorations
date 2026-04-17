@@ -3,7 +3,7 @@ import ContactBar from "@/components/ContactBar";
 import FinancingSection from "@/components/FinancingSection";
 import Footer from "@/components/Footer";
 import FooterTopCTA from "@/components/FooterTopCTA";
-import Navbar from "@/components/Navbar/Navbar";
+import Headerto from "@/components/Navbar/Headerto";
 import ServiceAndFaqSection from "@/components/ServiceAndFaqSection";
 import StickyNavbar from "@/components/StickyNavbar";
 import React from "react";
@@ -11,7 +11,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <Navbar />
+      <Headerto />
       <StickyNavbar />
       <ContactBar />
       <ServiceAndFaqSection />

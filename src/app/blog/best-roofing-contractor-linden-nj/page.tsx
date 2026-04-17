@@ -1,5 +1,5 @@
 import BackToTop from "@/components/BackToTop";
-import Blog from "@/components/Blog";
+import BlogLayout from "@/components/BlogLayout";
 import ContactBar from "@/components/ContactBar";
 import FinancingSection from "@/components/FinancingSection";
 import Footer from "@/components/Footer";
@@ -13,7 +13,7 @@ const page = () => {
       <Headerto />
       <StickyNavbar />
       <ContactBar />
-      <Blog />
+      <BlogLayout />
       <FinancingSection />
       <FooterTopCTA />
       <Footer />

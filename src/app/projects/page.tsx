@@ -4,13 +4,14 @@ import FinancingSection from "@/components/FinancingSection";
 import Footer from "@/components/Footer";
 import FooterTopCTA from "@/components/FooterTopCTA";
 import Gallery from "@/components/Gallery";
+import Headerto from "@/components/Navbar/Headerto";
 import Navbar from "@/components/Navbar/Navbar";
 import StickyNavbar from "@/components/StickyNavbar";
 
 const page = () => {
   return (
     <>
-      <Navbar />
+      <Headerto />
       <StickyNavbar />
       <ContactBar />
    <Gallery />

@@ -8,6 +8,7 @@ import { SiTiktok } from "react-icons/si";
 import Link from "next/link";
 
 /* ================= CONSTANTS ================= */
+
 const navLinks = [
   { label: "HOME", path: "/" },
   { label: "ABOUT US", path: "/aboutus" },
@@ -17,14 +18,30 @@ const navLinks = [
   { label: "CONTACT US", path: "/contact-us" },
 ];
 
+const services = [
+  {
+    label: "Roofing",
+    path: "/roofing-services-linden-nj",
+  },
+  {
+    label: "Siding",
+    path: "/siding-installation-linden-nj",
+  },
+  {
+    label: "Gutter",
+    path: "/gutter-installation-linden-nj",
+  },
+];
+
 export default function Headerto() {
   const [open, setOpen] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(false);
 
   const openMenu = useCallback(() => setOpen(true), []);
   const closeMenu = useCallback(() => setOpen(false), []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       {/* ================= MOBILE HEADER ================= */}
       <div className="flex md:hidden items-center justify-between h-36 px-4 bg-[#e63a27]">
         <Image
@@ -36,7 +53,7 @@ export default function Headerto() {
           priority
         />
 
-        <button onClick={openMenu} aria-label="Open menu">
+        <button onClick={openMenu}>
           <Menu size={32} className="text-white" />
         </button>
       </div>
@@ -61,7 +78,6 @@ export default function Headerto() {
       {/* ================= TOP BAR ================= */}
       <div className="hidden md:flex h-11 bg-[#1f2330] text-white text-[13px] pl-[clamp(260px,35vw,520px)]">
         <div className="max-w-300 mx-auto flex justify-end items-center w-full px-4 gap-24">
-          {/* LEFT */}
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <Phone size={22} className="text-[#e5391c]" />
@@ -76,7 +92,6 @@ export default function Headerto() {
             </div>
           </div>
 
-          {/* RIGHT */}
           <div className="flex items-center gap-5">
             <button className="bg-black px-3 py-1.5 rounded text-xs">
               Translate
@@ -100,11 +115,37 @@ export default function Headerto() {
         <div className="flex items-center h-23">
           <div className="max-w-300 mx-auto flex justify-end items-center w-full px-2 lg:px-8">
             <nav className="hidden md:flex gap-8 xl:gap-12 text-[14px] font-semibold text-[#1f2d3d]">
-              {navLinks.map((item) => (
-                <Link key={item.path} href={item.path}>
-                  {item.label}
-                </Link>
-              ))}
+              {navLinks.map((item) =>
+                item.label === "SERVICES" ? (
+                  <div key={item.path} className="relative group">
+                    {/* CLICK → GO TO /services */}
+                    <Link
+                      href="/services"
+                      className="flex items-center gap-1 cursor-pointer"
+                    >
+                      {item.label}
+                      <span className="text-xs">▼</span>
+                    </Link>
+
+                    {/* HOVER DROPDOWN */}
+                    <div className="absolute left-0 top-full mt-2 w-28 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999]">
+                      {services.map((service) => (
+                        <Link
+                          key={service.path}
+                          href={service.path}
+                          className="block px-4 py-3 hover:bg-gray-100 text-sm"
+                        >
+                          {service.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link key={item.path} href={item.path}>
+                    {item.label}
+                  </Link>
+                ),
+              )}
             </nav>
 
             <button className="hidden md:block bg-[#e5391c] text-white mx-4 xl:mx-7 px-4 h-23 font-semibold text-[14px] whitespace-nowrap">
@@ -120,40 +161,58 @@ export default function Headerto() {
           open ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        {/* OVERLAY */}
         <div
           className="absolute inset-0 bg-black/60 backdrop-blur-sm"
           onClick={closeMenu}
         />
 
-        {/* SIDEBAR */}
         <aside
-          className={`absolute top-0 right-0 w-[85%] max-w-80 h-full bg-black text-white transform transition-transform duration-300 ease-in-out ${
+          className={`absolute top-0 right-0 w-[85%] max-w-80 h-full bg-black text-white transform transition-transform duration-300 ${
             open ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          {/* CLOSE */}
           <div className="flex justify-end p-4">
-            <button onClick={closeMenu} aria-label="Close menu">
+            <button onClick={closeMenu}>
               <X size={26} />
             </button>
           </div>
 
-          {/* LOGO */}
           <div className="relative w-full h-20 mb-6 px-6">
             <Image
               src="/logo.avif"
-              alt="AG Restorations Logo"
+              alt="Logo"
               fill
               className="object-contain"
             />
           </div>
 
-          {/* MENU + SOCIAL */}
-          <div className="flex flex-col h-[calc(100%-140px)]">
-            {/* LINKS */}
-            <div>
-              {navLinks.map((item) => (
+          <div>
+            {navLinks.map((item) =>
+              item.label === "SERVICES" ? (
+                <div key={item.path}>
+                  <button
+                    onClick={() => setMobileDropdown(!mobileDropdown)}
+                    className="block w-full text-left border-t border-gray-700 px-6 py-4 text-lg"
+                  >
+                    {item.label} <span className="text-xs ml-1">▼</span>
+                  </button>
+
+                  {mobileDropdown && (
+                    <div className="bg-black">
+                      {services.map((service) => (
+                        <Link
+                          key={service.path}
+                          href={service.path}
+                          onClick={closeMenu}
+                          className="block px-8 py-3 text-sm border-t border-gray-800"
+                        >
+                          {service.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
                 <Link
                   key={item.path}
                   href={item.path}
@@ -162,41 +221,22 @@ export default function Headerto() {
                 >
                   {item.label}
                 </Link>
-              ))}
-            </div>
-
-            {/* SOCIAL */}
-            <div className="mt-auto px-6 py-6 flex justify-center gap-4 border-t border-gray-700">
-              <FaFacebookF className="social-icon" />
-              <FaInstagram className="social-icon" />
-              <SiTiktok className="social-icon" />
-            </div>
+              ),
+            )}
           </div>
         </aside>
       </div>
 
-      {/* ================= REUSABLE STYLES ================= */}
+      {/* ================= STYLES ================= */}
       <style jsx>{`
         .icon {
           cursor: pointer;
           color: #e5391c;
-          transition: 0.2s;
-        }
-        .icon:hover {
-          color: #ef4444;
         }
         .divider {
           height: 16px;
           width: 1px;
           background: rgba(255, 255, 255, 0.3);
-        }
-        .social-icon {
-          font-size: 24px;
-          cursor: pointer;
-          transition: transform 0.2s;
-        }
-        .social-icon:hover {
-          transform: scale(1.1);
         }
       `}</style>
     </div>

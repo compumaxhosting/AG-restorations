@@ -19,7 +19,7 @@ export default function Blog() {
 
   return (
     <section
-      className="mx-2 md:m-0 shadow-xl bg-[#f9f9f9] px-4 sm:px-6"
+      className="mx-2 md:m-0 shadow-xl bg-[#f9f9f9] pb-8 px-4 sm:px-6"
       aria-labelledby="blog-section-title"
     >
       {/* ✅ FIX: HARD LOCK HEIGHT */}

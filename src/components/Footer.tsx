@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa6";
+import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import BackToTop from "./BackToTop";
-import { ChevronRight } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -37,13 +36,6 @@ export default function Footer() {
             <p className="font-semibold">Business Hours</p>
             <p className="text-white/80">Mon - Sat: 8:00 AM – 6:00 PM</p>
           </div>
-
-          <Link
-            href="/aboutus underline"
-            className="inline-block mt-6 font-semiboldtransition-colors duration-300"
-          >
-            Learn more about AG Restorations roofing services<ChevronRight className="text-white inline" />
-          </Link>
         </div>
 
         {/* Quick Links */}
@@ -188,6 +180,15 @@ export default function Footer() {
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 <FaTiktok className="text-white text-lg" />
+              </Link>
+              <Link
+                href="https://x.com/AGrestorationss"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="AG Restorations TikTok"
+                className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
+              >
+                <FaXTwitter className="text-white text-lg" />
               </Link>
             </div>
           </div>

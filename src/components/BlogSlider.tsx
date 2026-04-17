@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -17,36 +18,13 @@ interface Props {
 
 const slides = [
   {
-    title: "Roof Repair & Roof Replacement Services in Linden NJ",
+    title: "How to Choose the Best Roofing Contractor in Linden NJ",
     description:
-      "Professional roofing services for homes and businesses in Linden New Jersey",
+      "Learn how to choose the best roofing contractor in Linden NJ by checking licensing, experience, reviews, and pricing. Get expert tips for roof repair and replacement decisions.",
     date: "11 July",
-    image: "/1.jpg",
+    image: "/blog/blog-1.webp",
     initialLikeCount: 70,
-  },
-  {
-    title: "Professional Siding Installation Services in Linden NJ",
-    description:
-      "Quality siding installation to protect and improve your home's exterior",
-    date: "25 June",
-    image: "/Services-Slider/masonry.jpg",
-    initialLikeCount: 150,
-  },
-  {
-    title: "Seamless Gutter Installation & Repair in Linden NJ",
-    description:
-      "Reliable gutter systems designed to protect homes from water damage",
-    date: "10 June",
-    image: "/blog/roofing-contractors.jpg",
-    initialLikeCount: 200,
-  },
-  {
-    title: "Why Homeowners in Linden NJ Choose AG Restorations for Roofing",
-    description:
-      "Trusted roofing contractors serving Linden and Union County communities",
-    date: "29 May",
-    image: "/blogImage.jpg",
-    initialLikeCount: 260,
+    link: "/blog/best-roofing-contractor-linden-nj", // ✅ ADDED LINK
   },
 ];
 
@@ -68,6 +46,7 @@ export default function BlogSlider({ swiperRef }: Props) {
     if (!swiper) return;
 
     swiper.autoplay?.stop();
+
     if (direction === "next") {
       swiper.slideNext();
     } else {
@@ -116,33 +95,13 @@ export default function BlogSlider({ swiperRef }: Props) {
             key={i}
             aria-label={`Slide ${i + 1} of ${slides.length}`}
           >
-            <BlogSlideCard slide={slide} />
+            {/* ✅ FULL CARD CLICKABLE */}
+            <Link href={slide.link} aria-label={slide.title}>
+              <BlogSlideCard slide={slide} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
-
-      <div
-        className="flex justify-center gap-4 pt-6"
-        aria-label="Slider navigation controls"
-      >
-        <button
-          type="button"
-          onClick={() => handleManualSlide("prev")}
-          aria-label="Previous Slide"
-          className={navBtnClass}
-        >
-          <FiChevronLeft className="w-5 h-5" aria-hidden="true" />
-        </button>
-
-        <button
-          type="button"
-          onClick={() => handleManualSlide("next")}
-          aria-label="Next Slide"
-          className={navBtnClass}
-        >
-          <FiChevronRight className="w-5 h-5" aria-hidden="true" />
-        </button>
-      </div>
     </section>
   );
 }
