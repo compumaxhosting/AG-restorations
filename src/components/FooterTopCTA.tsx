@@ -34,13 +34,18 @@ export default function FooterTopCTA() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <Link href="/" aria-label="Go to AG Restorations homepage">
+          <Link
+            href="/"
+            aria-label="Go to AG Restorations homepage"
+            className="inline-block"
+          >
             <Image
               src="/Navbar/Logo-AG.png"
               alt="AG Restorations roofing siding and gutter company logo in Linden New Jersey"
               width={160}
               height={160}
-              className="object-contain border-2"
+              className="object-contain border-2 cursor-pointer hover:opacity-80 transition"
+              priority
             />
           </Link>
         </motion.div>

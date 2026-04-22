@@ -45,15 +45,16 @@ export default function Headerto() {
     <div className="relative">
       {/* ================= MOBILE HEADER ================= */}
       <div className="flex md:hidden items-center justify-between h-36 px-4 bg-[#e63a27]">
-        <Image
-          src="/logo.avif"
-          alt="AG Restorations Logo"
-          width={160}
-          height={100}
-          className="h-28 w-auto object-contain"
-          priority
-        />
-
+        <Link href="/" aria-label="Go to homepage">
+          <Image
+            src="/logo.avif"
+            alt="AG Restorations Logo"
+            width={160}
+            height={100}
+            className="h-28 w-auto object-contain cursor-pointer"
+            priority
+          />
+        </Link>
         <button onClick={openMenu}>
           <Menu size={32} className="text-white" />
         </button>
@@ -65,14 +66,16 @@ export default function Headerto() {
         <div className="w-[75%] h-22.5 bg-[#e63a27] [clip-path:polygon(0_0,100%_0,88%_100%,0%_100%)]" />
 
         <div className="absolute inset-0 flex items-center pl-[clamp(10px,3vw,40px)]">
-          <Image
-            src="/logo.avif"
-            alt="AG Restorations Logo"
-            width={260}
-            height={100}
-            className="h-[clamp(60px,8vw,110px)] w-auto object-contain"
-            priority
-          />
+          <Link href="/" aria-label="Go to homepage">
+            <Image
+              src="/logo.avif"
+              alt="AG Restorations Logo"
+              width={260}
+              height={100}
+              className="h-[clamp(60px,8vw,110px)] w-auto object-contain cursor-pointer"
+              priority
+            />
+          </Link>
         </div>
       </div>
 
@@ -167,7 +170,7 @@ export default function Headerto() {
                     </Link>
 
                     {/* HOVER DROPDOWN */}
-                    <div className="absolute left-0 top-full mt-2 w-28 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999]">
+                    <div className="absolute left-0 top-full mt-2 w-28 bg-white shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-9999">
                       {services.map((service) => (
                         <Link
                           key={service.path}
@@ -187,9 +190,11 @@ export default function Headerto() {
               )}
             </nav>
 
-            <button className="hidden md:block bg-[#e5391c] text-white mx-4 xl:mx-7 px-4 h-23 font-semibold text-[14px] whitespace-nowrap">
-              GET A QUOTE
-            </button>
+            <Link href="/contact-us">
+              <button className="hidden md:block bg-[#e5391c] text-white mx-4 xl:mx-7 px-4 h-23 font-semibold text-[14px] whitespace-nowrap">
+                GET A QUOTE
+              </button>
+            </Link>
           </div>
         </div>
       </header>

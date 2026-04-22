@@ -125,7 +125,7 @@ export default function AboutCompany() {
 
           {/* Button */}
           <Link
-            href="/contact"
+            href="/contact-us"
             className="inline-block border-2 border-red-500 text-red-500 px-8 py-3 font-semibold tracking-wide hover:bg-red-500 hover:text-white transition"
           >
             Schedule Your Free Estimate
