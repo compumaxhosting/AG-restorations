@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 import Link from "next/link";
+import GoogleTranslateWidget from "../GoogleTranslateWidget";
 
 /* ================= CONSTANTS ================= */
 
@@ -79,32 +80,70 @@ export default function Headerto() {
       <div className="hidden md:flex h-11 bg-[#1f2330] text-white text-[13px] pl-[clamp(260px,35vw,520px)]">
         <div className="max-w-300 mx-auto flex justify-end items-center w-full px-4 gap-24">
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <Phone size={22} className="text-[#e5391c]" />
-              <span>973 342 4134</span>
-            </div>
+            <a
+              href="tel:+19733424134"
+              className="flex items-center gap-2 group"
+              aria-label="Call 973 342 4134"
+            >
+              <Phone
+                size={22}
+                className="text-[#e5391c] group-hover:scale-110 transition"
+              />
+              <span className="font-medium group-hover:underline">
+                973 342 4134
+              </span>
+            </a>
 
             <div className="h-4 w-px bg-white/30" />
 
-            <div className="hidden lg:flex items-center gap-2">
-              <Mail size={22} className="text-[#e5391c]" />
-              <span>Bayonne, New Jersey</span>
-            </div>
+            <a
+              href="mailto:info@agrestorations.com"
+              className="hidden lg:flex items-center gap-2 group"
+              aria-label="Email info@agrestorations.com"
+            >
+              <Mail
+                size={22}
+                className="text-[#e5391c] group-hover:scale-110 transition"
+              />
+              <span className="font-medium group-hover:underline">
+                info@agrestorations.com
+              </span>
+            </a>
           </div>
 
           <div className="flex items-center gap-5">
-            <button className="bg-black px-3 py-1.5 rounded text-xs">
-              Translate
-            </button>
+            <GoogleTranslateWidget />
 
             <div className="flex gap-3 items-center">
               <span className="hidden sm:block">Follow On:</span>
 
-              <FaFacebookF className="icon" />
+              <Link
+                href="https://www.facebook.com/share/18KcQSnH8d/"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <FaFacebookF className="icon cursor-pointer" />
+              </Link>
+
               <div className="divider" />
-              <FaInstagram className="icon" />
+
+              <Link
+                href="https://www.instagram.com/ag.restorationslinden"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <FaInstagram className="icon cursor-pointer" />
+              </Link>
+
               <div className="divider" />
-              <SiTiktok className="icon" />
+
+              <Link
+                href="https://www.tiktok.com/@ag.roofing.siding"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <SiTiktok className="icon cursor-pointer" />
+              </Link>
             </div>
           </div>
         </div>
@@ -223,6 +262,9 @@ export default function Headerto() {
                 </Link>
               ),
             )}
+          </div>
+          <div className="px-6 py-4">
+            <GoogleTranslateWidget variant="mobile" />
           </div>
         </aside>
       </div>

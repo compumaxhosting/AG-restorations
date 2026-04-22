@@ -31,7 +31,11 @@ declare global {
   }
 }
 
-export default function GoogleTranslateWidget() {
+export default function GoogleTranslateWidget({
+  variant,
+}: {
+  variant?: string;
+}) {
   const [loaded, setLoaded] = useState(false);
 
   const loadTranslate = () => {
@@ -75,7 +79,7 @@ export default function GoogleTranslateWidget() {
       {!loaded && (
         <button
           onClick={loadTranslate}
-          className="px-3 py-1 text-sm bg-black text-white rounded"
+          className={`px-3 py-1 text-sm rounded ${variant === "mobile" ? "bg-white text-black" : "bg-black text-white"}`}
         >
           Translate
         </button>
