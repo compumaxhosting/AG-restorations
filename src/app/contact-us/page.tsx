@@ -6,7 +6,7 @@ import FooterTopCTA from "@/components/FooterTopCTA";
 import Headerto from "@/components/Navbar/Headerto";
 import ServiceAndFaqSection from "@/components/ServiceAndFaqSection";
 import StickyNavbar from "@/components/StickyNavbar";
-import React from "react";
+
 
 const page = () => {
   return (

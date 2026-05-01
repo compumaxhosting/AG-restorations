@@ -101,14 +101,27 @@ export default function AboutCompany() {
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">
             AG Restorations provides professional{" "}
-            <Link href="/roofing-services-linden-nj" className="text-inherit ">
+            <Link href="/roofing-services-linden-nj" className="text-red-500">
               roofing
             </Link>
-            , siding, and gutter services for homeowners and businesses in
-            Linden, New Jersey. Our expert team specializes in durable storm
-            repairs and high-quality installations, ensuring long-lasting
-            protection and enhanced curb appeal for properties throughout the
-            Union County region.
+            ,{" "}
+            <Link
+              href="/siding-installation-linden-nj"
+              className="text-red-500"
+            >
+              siding
+            </Link>
+            , and{" "}
+            <Link
+              href="/gutter-installation-linden-nj"
+              className="text-red-500"
+            >
+              gutter
+            </Link>{" "}
+            services for homeowners and businesses in Linden, New Jersey. Our
+            expert team specializes in durable storm repairs and high-quality
+            installations, ensuring long-lasting protection and enhanced curb
+            appeal for properties throughout the Union County region.
           </p>
           <p className="text-gray-600 leading-relaxed mb-4">
             <strong>
