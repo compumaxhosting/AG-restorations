@@ -26,6 +26,15 @@ const slides = [
     initialLikeCount: 70,
     link: "/blog/best-roofing-contractor-linden-nj", // ✅ ADDED LINK
   },
+  {
+    title: "Top Signs You Need New Siding in Linden NJ Homes",
+    description:
+      "Learn how to identify when your Linden NJ home needs new siding by checking for damage, energy efficiency, and aesthetic concerns. Get expert tips for siding replacement decisions.",
+    date: "11 July",
+    image: "/blog/blog-2.webp",
+    initialLikeCount: 70,
+    link: "/blog/top-signs-you-need-new-siding-in-linden-nj-homes", // ✅ ADDED LINK
+  },
 ];
 
 export default function BlogSlider({ swiperRef }: Props) {

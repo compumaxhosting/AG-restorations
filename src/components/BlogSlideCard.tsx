@@ -73,7 +73,7 @@ export default function BlogSlideCard({ slide }: { slide: Slide }) {
 
       {/* Footer */}
       <footer className="bg-white px-4 py-3 flex justify-between items-center border border-gray-400 text-sm">
-        <span className="font-bold text-[#003269]">ROOFING BLOG</span>
+        <span className="font-bold text-[#003269]">READ MORE</span>
 
         <div className="flex items-center gap-4">
           {/* Like Button */}

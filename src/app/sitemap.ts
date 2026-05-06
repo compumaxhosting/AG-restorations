@@ -52,5 +52,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: "2026-05-01T16:08:50+00:00",
       priority: 0.8,
     },
+    {
+      url: "https://www.agrestorations.com/blog/top-signs-you-need-new-siding-in-linden-nj-homes",
+      lastModified: "2026-05-01T16:08:50+00:00",
+      priority: 0.8,
+    },
   ];
 }

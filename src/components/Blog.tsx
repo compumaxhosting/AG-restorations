@@ -23,7 +23,7 @@ export default function Blog() {
       aria-labelledby="blog-section-title"
     >
       {/* ✅ FIX: HARD LOCK HEIGHT */}
-      <div className="max-w-7xl mx-auto text-center font-inter py-10 min-h-[650px]">
+      <div className="max-w-7xl mx-auto text-center font-inter py-10 min-h-162.5">
         {/* ================= HEADER ================= */}
         <header className="mb-10">
           <div className="inline-flex items-center gap-2 mb-2">
@@ -39,7 +39,7 @@ export default function Blog() {
           {/* ✅ FIX: PREVENT FONT SHIFT */}
           <h2
             id="blog-section-title"
-            className="text-4xl lg:text-5xl font-bold text-[#003269] leading-tight min-h-[120px]"
+            className="text-4xl lg:text-5xl font-bold text-[#003269] leading-tight min-h-30"
           >
             Roofing, Siding & Gutter Tips for Linden NJ Homeowners
           </h2>
@@ -50,7 +50,7 @@ export default function Blog() {
           role="region"
           aria-roledescription="carousel"
           aria-label="Roofing blog carousel"
-          className="w-full h-[360px] lg:h-[400px]"
+          className="w-full h-90 lg:h-100"
         >
           {/* ✅ FIX: RENDER ONLY AFTER MOUNT */}
           {mounted ? (
