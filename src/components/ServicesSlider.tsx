@@ -142,23 +142,6 @@ export default function ServicesSlider({ swiperRef }: Props) {
       <div className="sr-only" aria-live="polite">
         {`Current slide: ${currentSlideTitle}`}
       </div>
-
-      {/* Navigation */}
-      <nav className="flex justify-center gap-4 pt-6">
-        {["prev", "next"].map((dir) => {
-          const Icon = dir === "prev" ? FiChevronLeft : FiChevronRight;
-          return (
-            <button
-              key={dir}
-              onClick={() => handleManualSlide(dir as "prev" | "next")}
-              aria-label={`Go to ${dir} service`}
-              className="w-10 h-10 rounded-full border-2 border-[#003269] text-[#003269] flex items-center justify-center hover:bg-gray-100 transition"
-            >
-              <Icon className="w-5 h-5" />
-            </button>
-          );
-        })}
-      </nav>
     </div>
   );
 }

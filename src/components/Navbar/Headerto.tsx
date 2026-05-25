@@ -190,10 +190,12 @@ export default function Headerto() {
               )}
             </nav>
 
-            <Link href="/contact-us">
-              <button className="hidden md:block bg-[#e5391c] text-white mx-4 xl:mx-7 px-4 h-23 font-semibold text-[14px] whitespace-nowrap">
-                GET A QUOTE
-              </button>
+            <Link
+              href="/contact-us"
+              aria-label="Get a quote from AG Restorations"
+              className="hidden md:flex items-center justify-center bg-[#e5391c] hover:bg-[#cc3218] transition-colors duration-300 cursor-pointer text-white mx-4 xl:mx-7 px-6 h-23 font-semibold text-[14px] whitespace-nowrap"
+            >
+              GET A QUOTE
             </Link>
           </div>
         </div>
