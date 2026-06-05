@@ -49,6 +49,10 @@ export const metadata: Metadata = {
     follow: true,
   },
 
+  verification: {
+    google: "q2XHSPZ7u7GImYWMR2Bi8HtkkEr9i4KpLmutYhKZM90",
+  },
+
   openGraph: {
     type: "website",
     title: "Roofing Contractor Linden NJ | Roof Repair & Replacement Experts",
