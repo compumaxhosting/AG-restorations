@@ -48,6 +48,16 @@ const nextConfig: NextConfig = {
         destination: "/waterproofing-contractors-NY",
         permanent: true,
       },
+      {
+        source: "/index.php",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/index.html",
+        destination: "/",
+        permanent: true,
+      }
     ];
   },
 };
