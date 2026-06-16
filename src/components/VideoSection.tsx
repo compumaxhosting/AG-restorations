@@ -39,10 +39,10 @@ export default function VideoSection({ margin }: Props) {
         {/* IMAGE SIDE */}
         <div className="relative w-full md:w-[40%] h-87.5 md:h-125">
           <Image
-            src="/Services-Slider/services1.jpg"
+            src="/Services-Slider/services1.webp"
             alt="Professional roofing installation project by AG Restorations in Linden New Jersey"
             fill
-            priority
+            quality={40}
             sizes="(max-width:768px) 100vw, 40vw"
             className="object-cover"
           />
@@ -61,7 +61,7 @@ export default function VideoSection({ margin }: Props) {
               {/* Small Heading */}
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-6 h-px bg-white" />
-                <h2 className="text-sm uppercase font-semibold">
+                <h2 className="text-sm sm:text-md md:text-lg uppercase font-semibold">
                   Our Roofing Services
                 </h2>
               </div>

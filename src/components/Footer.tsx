@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
-import { FaTiktok } from "react-icons/fa6";
+import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import BackToTop from "./BackToTop";
 
 export default function Footer() {
@@ -36,13 +36,6 @@ export default function Footer() {
             <p className="font-semibold">Business Hours</p>
             <p className="text-white/80">Mon - Sat: 8:00 AM – 6:00 PM</p>
           </div>
-
-          <Link
-            href="/aboutus"
-            className="inline-block mt-6 bg-[#e63a27] px-6 py-3 font-semibold hover:bg-red-600 transition-colors duration-300"
-          >
-            Learn More
-          </Link>
         </div>
 
         {/* Quick Links */}
@@ -116,30 +109,30 @@ export default function Footer() {
 
           <p className="mt-2">
             Phone:{" "}
-            <a
+            <Link
               href="tel:+19733424134"
               className="hover:underline"
               aria-label="Call AG Restorations"
             >
               +1 973 342 4134
-            </a>
+            </Link>
           </p>
 
           <p className="mt-2">
             Email:{" "}
-            <a
+            <Link
               href="mailto:info@agrestorations.com"
               aria-label="Send email to AG Restorations"
               className="text-[#e63a27] hover:underline font-medium"
             >
               info@agrestorations.com
-            </a>
+            </Link>
           </p>
 
           <div className="mt-6">
             <p className="font-semibold">Location</p>
 
-            <a
+            <Link
               href="https://maps.google.com/?q=837+Kennedy+Blvd,+Bayonne,+NJ+07002"
               target="_blank"
               rel="noopener noreferrer"
@@ -147,10 +140,10 @@ export default function Footer() {
               aria-label="View AG Restorations location on Google Maps"
             >
               837 Kennedy Blvd, Bayonne, NJ 07002, USA
-            </a>
+            </Link>
 
             <p className="text-white/80">
-              Serving Union County and surrounding NJ communities.
+              Serving Union County and surrounding New Jersey communities.
             </p>
           </div>
 
@@ -159,7 +152,7 @@ export default function Footer() {
             <p className="font-semibold mb-3">Follow Us</p>
 
             <div className="flex gap-4">
-              <a
+              <Link
                 href="https://www.facebook.com/share/18KcQSnH8d/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -167,9 +160,9 @@ export default function Footer() {
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 <FaFacebookF className="text-white text-lg" />
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="https://www.instagram.com/ag.restorationslinden"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -177,9 +170,9 @@ export default function Footer() {
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 <FaInstagram className="text-white text-lg" />
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="https://www.tiktok.com/@ag.roofing.siding"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -187,7 +180,16 @@ export default function Footer() {
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 <FaTiktok className="text-white text-lg" />
-              </a>
+              </Link>
+              <Link
+                href="https://x.com/AGrestorationss"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                aria-label="AG Restorations TikTok"
+                className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
+              >
+                <FaXTwitter className="text-white text-lg" />
+              </Link>
             </div>
           </div>
         </div>

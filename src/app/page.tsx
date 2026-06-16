@@ -1,41 +1,76 @@
+import dynamic from "next/dynamic";
 import HeroSection from "@/components/HeroSection";
-import OurServicesPage from "@/components/OurServicesPage"
-import VideoSection from "@/components/VideoSection"
-// import OurProjects from "@/components/OurProjects";
-import Navbar from "@/components/Navbar/Navbar";
-import Blog from "@/components/Blog";
 import StickyNavbar from "@/components/StickyNavbar";
-import Footer from "@/components/Footer";
-import FooterTopCTA from "@/components/FooterTopCTA";
-import ServiceAndFaqSection from "@/components/ServiceAndFaqSection";
 import ContactBar from "@/components/ContactBar";
-import AboutCompanyHome from "@/components/AboutCompanyHome";
-import Certificate from "@/components/Certificate";
-import AreasWeServe from "@/components/AreasWeServe";
-import FinancingSection from "@/components/FinancingSection";
+import Headerto from "@/components/Navbar/Headerto";
 
+// 👇 ABOVE THE FOLD (keep normal)
+
+// 👇 BELOW THE FOLD (lazy load properly)
+const OurServicesPage = dynamic(() => import("@/components/OurServicesPage"), {
+  loading: () => null,
+});
+
+const AboutCompanyHome = dynamic(
+  () => import("@/components/AboutCompanyHome"),
+  {
+    loading: () => null,
+  },
+);
+
+const FinancingSection = dynamic(
+  () => import("@/components/FinancingSection"),
+  {
+    loading: () => null,
+  },
+);
+
+const Certificate = dynamic(() => import("@/components/Certificate"), {
+  loading: () => null,
+});
+
+const VideoSection = dynamic(() => import("@/components/VideoSection"), {
+  loading: () => null,
+});
+
+const AreasWeServe = dynamic(() => import("@/components/AreasWeServe"), {
+  loading: () => null,
+});
+
+const ServiceAndFaqSection = dynamic(
+  () => import("@/components/ServiceAndFaqSection"),
+  { loading: () => null },
+);
+
+
+const FooterTopCTA = dynamic(() => import("@/components/FooterTopCTA"), {
+  loading: () => null,
+});
+
+const Footer = dynamic(() => import("@/components/Footer"), {
+  loading: () => null,
+});
 
 export default function Home() {
-  const mvalue = [0,15,0];
-  // const number = "1";
+  const mvalue = [0, 15, 0];
+
   return (
     <>
-      <Navbar />
+      <Headerto />
       <StickyNavbar />
       <ContactBar />
       <HeroSection />
+
+      {/* 🚀 BELOW THE FOLD (lazy hydration) */}
       <OurServicesPage margin={mvalue} />
       <AboutCompanyHome />
       <FinancingSection />
       <Certificate />
-      {/* <OurProjects gallery={number} /> */}
       <VideoSection margin={mvalue} />
       <AreasWeServe />
       <ServiceAndFaqSection />
-      <Blog />
       <FooterTopCTA />
       <Footer />
     </>
   );
-} 
-  
+}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Our Work | Roofing, Siding & Gutter Projects in Linden, NJ",
@@ -40,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/images/projects-hero.jpg",
+        url: "https://www.agrestorations.com/gallery.jpg",
         width: 1200,
         height: 630,
         alt: "AG Restorations Projects",
@@ -53,7 +52,7 @@ export const metadata: Metadata = {
     title: "Our Recent Work in Linden & Union County",
     description:
       "View our gallery of professional roofing and siding installations. Local quality you can trust.",
-    images: ["https://www.agrestorations.com/images/projects-hero.jpg"],
+    images: ["https://www.agrestorations.com/gallery.jpg"],
   },
 
   referrer: "strict-origin-when-cross-origin",
@@ -67,29 +66,6 @@ export default function ProjectsLayout({
   return (
     <>
       {children}
-
-      {/* Portfolio / Image Gallery Schema */}
-      <Script
-        id="projects-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "AG Restorations Projects",
-            url: "https://www.agrestorations.com/projects",
-            description:
-              "Gallery of completed roofing, siding, and gutter projects in Linden, NJ and Union County.",
-
-            about: {
-              "@type": "RoofingContractor",
-              name: "AG Restorations",
-              areaServed: "Linden NJ, Union County NJ",
-            },
-          }),
-        }}
-      />
     </>
   );
 }

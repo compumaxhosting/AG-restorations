@@ -1,46 +1,47 @@
-import type { Metadata } from "next";
-import type { ReactNode } from "react";
-import { Inter, Be_Vietnam_Pro } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
+import { Inter, Be_Vietnam_Pro } from "next/font/google";
+import type { Metadata } from "next";
 
+// ✅ Fonts
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 const bevietnam = Be_Vietnam_Pro({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
   variable: "--font-bevietnam",
+  display: "swap",
 });
 
+// ✅ SEO Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agrestorations.com"),
-
-  title: {
-    default:
-      "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
-    template: "%s | AG Restorations",
-  },
+  title: "Roofing Contractor Linden NJ | Roof Repair & Replacement Experts",
 
   description:
-    "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair, roof replacement, siding installation, and gutter services. Call 973-342-4134 for a free estimate.",
+    "Trusted roofing contractor in Linden NJ offering roof repair, replacement, siding, and gutter installation. Serving Union County NJ with reliable residential & commercial roofing services. Get a free estimate today.",
 
   keywords: [
-    "roofing contractor linden nj",
-    "roof repair linden nj",
-    "roof replacement linden nj",
-    "roof installation linden nj",
-    "siding contractor linden nj",
-    "siding installation linden nj",
-    "gutter installation linden nj",
-    "union county roofing contractor",
+    "roofing contractor Linden NJ",
+    "roof repair Linden NJ",
+    "roof replacement Linden NJ",
+    "roofing company Union County NJ",
+    "emergency roof repair NJ",
+    "flat roof repair Linden NJ",
+    "siding installation Linden NJ",
+    "gutter installation Linden NJ",
+    "seamless gutters NJ",
   ],
 
-  verification: {
-    google: "q2XHSPZ7u7GImYWMR2Bi8HtkkEr9i4KpLmutYhKZM90",
+  authors: [{ name: "AG Restorations" }],
+
+  metadataBase: new URL("https://www.agrestorations.com"),
+
+  alternates: {
+    canonical: "/",
   },
 
   robots: {
@@ -48,118 +49,87 @@ export const metadata: Metadata = {
     follow: true,
   },
 
-  alternates: {
-    canonical: "https://agrestorations.com",
+  verification: {
+    google: "q2XHSPZ7u7GImYWMR2Bi8HtkkEr9i4KpLmutYhKZM90",
   },
 
   openGraph: {
-    title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
-    description:
-      "Professional roofing, siding and gutter services in Linden NJ. Roof repair, roof replacement and seamless gutters for residential and commercial properties.",
-    url: "https://agrestorations.com",
-    siteName: "AG Restorations",
-    locale: "en_US",
     type: "website",
-
+    title: "Roofing Contractor Linden NJ | Roof Repair & Replacement Experts",
+    description:
+      "Professional roofing, siding, and gutter services in Linden NJ. Reliable, affordable, and trusted across Union County.",
+    url: "https://www.agrestorations.com/",
+    siteName: "AG Restorations",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://www.agrestorations.com/about-roofing.webp",
         width: 1200,
         height: 630,
-        alt: "AG Restorations Roofing, Siding and Gutter Services in Linden NJ",
+        alt: "AG Restorations Roofing Services",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Roofing, Siding & Gutter Contractor in Linden NJ | AG Restorations",
+    title: "Roofing Contractor Linden NJ | Roof Repair Experts",
     description:
-      "Trusted roofing contractor in Linden NJ providing roof repair, roof replacement, siding installation and gutter services.",
-    images: ["/og-image.jpg"],
+      "Need roof repair or replacement in Linden NJ? Contact trusted local roofing experts today.",
+    images: ["https://www.agrestorations.com/about-roofing.webp"],
+    site: "@yourhandle",
   },
+
+  referrer: "strict-origin-when-cross-origin",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+// ✅ Structured Data (Schema)
+const jsonLdSchema = {
+  "@context": "https://schema.org",
+  "@type": "RoofingContractor",
+  name: "AG Restorations",
+  url: "https://www.agrestorations.com/",
+  telephone: "+1 973 342 4134",
+  email: "info@agrestorations.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "837 Kennedy Blvd",
+    addressLocality: "Bayonne",
+    addressRegion: "NJ",
+    postalCode: "07002",
+    addressCountry: "US",
+  },
+  areaServed: [
+    "Linden, NJ",
+    "Elizabeth, NJ",
+    "Plainfield, NJ",
+    "Rahway, NJ",
+    "Westfield, NJ",
+    "Fanwood, NJ",
+    "Garwood, NJ",
+    "Kenilworth, NJ",
+    "Mountainside, NJ",
+    "New Providence, NJ",
+    "Roselle, NJ",
+    "Roselle Park, NJ",
+    "Union County, New Jersey",
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
-      <body className={`${inter.variable} ${bevietnam.variable}`}>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TCSLWCWZ"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-
+      <body>
         {children}
 
-        {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-TCSLWCWZ');
-          `}
-        </Script>
-
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-QR7FYXT3QL"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-QR7FYXT3QL');
-          `}
-        </Script>
-
-        {/* Schema */}
-        <Script
-          id="schema"
+        {/* ✅ JSON-LD Schema (non-blocking, best placement) */}
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "RoofingContractor",
-                name: "AG Restorations",
-                url: "https://agrestorations.com",
-                telephone: "+1-973-342-4134",
-                email: "info@agrestorations.com",
-                address: {
-                  "@type": "PostalAddress",
-                  addressLocality: "Linden",
-                  addressRegion: "NJ",
-                  addressCountry: "US",
-                },
-                areaServed: [
-                  "Linden NJ",
-                  "Elizabeth NJ",
-                  "Rahway NJ",
-                  "Plainfield NJ",
-                  "Westfield NJ",
-                  "Union County NJ",
-                ],
-                serviceType: [
-                  "Roof Repair",
-                  "Roof Replacement",
-                  "Roof Installation",
-                  "Siding Installation",
-                  "Siding Repair",
-                  "Gutter Installation",
-                  "Gutter Repair",
-                ],
-              },
-            ]),
+            __html: JSON.stringify(jsonLdSchema),
           }}
         />
       </body>

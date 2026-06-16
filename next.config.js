@@ -1,6 +1,13 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000, // 🚀 better caching (1 year)
 
-const nextConfig: NextConfig = {
+    // ✅ FIX your warnings
+    qualities: [40, 60, 70, 75],
+  },
+
   async redirects() {
     return [
       {
@@ -39,13 +46,19 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/masonry-services-brooklyn-ny.html",
-        destination: "/masonry-services-brooklyn-ny",
+        source: "/waterproofing-contractors-NY.html",
+        destination: "/waterproofing-contractors-NY",
+        permanent: true,
+      },
+
+      {
+        source: "/clean-roof",
+        destination: "/",
         permanent: true,
       },
       {
-        source: "/waterproofing-contractors-NY.html",
-        destination: "/waterproofing-contractors-NY",
+        source: "/metal-roof-paint",
+        destination: "/",
         permanent: true,
       },
       {
@@ -62,4 +75,8 @@ const nextConfig: NextConfig = {
   },
 };
 
+<<<<<<< HEAD:next.config.ts
 export default nextConfig;
+=======
+module.exports = nextConfig;
+>>>>>>> 297c7a81b65daaff3253354162f0a3832ac11ffa:next.config.js

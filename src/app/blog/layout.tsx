@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title:
-    "Linden Home Improvement Blog | Roofing & Siding Tips | AG Restorations",
+    "Roofing Blog | Tips, Guides & Home Improvement Insights | AG Restorations NJ",
 
   description:
-    "Expert advice on roofing, siding, and gutter maintenance for Linden, NJ homeowners. Read our latest tips on protecting your home from New Jersey weather.",
+    "Read expert roofing, siding, and gutter blogs by AG Restorations. Get tips on roof repair, replacement, maintenance, and exterior home improvement in New Jersey. Stay informed with professional advice and industry insights.",
 
   keywords: [
-    "roofing tips Linden NJ",
-    "home maintenance blog Union County",
-    "siding advice NJ",
-    "gutter cleaning tips",
-    "NJ roofing blog",
-    "exterior home improvement news",
+    "roofing blog NJ",
+    "roof repair tips New Jersey",
+    "siding installation guide",
+    "gutter maintenance tips NJ",
+    "roofing advice Linden NJ",
+    "home improvement blog NJ",
+    "roof replacement guide",
+    "exterior home care tips",
   ],
 
   authors: [{ name: "AG Restorations" }],
@@ -33,14 +34,14 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    title: "Linden Home Improvement & Exterior Maintenance Blog",
+    title: "Roofing Blog | AG Restorations NJ",
     description:
-      "From roof leak prevention to choosing the right siding—get expert insights from the pros at AG Restorations.",
+      "Expert roofing, siding, and gutter tips and guides for New Jersey homeowners. Learn how to maintain and protect your home exterior.",
     url: "https://www.agrestorations.com/blog",
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/images/blog-banner.jpg",
+        url: "https://www.agrestorations.com/blog/blog-1.webp",
         width: 1200,
         height: 630,
         alt: "AG Restorations Blog",
@@ -50,10 +51,11 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Expert Exterior Tips for NJ Homeowners",
+    title: "Roofing Blog | AG Restorations NJ",
     description:
-      "Stay informed with the latest roofing and siding guides from your local Linden experts.",
-    images: ["https://www.agrestorations.com/images/blog-banner.jpg"],
+      "Roofing, siding, and gutter tips for homeowners in New Jersey. Expert advice and maintenance guides.",
+    images: ["https://www.agrestorations.com/blog/blog-1.webp"],
+    site: "@agrestorations",
   },
 
   referrer: "strict-origin-when-cross-origin",
@@ -68,30 +70,7 @@ export default function BlogLayout({
     <>
       {children}
 
-      {/* Optional: Blog Schema (helps SEO more than meta tags 👇) */}
-      <Script
-        id="blog-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Blog",
-            name: "AG Restorations Blog",
-            url: "https://www.agrestorations.com/blog",
-            description:
-              "Expert roofing, siding, and gutter tips for homeowners in Linden, NJ and Union County.",
-            publisher: {
-              "@type": "Organization",
-              name: "AG Restorations",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://www.agrestorations.com/logo.jpg",
-              },
-            },
-          }),
-        }}
-      />
+     
     </>
   );
 }
