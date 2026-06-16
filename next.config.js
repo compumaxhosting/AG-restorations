@@ -2,9 +2,7 @@
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 31536000, // 🚀 better caching (1 year)
-
-    // ✅ FIX your warnings
+    minimumCacheTTL: 31536000, // better caching (1 year)
     qualities: [40, 60, 70, 75],
   },
 
@@ -50,7 +48,6 @@ const nextConfig = {
         destination: "/waterproofing-contractors-NY",
         permanent: true,
       },
-
       {
         source: "/clean-roof",
         destination: "/",
@@ -70,13 +67,9 @@ const nextConfig = {
         source: "/index.html",
         destination: "/",
         permanent: true,
-      }
+      },
     ];
   },
 };
 
-<<<<<<< HEAD:next.config.ts
-export default nextConfig;
-=======
 module.exports = nextConfig;
->>>>>>> 297c7a81b65daaff3253354162f0a3832ac11ffa:next.config.js
