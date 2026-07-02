@@ -2,9 +2,7 @@
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: 31536000, // 🚀 better caching (1 year)
-
-    // ✅ FIX your warnings
+    minimumCacheTTL: 31536000, // better caching (1 year)
     qualities: [40, 60, 70, 75],
   },
 
@@ -50,7 +48,6 @@ const nextConfig = {
         destination: "/waterproofing-contractors-NY",
         permanent: true,
       },
-
       {
         source: "/clean-roof",
         destination: "/",
@@ -58,6 +55,16 @@ const nextConfig = {
       },
       {
         source: "/metal-roof-paint",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/index.php",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/index.html",
         destination: "/",
         permanent: true,
       },
