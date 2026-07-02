@@ -21,10 +21,9 @@ const blogs = [
     image: "/blog/blog-2.webp",
     lastUpdated: "24th April 2026",
   },
-
   {
     slug: "gutter-installation-union-county-guide",
-    title: "Gutter Installation in Union County: A Homeowner's Guide",
+    title: "Gutter Installation in Union County: A Complete Guide",
     description:
       "Gutter installation in Union County is essential for protecting homes from water damage, foundation issues, and roof deterioration....",
     image: "/blog/blog-3.webp",
