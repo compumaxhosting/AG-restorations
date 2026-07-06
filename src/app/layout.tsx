@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter, Be_Vietnam_Pro } from "next/font/google";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 // ✅ Fonts
 const inter = Inter({
@@ -124,6 +125,22 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${bevietnam.variable}`}>
       <body>
         {children}
+
+        {/* ✅ Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-QR7FYXT3QL"
+          strategy="lazyOnload"
+        />
+
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-QR7FYXT3QL');
+        `}
+        </Script>
 
         {/* ✅ JSON-LD Schema (non-blocking, best placement) */}
         <script
