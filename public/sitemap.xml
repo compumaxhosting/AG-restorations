@@ -61,10 +61,21 @@
     <priority>0.8</priority>
   </url>
 
+   <url>
+    <loc>https://www.agrestorations.com/book-appointment</loc>
+    <lastmod>2026-05-01T16:08:50+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.agrestorations.com/blog/top-signs-you-need-new-siding-in-linden-nj-homes/</loc>
     <lastmod>2026-05-01T16:08:50+00:00</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.agrestorations.com/blog/gutter-installation-union-county-guide/</loc>
+    <lastmod>2026-05-01T16:08:50+00:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 
 </urlset>
