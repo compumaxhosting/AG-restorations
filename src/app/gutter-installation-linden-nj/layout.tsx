@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     description:
       "Expert seamless gutter installation and repair in Linden NJ. Protect your home with trusted local contractors.",
     images: ["https://www.agrestorations.com/Gutter Installation.webp"],
-    site: "@agrestorations",
+    site: "@AGrestorationss",
   },
 };
 

@@ -108,7 +108,7 @@ export default function AboutCompanySection() {
           <p className="text-gray-600 mb-8">
             Got a question about your roof, siding, or gutters?{" "}
             <Link
-              href="/contact"
+              href="/contact-us"
               className="text-red-500 font-semibold hover:underline"
             >
               Reach out for a free estimate

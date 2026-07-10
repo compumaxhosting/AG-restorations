@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     images: [
       "https://www.agrestorations.com/blog/best-roofing-contractor-linden-nj/blog-1.webp",
     ],
-    site: "@agrestorations",
+    site: "@AGrestorationss",
   },
 
   referrer: "strict-origin-when-cross-origin",

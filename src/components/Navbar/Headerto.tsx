@@ -155,8 +155,8 @@ export default function Headerto() {
       {/* ================= MAIN HEADER ================= */}
       <header className="hidden md:block bg-[#f2f2f2] pl-[clamp(260px,35vw,520px)]">
         <div className="flex items-center h-23">
-          <div className="max-w-300 mx-auto flex justify-end items-center w-full px-2 lg:px-8">
-            <nav className="hidden md:flex gap-8 xl:gap-12 text-[14px] font-semibold text-[#1f2d3d]">
+          <div className="max-w-300 mx-auto flex justify-end items-center w-full px-2 md:px-4 lg:px-8">
+            <nav className="hidden md:flex gap-8 md:gap-3 xl:gap-12 text-[14px] font-semibold text-[#1f2d3d]">
               {navLinks.map((item) =>
                 item.label === "SERVICES" ? (
                   <div key={item.path} className="relative group">

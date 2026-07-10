@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     description:
       "Roofing, siding, and gutter services in New Jersey. Reliable exterior home improvement experts.",
     images: ["https://www.agrestorations.com/Services-Slider/services5.webp"],
-    site: "@agrestorations",
+    site: "@AGrestorationss",
   },
 
   referrer: "strict-origin-when-cross-origin",

@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description:
       "Trusted roofing, siding, and gutter experts in New Jersey. Learn more about AG Restorations.",
     images: ["https://www.agrestorations.com/about-roofing.webp"],
-    site: "@agrestorations",
+    site: "@AGrestorationss",
   },
 };
 

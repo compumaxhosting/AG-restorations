@@ -19,7 +19,7 @@ const contactItems = [
     external: true,
   },
   {
-    href: "/contact",
+    href: "/contact-us",
     ariaLabel: "Contact AG Restorations via website form",
     Icon: Mail,
     text: "Email Us",

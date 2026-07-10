@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     description:
       "Professional siding installation and repair in Linden NJ. Improve your home’s exterior with trusted local experts.",
     images: ["https://www.agrestorations.com/gutter-installation.webp"],
-    site: "@agrestorations",
+    site: "@AGrestorationss",
   },
 };
 

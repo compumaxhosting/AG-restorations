@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     description:
       "Expert roof repair and replacement services in Linden NJ. Free estimates available.",
     images: ["https://www.agrestorations.com/Roofing-Services-in-Linden,-NJ.webp"],
-    site: "@agrestorations",
+    site: "@AGrestorationss",
   },
 
   referrer: "strict-origin-when-cross-origin",

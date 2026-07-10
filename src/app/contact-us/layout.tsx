@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description:
       "Request a free estimate for roofing, siding, and gutter services in New Jersey.",
     images: ["https://www.agrestorations.com/about-roofing.webp"],
-    site: "@agrestorations",
+    site: "@AGrestorationss",
   },
 };
 
@@ -61,8 +61,6 @@ export default function ContactLayout({
   return (
     <>
       {children}
-
-      
     </>
   );
 }

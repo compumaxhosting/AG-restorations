@@ -17,18 +17,18 @@ export default function BlogLayout() {
 
           {/* TITLE */}
           <h1 className="mt-4 text-3xl md:text-4xl font-bold text-[#1b2a41] leading-tight w-full">
-            How to Choose the Best{" "}
-            <Link href="/roofing-services-linden-nj">
-              {" "}
-              Roofing Contractor in Linden, NJ
-            </Link>
+            How to Choose the Best Roofing Contractor in Linden, NJ
           </h1>
 
           {/* DESCRIPTION */}
           <div className="mt-5 text-base md:text-lg text-slate-700 leading-relaxed w-full">
             <p className="text-md md:text-lg">
               Choosing the best {" "}
-              <Link href="/roofing-services-linden-nj">
+              <Link
+                href="/roofing-services-linden-nj"
+                className="text-[#e63a27]"
+                target="/blank"
+              >
                 roofing contractor in Linden NJ
               </Link>{" "}
               comes down to verifying licensing, checking local experience,
@@ -348,7 +348,7 @@ export default function BlogLayout() {
             </h2>
             <p className="text-md md:text-lg">
               Choosing the{" "}
-              <Link href="/roofing-services-linden-nj">
+              <Link href="/" className="text-[#e63a27]" target="/blank">
                 right roofing contractor Linden NJ
               </Link>{" "}
               is not something to rush. Take your time to research, compare, and

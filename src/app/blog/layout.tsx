@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     description:
       "Roofing, siding, and gutter tips for homeowners in New Jersey. Expert advice and maintenance guides.",
     images: ["https://www.agrestorations.com/blog/blog-1.webp"],
-    site: "@agrestorations",
+    site: "@AGrestorationss",
   },
 
   referrer: "strict-origin-when-cross-origin",
