@@ -34,7 +34,7 @@ export default function Footer() {
 
           <div className="mt-6">
             <p className="font-semibold">Business Hours</p>
-            <p className="text-white/80">Mon - Sat: 8:00 AM – 6:00 PM</p>
+            <p className="text-white/80">Mon - Sat: 8:00 AM – 8:00 PM</p>
           </div>
         </div>
 
