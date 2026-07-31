@@ -1,4 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title: "Our Work | Roofing, Siding & Gutter Projects in Linden, NJ",
@@ -27,8 +31,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.agrestorations.com/projects",
   },
-
-  themeColor: "#ffffff",
 
   openGraph: {
     type: "website",

@@ -1,4 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title:
@@ -33,8 +37,6 @@ export const metadata: Metadata = {
     canonical: "https://www.agrestorations.com/roofing-services-linden-nj",
   },
 
-  themeColor: "#ffffff",
-
   openGraph: {
     type: "website",
     title: "Roofing Services in Linden NJ | AG Restorations",
@@ -57,7 +59,9 @@ export const metadata: Metadata = {
     title: "Roofing Services Linden NJ | AG Restorations",
     description:
       "Expert roof repair and replacement services in Linden NJ. Free estimates available.",
-    images: ["https://www.agrestorations.com/Roofing-Services-in-Linden,-NJ.webp"],
+    images: [
+      "https://www.agrestorations.com/Roofing-Services-in-Linden,-NJ.webp",
+    ],
     site: "@AGrestorationss",
   },
 

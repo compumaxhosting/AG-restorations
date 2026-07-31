@@ -55,7 +55,7 @@ export default function UrgentRoofingContractorContent() {
                 width={1200}
                 height={700}
                 priority
-                className="w-full h-[280px] md:h-[420px] object-cover"
+                className="w-full h-70 md:h-105 object-cover"
               />
             </div>
           </div>

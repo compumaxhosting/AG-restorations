@@ -1,4 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
+
 export const metadata: Metadata = {
   title:
     "Siding Installation in Linden NJ | Vinyl & Exterior Siding Services | AG Restorations",
@@ -30,8 +35,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.agrestorations.com/siding-installation-linden-nj",
   },
-
-  themeColor: "#ffffff",
 
   openGraph: {
     type: "website",

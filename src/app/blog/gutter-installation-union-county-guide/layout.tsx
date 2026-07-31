@@ -1,4 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title:
@@ -66,8 +70,6 @@ export const metadata: Metadata = {
   },
 
   referrer: "strict-origin-when-cross-origin",
-
-  themeColor: "#ffffff",
 };
 
 export default function BlogLayout({

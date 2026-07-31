@@ -1,4 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title: "Urgent Roofing Contractor in Linden NJ | Emergency Roof Repair Guide",
@@ -26,8 +30,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.agrestorations.com/roofing-services-linden-nj",
   },
-
-  themeColor: "#ffffff",
 
   openGraph: {
     type: "article",

@@ -1,4 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
 
 export const metadata: Metadata = {
   title: "Linden, NJ Roofing, Siding & Gutters | AG Restorations",
@@ -32,8 +36,6 @@ export const metadata: Metadata = {
     canonical: "https://www.agrestorations.com/services",
   },
 
-  themeColor: "#ffffff",
-
   openGraph: {
     type: "website",
     title: "Linden, NJ Roofing, Siding & Gutters | AG Restorations",
@@ -56,7 +58,9 @@ export const metadata: Metadata = {
     title: "Our Services | AG Restorations NJ",
     description:
       "Roofing, siding, and gutter services in New Jersey. Reliable exterior home improvement experts.",
-    images: ["https://www.agrestorations.com/Services-Slider/services5.webp"],
+    images: [
+      "https://www.agrestorations.com/Services-Slider/services5.webp",
+    ],
     site: "@AGrestorationss",
   },
 
