@@ -6,6 +6,14 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
+    slug: "urgent-roofing-contractor-linden-nj-emergency-roof-repair-guide",
+    title: "Urgent Roofing Contractor in Linden NJ: Complete Guide to Emergency Roof Repair",
+    description:
+      "When a roof emergency happens, fast action can prevent expensive structural damage. Learn how emergency roof repair works, costs, and why hiring a professional urgent roofing contractor in Linden NJ matters....",
+    image: "/blog/urgent-roofing-contractor-linden-nj.webp",
+    lastUpdated: "31st July 2026",
+  },
+  {
     slug: "best-roofing-contractor-linden-nj",
     title: "How to Choose the Best Roofing Contractor in Linden, NJ",
     description:
@@ -21,7 +29,6 @@ const blogs = [
     image: "/blog/blog-2.webp",
     lastUpdated: "24th April 2026",
   },
-
   {
     slug: "gutter-installation-union-county-guide",
     title: "Gutter Installation in Union County: A Homeowner's Guide",
