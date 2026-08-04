@@ -20,20 +20,20 @@ const bevietnam = Be_Vietnam_Pro({
 
 // ✅ SEO Metadata
 export const metadata: Metadata = {
-  title: "Roofing Contractor Linden NJ | Roof Repair & Replacement Experts",
+  title: "Roofing Contractor Linden, NJ | Roof Repair & Replacement Experts",
 
   description:
-    "Trusted roofing contractor in Linden NJ offering roof repair, replacement, siding, and gutter installation. Serving Union County NJ with reliable residential & commercial roofing services. Get a free estimate today.",
+    "Trusted roofing contractor in Linden, NJ offering roof repair, replacement, siding, and gutter installation. Serving Union County NJ with reliable residential & commercial roofing services. Get a free estimate today.",
 
   keywords: [
-    "roofing contractor Linden NJ",
-    "roof repair Linden NJ",
-    "roof replacement Linden NJ",
+    "roofing contractor Linden, NJ",
+    "roof repair Linden, NJ",
+    "roof replacement Linden, NJ",
     "roofing company Union County NJ",
     "emergency roof repair NJ",
-    "flat roof repair Linden NJ",
-    "siding installation Linden NJ",
-    "gutter installation Linden NJ",
+    "flat roof repair Linden, NJ",
+    "siding installation Linden, NJ",
+    "gutter installation Linden, NJ",
     "seamless gutters NJ",
   ],
 
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    title: "Roofing Contractor Linden NJ | Roof Repair & Replacement Experts",
+    title: "Roofing Contractor Linden, NJ | Roof Repair & Replacement Experts",
     description:
-      "Professional roofing, siding, and gutter services in Linden NJ. Reliable, affordable, and trusted across Union County.",
+      "Professional roofing, siding, and gutter services in Linden, NJ. Reliable, affordable, and trusted across Union County.",
     url: "https://www.agrestorations.com/",
     siteName: "AG Restorations",
     images: [
@@ -73,9 +73,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Roofing Contractor Linden NJ | Roof Repair Experts",
+    title: "Roofing Contractor Linden, NJ | Roof Repair Experts",
     description:
-      "Need roof repair or replacement in Linden NJ? Contact trusted local roofing experts today.",
+      "Need roof repair or replacement in Linden, NJ? Contact trusted local roofing experts today.",
     images: ["https://www.agrestorations.com/about-roofing.webp"],
     site: "@yourhandle",
   },

@@ -9,7 +9,7 @@ const blogs = [
     slug: "best-roofing-contractor-linden-nj",
     title: "How to Choose the Best Roofing Contractor in Linden, NJ",
     description:
-      "Choosing the best roofing contractor in Linden NJ comes down to verifying licensing, checking local experience, comparing estimates, and reviewing past work....",
+      "Choosing the best roofing contractor in Linden, NJ comes down to verifying licensing, checking local experience, comparing estimates, and reviewing past work....",
     image: "/blog/blog-1.webp",
     lastUpdated: "1st May 2026",
   },
@@ -65,7 +65,7 @@ export default function Blog() {
             id="blog-section-title"
             className="text-4xl lg:text-5xl font-bold text-[#003269] leading-tight max-w-5xl mx-auto"
           >
-            Roofing, Siding & Gutter Tips for Linden NJ Homeowners
+            Roofing, Siding & Gutter Tips for Linden, NJ Homeowners
           </h2>
         </header>
 

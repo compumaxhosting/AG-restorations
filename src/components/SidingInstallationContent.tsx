@@ -30,7 +30,7 @@ export default function SidingInstallationContent() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-0.5 bg-red-500"></div>
               <span className="text-sm font-semibold text-red-500 uppercase tracking-wide">
-                Siding Installation Linden NJ
+                Siding Installation Linden, NJ
               </span>
             </div>
 

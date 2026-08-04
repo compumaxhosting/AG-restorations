@@ -15,7 +15,7 @@ export default function GutterInstallationContent() {
             <div className="relative w-full h-full min-h-100 overflow-hidden rounded-lg ">
               <Image
                 src="/gutter-installation.webp" // 👈 your image
-                alt="Gutter installation in Linden NJ"
+                alt="Gutter installation in Linden, NJ"
                 fill
                 sizes="(max-width:768px) 100vw, 50vw"
                 quality={70}
@@ -30,7 +30,7 @@ export default function GutterInstallationContent() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-0.5 bg-red-500"></div>
               <span className="text-sm font-semibold text-red-500 uppercase tracking-wide">
-                Gutter Installation Linden NJ
+                Gutter Installation Linden, NJ
               </span>
             </div>
 

@@ -6,18 +6,18 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title:
-    "Siding Installation in Linden NJ | Vinyl & Exterior Siding Services | AG Restorations",
+    "Siding Installation in Linden, NJ | Vinyl & Exterior Siding Services | AG Restorations",
 
   description:
-    "Professional siding installation in Linden NJ by AG Restorations. We offer vinyl siding installation, siding repair, and exterior home improvement services across Union County. Improve your home's protection and curb appeal with expert workmanship.",
+    "Professional siding installation in Linden, NJ by AG Restorations. We offer vinyl siding installation, siding repair, and exterior home improvement services across Union County. Improve your home's protection and curb appeal with expert workmanship.",
 
   keywords: [
-    "siding installation Linden NJ",
-    "siding contractor Linden NJ",
-    "vinyl siding Linden NJ",
+    "siding installation Linden, NJ",
+    "siding contractor Linden, NJ",
+    "vinyl siding Linden, NJ",
     "siding repair New Jersey",
     "exterior siding replacement NJ",
-    "siding services Linden NJ",
+    "siding services Linden, NJ",
     "siding company Union County NJ",
     "house siding installation NJ",
   ],
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    title: "Siding Installation in Linden NJ | AG Restorations",
+    title: "Siding Installation in Linden, NJ | AG Restorations",
     description:
-      "Expert siding installation and repair in Linden NJ. High-quality vinyl siding and exterior home improvement services for lasting protection.",
+      "Expert siding installation and repair in Linden, NJ. High-quality vinyl siding and exterior home improvement services for lasting protection.",
     url: "https://www.agrestorations.com/siding-installation-linden-nj",
     siteName: "AG Restorations",
     images: [
@@ -48,16 +48,16 @@ export const metadata: Metadata = {
         url: "https://www.agrestorations.com/gutter-installation.webp",
         width: 1200,
         height: 630,
-        alt: "Siding Installation Linden NJ",
+        alt: "Siding Installation Linden, NJ",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Siding Installation Linden NJ | AG Restorations",
+    title: "Siding Installation Linden, NJ | AG Restorations",
     description:
-      "Professional siding installation and repair in Linden NJ. Improve your home’s exterior with trusted local experts.",
+      "Professional siding installation and repair in Linden, NJ. Improve your home’s exterior with trusted local experts.",
     images: ["https://www.agrestorations.com/gutter-installation.webp"],
     site: "@AGrestorationss",
   },

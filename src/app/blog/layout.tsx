@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "roof repair tips New Jersey",
     "siding installation guide",
     "gutter maintenance tips NJ",
-    "roofing advice Linden NJ",
+    "roofing advice Linden, NJ",
     "home improvement blog NJ",
     "roof replacement guide",
     "exterior home care tips",

@@ -14,7 +14,7 @@ const EmblaCarousel = dynamic(() => import("./HeroSliderEmbla"), {
 const slidesData = [
   {
     id: 1,
-    title: "Roofing Contractor in Linden NJ – Roof Repair & Replacement",
+    title: "Roofing Contractor in Linden, NJ – Roof Repair & Replacement",
     description:
       "AG Restorations is a trusted roofing contractor in Linden, New Jersey specializing in roof repair and replacement.",
     buttonText: "View Roofing Services",
@@ -23,7 +23,7 @@ const slidesData = [
   },
   {
     id: 2,
-    title: "Professional Siding & Gutter Installation in Linden NJ",
+    title: "Professional Siding & Gutter Installation in Linden, NJ",
     description:
       "Protect your home with expert siding installation and seamless gutter systems.",
     buttonText: "Our Exterior Services",

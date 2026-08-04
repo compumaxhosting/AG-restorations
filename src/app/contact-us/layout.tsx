@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   keywords: [
     "contact AG Restorations",
     "roofing contractor NJ contact",
-    "roof repair Linden NJ",
+    "roof repair Linden, NJ",
     "siding contractor New Jersey",
     "gutter installation NJ",
     "get roofing estimate NJ",

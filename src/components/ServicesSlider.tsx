@@ -17,28 +17,28 @@ interface Props {
 
 const slides = [
   {
-    title: "Roof Repair & Roof Replacement in Linden NJ",
+    title: "Roof Repair & Roof Replacement in Linden, NJ",
     description:
       "AG Restorations provides professional roof repair, roof replacement, and new roof installation for homes and commercial properties in Linden, New Jersey.",
     image: "/Services-Slider/services1.webp",
     link: "/roofing-services-linden-nj",
-    alt: "Roof repair and roof replacement services by AG Restorations roofing contractor in Linden New Jersey",
+    alt: "Roof repair and roof replacement services by AG Restorations roofing contractor in Linden, New Jersey",
   },
   {
     title: "Siding Installation & Siding Repair Services",
     description:
-      "Improve your home's protection and curb appeal with professional siding installation and siding repair in Linden NJ.",
+      "Improve your home's protection and curb appeal with professional siding installation and siding repair in Linden, NJ.",
     image: "/Services-Slider/masonry.webp",
     link: "/siding-installation-linden-nj",
-    alt: "Home siding installation project completed by AG Restorations siding contractor in Linden New Jersey",
+    alt: "Home siding installation project completed by AG Restorations siding contractor in Linden, New Jersey",
   },
   {
     title: "Gutter Installation & Seamless Gutter Systems",
     description:
-      "Protect your home from water damage with professional gutter installation and gutter repair services in Linden NJ.",
+      "Protect your home from water damage with professional gutter installation and gutter repair services in Linden, NJ.",
     image: "/Services-Slider/services5.webp",
     link: "/gutter-installation-linden-nj",
-    alt: "Seamless gutter installation and gutter repair services in Linden New Jersey",
+    alt: "Seamless gutter installation and gutter repair services in Linden, New Jersey",
   },
 ];
 

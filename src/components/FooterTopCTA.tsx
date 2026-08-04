@@ -41,7 +41,7 @@ export default function FooterTopCTA() {
           >
             <Image
               src="/Navbar/Logo-AG.png"
-              alt="AG Restorations roofing siding and gutter company logo in Linden New Jersey"
+              alt="AG Restorations roofing siding and gutter company logo in Linden, New Jersey"
               width={160}
               height={160}
               className="object-contain border-2 cursor-pointer hover:opacity-80 transition"
@@ -79,7 +79,7 @@ export default function FooterTopCTA() {
 
           <p className="text-sm text-white/80 leading-snug font-inter">
             Protect your home with professional roofing, siding, and gutter
-            services in Linden NJ. Contact AG Restorations today for a free
+            services in Linden, NJ. Contact AG Restorations today for a free
             estimate.
           </p>
         </motion.div>
@@ -102,13 +102,13 @@ export default function FooterTopCTA() {
           </Link>
 
           <Link
-            href="tel:+19738205130"
+            href="tel:+19733424134"
             className="bg-[#e63a27] text-white flex items-center gap-2 px-4 py-2 font-semibold transition hover:bg-[#c52f1f] call-hover-button"
             aria-label="Call AG Restorations at 973-820-5130"
           >
             <FaHeadphonesAlt aria-hidden="true" />
             <span className="text-sm sm:text-base font-inter">
-              (973) 820-5130
+              +1 973 342 4134
             </span>
           </Link>
         </motion.div>

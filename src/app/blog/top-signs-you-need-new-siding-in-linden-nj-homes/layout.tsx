@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     "Learn the top signs you need new siding in your Linden, NJ home. Discover how damaged siding affects energy efficiency, curb appeal, and protection from New Jersey weather.",
 
   keywords: [
-    "new siding Linden NJ",
-    "siding replacement Linden NJ",
+    "new siding Linden, NJ",
+    "siding replacement Linden, NJ",
     "signs you need new siding",
     "vinyl siding replacement",
-    "siding contractors Linden NJ",
+    "siding contractors Linden, NJ",
     "home siding repair",
     "AG Restoration",
   ],

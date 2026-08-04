@@ -5,15 +5,15 @@ import Link from "next/link";
 
 const contactItems = [
   {
-    href: "tel:+19738205130",
-    ariaLabel: "Call AG Restorations at +1 (973) 820-5130",
+    href: "tel:+19733424134",
+    ariaLabel: "Call AG Restorations at +1 973 342 4134",
     Icon: Phone,
     text: "Call Us",
   },
   {
     href: "https://www.google.com/maps/search/?api=1&query=Linden+New+Jersey",
     ariaLabel:
-      "View AG Restorations location in Linden New Jersey on Google Maps",
+      "View AG Restorations location in Linden, New Jersey on Google Maps",
     Icon: MapPin,
     text: "Our Location",
     external: true,

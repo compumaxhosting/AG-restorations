@@ -15,7 +15,7 @@ export default function RoofingServiceContent() {
             <div className="relative w-full h-full min-h-100 overflow-hidden rounded-lg">
               <Image
                 src="/Roofing-Services-in-Linden,-NJ.webp"
-                alt="Roofing services in Linden NJ"
+                alt="Roofing services in Linden, NJ"
                 fill
                 sizes="(max-width:768px) 100vw, 50vw"
                 quality={70}
@@ -30,7 +30,7 @@ export default function RoofingServiceContent() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-0.5 bg-red-500"></div>
               <span className="text-sm font-semibold text-red-500 uppercase tracking-wide">
-                Roofing Services Linden NJ
+                Roofing Services Linden, NJ
               </span>
             </div>
 

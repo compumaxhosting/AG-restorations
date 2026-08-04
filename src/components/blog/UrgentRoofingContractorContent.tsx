@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const tableOfContents = [
-  { label: "What Is an Urgent Roofing Contractor in Linden NJ?", href: "#what-is-urgent-roofing-contractor" },
+  { label: "What Is an Urgent Roofing Contractor in Linden, NJ?", href: "#what-is-urgent-roofing-contractor" },
   { label: "How Emergency Roof Repair Works", href: "#how-emergency-roof-repair-works" },
   { label: "Benefits of Professional Roofing Services", href: "#benefits-of-professional-roofing" },
-  { label: "Common Roofing Emergencies in Linden NJ", href: "#common-roofing-emergencies" },
+  { label: "Common Roofing Emergencies in Linden, NJ", href: "#common-roofing-emergencies" },
   { label: "Emergency Roof Repair Cost Factors", href: "#emergency-roof-repair-cost" },
   { label: "Why Hiring Certified Roofing Experts Matters", href: "#why-hire-certified-roofing-experts" },
   { label: "Roof Maintenance Best Practices", href: "#roof-maintenance-best-practices" },
@@ -26,7 +26,7 @@ export default function UrgentRoofingContractorContent() {
           </Link>
 
           <h1 className="mt-4 text-3xl md:text-4xl font-bold text-[#1b2a41] leading-tight w-full">
-            Urgent Roofing Contractor in Linden NJ (2026): Complete Guide to Emergency Roof Repair
+            Urgent Roofing Contractor in Linden, NJ (2026): Complete Guide to Emergency Roof Repair
           </h1>
 
           <div className="mt-5 text-base md:text-lg text-slate-700 leading-relaxed w-full">
@@ -37,7 +37,7 @@ export default function UrgentRoofingContractorContent() {
                 className="text-[#e63a27]"
                 target="/blank"
               >
-                urgent roofing contractor in Linden NJ
+                urgent roofing contractor in Linden, NJ
               </Link>{" "}
               provides immediate solutions for leaks, storm damage, missing shingles, roof punctures, and other issues that threaten your property. Professional emergency roof repair helps protect homes and businesses from water intrusion, mold growth, insulation damage, and costly repairs.
             </p>
@@ -51,7 +51,7 @@ export default function UrgentRoofingContractorContent() {
             <div className="w-3/4 rounded-3xl overflow-hidden shadow-2xl border border-gray-200 flex justify-self-center">
               <Image
                 src="/blog/urgent-roofing-contractor-linden-nj.webp"
-                alt="Urgent Roofing Contractor in Linden NJ - Emergency Roof Repair Guide"
+                alt="Urgent Roofing Contractor in Linden, NJ - Emergency Roof Repair Guide"
                 width={1200}
                 height={700}
                 priority
@@ -83,7 +83,7 @@ export default function UrgentRoofingContractorContent() {
           {/* What Is an Urgent Roofing Contractor */}
           <article id="what-is-urgent-roofing-contractor" className="scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-3">
-              What Is an Urgent Roofing Contractor in Linden NJ?
+              What Is an Urgent Roofing Contractor in Linden, NJ?
             </h2>
 
             <p className="text-md md:text-lg">
@@ -168,7 +168,7 @@ export default function UrgentRoofingContractorContent() {
           {/* Benefits of Professional Roofing Services */}
           <article id="benefits-of-professional-roofing" className="scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-3">
-              Benefits of Professional Roofing Services in Linden NJ
+              Benefits of Professional Roofing Services in Linden, NJ
             </h2>
 
             <p className="text-md md:text-lg">
@@ -216,7 +216,7 @@ export default function UrgentRoofingContractorContent() {
           {/* Common Roofing Emergencies */}
           <article id="common-roofing-emergencies" className="scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-3">
-              Common Roofing Emergencies in Linden NJ
+              Common Roofing Emergencies in Linden, NJ
             </h2>
 
             <div className="mt-6">
@@ -224,7 +224,7 @@ export default function UrgentRoofingContractorContent() {
                 Storm and Wind Damage
               </h3>
               <p className="text-md md:text-lg mt-2">
-                Severe weather can loosen roofing materials, damage flashing, and create openings where water enters. A wind damaged roof contractor in Linden NJ can inspect affected areas and recommend repairs.
+                Severe weather can loosen roofing materials, damage flashing, and create openings where water enters. A wind damaged roof contractor in Linden, NJ can inspect affected areas and recommend repairs.
               </p>
               <p className="font-semibold text-md md:text-lg mt-3 text-[#cc4233]">
                 Common storm-related problems include:
@@ -291,7 +291,7 @@ export default function UrgentRoofingContractorContent() {
             <p className="text-md md:text-lg mt-4">
               A reputable roofing company should provide{" "}
               <Link href="/roofing-services-linden-nj" className="text-[#e63a27]">
-                affordable roofing estimates in Linden NJ
+                affordable roofing estimates in Linden, NJ
               </Link>{" "}
               and explain repair options before work begins.
             </p>
@@ -312,7 +312,7 @@ export default function UrgentRoofingContractorContent() {
             </p>
 
             <p className="font-semibold text-lg md:text-xl mt-4 text-[#cc4233]">
-              A licensed roofing company in Linden NJ can provide:
+              A licensed roofing company in Linden, NJ can provide:
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1 text-md md:text-lg">
               <li>Proper inspections</li>
@@ -365,7 +365,7 @@ export default function UrgentRoofingContractorContent() {
             </ol>
 
             <p className="text-md md:text-lg mt-4">
-              A professional roof maintenance company in Linden NJ can help protect your investment throughout the year.
+              A professional roof maintenance company in Linden, NJ can help protect your investment throughout the year.
             </p>
           </article>
 
@@ -380,7 +380,7 @@ export default function UrgentRoofingContractorContent() {
             </p>
 
             <p className="text-md md:text-lg mt-3">
-              As experienced roofing professionals, AG Restorations focuses on accurate assessments, quality workmanship, and customer-focused service. Whether you need same day roofing service in Linden NJ, roof insurance claim assistance, or a detailed roofing estimate, their team helps property owners make informed decisions.
+              As experienced roofing professionals, AG Restorations focuses on accurate assessments, quality workmanship, and customer-focused service. Whether you need same day roofing service in Linden, NJ, roof insurance claim assistance, or a detailed roofing estimate, their team helps property owners make informed decisions.
             </p>
 
             <p className="text-md md:text-lg mt-3">
@@ -410,7 +410,7 @@ export default function UrgentRoofingContractorContent() {
 
               <details className="rounded-xl p-1">
                 <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
-                  2. How do I know if I need an urgent roofing contractor in Linden NJ?
+                  2. How do I know if I need an urgent roofing contractor in Linden, NJ?
                 </summary>
                 <p className="mt-2 text-slate-700">
                   <b>Answer:</b> You may need emergency roofing help if you notice active leaks, water stains on ceilings, missing shingles, damaged flashing, sagging areas, or storm-related damage. Quick professional inspection can prevent minor issues from becoming major repairs.
@@ -419,7 +419,7 @@ export default function UrgentRoofingContractorContent() {
 
               <details className="rounded-xl p-1">
                 <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
-                  3. How much does emergency roof repair cost in Linden NJ?
+                  3. How much does emergency roof repair cost in Linden, NJ?
                 </summary>
                 <p className="mt-2 text-slate-700">
                   <b>Answer:</b> Emergency roof repair costs depend on the extent of damage, materials required, and repair complexity. Small repairs may be affordable, while extensive storm damage or roof restoration projects require a more detailed estimate.
@@ -518,7 +518,7 @@ export default function UrgentRoofingContractorContent() {
               Conclusion
             </h2>
             <p className="text-md md:text-lg">
-              Roof emergencies require quick decisions and professional solutions. An urgent roofing contractor in Linden NJ can help protect your property from leaks, storm damage, moisture problems, and costly structural repairs.
+              Roof emergencies require quick decisions and professional solutions. An urgent roofing contractor in Linden, NJ can help protect your property from leaks, storm damage, moisture problems, and costly structural repairs.
             </p>
             <p className="text-md md:text-lg mt-3">
               Whether you need missing shingle replacement, chimney flashing repair, roof ventilation services, storm restoration, or complete roofing upgrades, working with experienced professionals ensures your roof receives the right care.

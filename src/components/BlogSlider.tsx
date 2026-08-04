@@ -18,18 +18,18 @@ interface Props {
 
 const slides = [
   {
-    title: "How to Choose the Best Roofing Contractor in Linden NJ",
+    title: "How to Choose the Best Roofing Contractor in Linden, NJ",
     description:
-      "Learn how to choose the best roofing contractor in Linden NJ by checking licensing, experience, reviews, and pricing. Get expert tips for roof repair and replacement decisions.",
+      "Learn how to choose the best roofing contractor in Linden, NJ by checking licensing, experience, reviews, and pricing. Get expert tips for roof repair and replacement decisions.",
     date: "11 July",
     image: "/blog/blog-1.webp",
     initialLikeCount: 70,
     link: "/blog/best-roofing-contractor-linden-nj", // ✅ ADDED LINK
   },
   {
-    title: "Top Signs You Need New Siding in Linden NJ Homes",
+    title: "Top Signs You Need New Siding in Linden, NJ Homes",
     description:
-      "Learn how to identify when your Linden NJ home needs new siding by checking for damage, energy efficiency, and aesthetic concerns. Get expert tips for siding replacement decisions.",
+      "Learn how to identify when your Linden, NJ home needs new siding by checking for damage, energy efficiency, and aesthetic concerns. Get expert tips for siding replacement decisions.",
     date: "11 July",
     image: "/blog/blog-2.webp",
     initialLikeCount: 70,

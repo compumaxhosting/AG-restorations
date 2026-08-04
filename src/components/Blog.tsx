@@ -7,9 +7,9 @@ import Image from "next/image";
 const blogs = [
   {
     slug: "urgent-roofing-contractor-linden-nj-emergency-roof-repair-guide",
-    title: "Urgent Roofing Contractor in Linden NJ: Complete Guide to Emergency Roof Repair",
+    title: "Urgent Roofing Contractor in Linden, NJ: Complete Guide to Emergency Roof Repair",
     description:
-      "When a roof emergency happens, fast action can prevent expensive structural damage. Learn how emergency roof repair works, costs, and why hiring a professional urgent roofing contractor in Linden NJ matters....",
+      "When a roof emergency happens, fast action can prevent expensive structural damage. Learn how emergency roof repair works, costs, and why hiring a professional urgent roofing contractor in Linden, NJ matters....",
     image: "/blog/urgent-roofing-contractor-linden-nj.webp",
     lastUpdated: "31st July 2026",
   },
@@ -17,7 +17,7 @@ const blogs = [
     slug: "best-roofing-contractor-linden-nj",
     title: "How to Choose the Best Roofing Contractor in Linden, NJ",
     description:
-      "Choosing the best roofing contractor in Linden NJ comes down to verifying licensing, checking local experience, comparing estimates, and reviewing past work....",
+      "Choosing the best roofing contractor in Linden, NJ comes down to verifying licensing, checking local experience, comparing estimates, and reviewing past work....",
     image: "/blog/blog-1.webp",
     lastUpdated: "1st May 2026",
   },
@@ -73,7 +73,7 @@ export default function Blog() {
             id="blog-section-title"
             className="text-4xl lg:text-5xl font-bold text-[#003269] leading-tight max-w-5xl mx-auto"
           >
-            Roofing, Siding & Gutter Tips for Linden NJ Homeowners
+            Roofing, Siding & Gutter Tips for Linden, NJ Homeowners
           </h2>
         </header>
 

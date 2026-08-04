@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     "Explore our portfolio of completed roofing, siding, and gutter projects in Linden, NJ, and Union County. See why AG Restorations is the trusted local choice.",
 
   keywords: [
-    "roofing projects Linden NJ",
+    "roofing projects Linden, NJ",
     "siding gallery Linden",
     "gutter installation photos",
     "AG Restorations portfolio",

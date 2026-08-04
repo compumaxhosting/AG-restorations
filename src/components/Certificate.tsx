@@ -14,7 +14,7 @@ const items = [
   },
   {
     title: "Experienced Local Professionals",
-    desc: "Our skilled contractors bring years of experience in roofing, siding, and gutter installation for residential and commercial properties in Linden NJ.",
+    desc: "Our skilled contractors bring years of experience in roofing, siding, and gutter installation for residential and commercial properties in Linden, NJ.",
     icon: <HardHat size={40} aria-hidden="true" />,
   },
   {
@@ -27,12 +27,12 @@ const items = [
     <section
       className="w-full bg-[#0f172a] py-16"
       aria-labelledby="why-choose-ag-restorations"
-      aria-label="Reasons to choose AG Restorations roofing contractor in Linden New Jersey"
+      aria-label="Reasons to choose AG Restorations roofing contractor in Linden, New Jersey"
     >
       <div className="max-w-6xl mx-auto px-4">
         {/* Hidden SEO Heading */}
         <h2 id="why-choose-ag-restorations" className="sr-only">
-          Why Choose AG Restorations Roofing Contractor in Linden New Jersey
+          Why Choose AG Restorations Roofing Contractor in Linden, New Jersey
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

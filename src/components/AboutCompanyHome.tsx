@@ -15,7 +15,7 @@ export default function AboutCompany() {
         <div className="w-full h-105 relative overflow-hidden">
           <Image
             src="/about-roofing.webp"
-            alt="AG Restorations roofing contractors installing residential roof in Linden New Jersey"
+            alt="AG Restorations roofing contractors installing residential roof in Linden, New Jersey"
             fill
             sizes="(max-width:768px) 100vw, 50vw"
             quality={70}

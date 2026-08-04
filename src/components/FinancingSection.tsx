@@ -15,7 +15,7 @@ export default function FinancingSection() {
           <FaCreditCard aria-hidden="true" />
           <span>
             100% Financing Available for Roofing, Siding & Gutter Projects in
-            Linden NJ.
+            Linden, NJ.
           </span>
         </p>
 

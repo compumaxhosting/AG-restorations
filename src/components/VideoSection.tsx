@@ -40,7 +40,7 @@ export default function VideoSection({ margin }: Props) {
         <div className="relative w-full md:w-[40%] h-87.5 md:h-125">
           <Image
             src="/Services-Slider/services1.webp"
-            alt="Professional roofing installation project by AG Restorations in Linden New Jersey"
+            alt="Professional roofing installation project by AG Restorations in Linden, New Jersey"
             fill
             quality={40}
             sizes="(max-width:768px) 100vw, 40vw"
@@ -68,7 +68,7 @@ export default function VideoSection({ margin }: Props) {
 
               {/* Title */}
               <h2 className="text-3xl lg:text-5xl font-medium leading-tight mb-4">
-                Professional Roofing Services <br /> In Linden NJ
+                Professional Roofing Services <br /> In Linden, NJ
               </h2>
 
               {/* List */}

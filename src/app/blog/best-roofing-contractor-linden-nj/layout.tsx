@@ -8,16 +8,16 @@ export const metadata: Metadata = {
     "Learn how to choose the best roofing contractor in Linden, NJ. Discover tips on licensing, reviews, pricing, warranties, and hiring trusted professionals for roof repair or replacement.",
 
   keywords: [
-    "best roofing contractor Linden NJ",
+    "best roofing contractor Linden, NJ",
     "how to choose roofing contractor NJ",
-    "roof repair contractor Linden NJ",
-    "roof replacement Linden New Jersey",
+    "roof repair contractor Linden, NJ",
+    "roof replacement Linden, New Jersey",
     "licensed roofing contractor NJ",
-    "roofing company Linden NJ reviews",
-    "local roofing contractor Linden NJ",
+    "roofing company Linden, NJ reviews",
+    "local roofing contractor Linden, NJ",
     "residential roofing services NJ",
     "commercial roofing contractor NJ",
-    "roofing estimates Linden NJ",
+    "roofing estimates Linden, NJ",
   ],
 
   authors: [{ name: "AG Restorations" }],

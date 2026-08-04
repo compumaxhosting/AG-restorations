@@ -26,7 +26,7 @@ const accordionVariants: Variants = {
 
 const faqs = [
   {
-    question: "What roofing services do you offer in Linden NJ?",
+    question: "What roofing services do you offer in Linden, NJ?",
     answer:
       "AG Restorations provides professional roof repair, roof replacement, and new roof installation for residential and commercial properties in Linden and nearby Union County communities.",
   },
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: "Do you offer siding installation services?",
     answer:
-      "Yes, AG Restorations installs durable siding systems designed to improve curb appeal and protect your home from weather damage across Linden NJ and surrounding areas.",
+      "Yes, AG Restorations installs durable siding systems designed to improve curb appeal and protect your home from weather damage across Linden, NJ and surrounding areas.",
   },
   {
     question: "Do you provide gutter installation and repair?",
