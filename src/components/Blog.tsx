@@ -37,6 +37,14 @@ const blogs = [
     image: "/blog/blog-3.webp",
     lastUpdated: "3rd July 2026",
   },
+  {
+    slug: "durable-rain-gutter-systems-linden-nj-2026",
+    title: "The Complete 2026 Guide to Durable Rain Gutter Systems and Exterior Water Management in Linden, NJ",
+    description:
+      "Durable rain gutter systems protect foundations, reduce basement flooding, prevent moisture damage, and improve long-term exterior water management....",
+    image: "/blog/durable-rain-gutter-systems-linden-nj-2026.webp",
+    lastUpdated: "6th August 2026",
+  },
 ];
 
 /* ================= TYPES ================= */
