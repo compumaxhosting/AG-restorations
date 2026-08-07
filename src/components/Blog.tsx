@@ -6,6 +6,22 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
+    slug: "durable-rain-gutter-systems-linden-nj-2026",
+    title: "The Complete 2026 Guide to Durable Rain Gutter Systems and Exterior Water Management in Linden, NJ",
+    description:
+      "Durable rain gutter systems protect foundations, reduce basement flooding, prevent moisture damage, and improve long-term exterior water management....",
+    image: "/blog/durable-rain-gutter-systems-linden-nj-2026.webp",
+    lastUpdated: "6th August 2026",
+  },
+  {
+    slug: "gutter-installation-union-county-guide",
+    title: "Gutter Installation in Union County: A Homeowner's Guide",
+    description:
+      "Gutter installation in Union County is essential for protecting homes from water damage, foundation issues, and roof deterioration....",
+    image: "/blog/blog-3.webp",
+    lastUpdated: "3rd July 2026",
+  },
+  {
     slug: "urgent-roofing-contractor-linden-nj-emergency-roof-repair-guide",
     title: "Urgent Roofing Contractor in Linden, NJ: Complete Guide to Emergency Roof Repair",
     description:
@@ -28,14 +44,6 @@ const blogs = [
       "If your home's exterior looks worn, feels soft to the touch, or your heating and cooling bills have crept up without explanation, your siding.....",
     image: "/blog/blog-2.webp",
     lastUpdated: "24th April 2026",
-  },
-  {
-    slug: "gutter-installation-union-county-guide",
-    title: "Gutter Installation in Union County: A Homeowner's Guide",
-    description:
-      "Gutter installation in Union County is essential for protecting homes from water damage, foundation issues, and roof deterioration....",
-    image: "/blog/blog-3.webp",
-    lastUpdated: "3rd July 2026",
   },
 ];
 
