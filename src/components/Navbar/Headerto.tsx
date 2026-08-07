@@ -7,6 +7,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { SiTiktok } from "react-icons/si";
 import Link from "next/link";
 import GoogleTranslateWidget from "../GoogleTranslateWidget";
+import { trackEvent } from "@/lib/analytics";
 
 /* ================= CONSTANTS ================= */
 
@@ -87,6 +88,9 @@ export default function Headerto() {
               href="tel:+19733424134"
               className="flex items-center gap-2 group"
               aria-label="Call 973 342 4134"
+              onClick={() => {
+                trackEvent("phone_click", "Top Bar Phone");
+              }}
             >
               <Phone
                 size={22}
@@ -103,6 +107,9 @@ export default function Headerto() {
               href="mailto:info@agrestorations.com"
               className="hidden lg:flex items-center gap-2 group"
               aria-label="Email info@agrestorations.com"
+              onClick={() => {
+                trackEvent("email_click", "Top Bar Email");
+              }}
             >
               <Mail
                 size={22}
