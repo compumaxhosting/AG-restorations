@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaHeadphonesAlt } from "react-icons/fa";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
-
+import { trackEvent } from "@/lib/analytics";
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (delay: number = 0) => ({
@@ -105,6 +105,9 @@ export default function FooterTopCTA() {
             href="tel:+19733424134"
             className="bg-[#e63a27] text-white flex items-center gap-2 px-4 py-2 font-semibold transition hover:bg-[#c52f1f] call-hover-button"
             aria-label="Call AG Restorations at 973-820-5130"
+            onClick={() => {
+              trackEvent("phone_click", "CTA Button Phone");
+            }}
           >
             <FaHeadphonesAlt aria-hidden="true" />
             <span className="text-sm sm:text-base font-inter">

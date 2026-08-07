@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaTiktok, FaXTwitter } from "react-icons/fa6";
 import BackToTop from "./BackToTop";
-
+import { trackEvent } from "@/lib/analytics";
 export default function Footer() {
   return (
     <footer
@@ -111,10 +111,13 @@ export default function Footer() {
             Phone:{" "}
             <Link
               href="tel:+19733424134"
-              className="hover:underline"
               aria-label="Call AG Restorations"
+              className="text-[#e63a27] hover:underline font-medium"
+              onClick={() => {
+                trackEvent("phone_click", "Contact Section Phone");
+              }}
             >
-              +1 973 342 4134
+              (973) 342-4134
             </Link>
           </p>
 
@@ -124,6 +127,9 @@ export default function Footer() {
               href="mailto:info@agrestorations.com"
               aria-label="Send email to AG Restorations"
               className="text-[#e63a27] hover:underline font-medium"
+              onClick={() => {
+                trackEvent("email_click", "Contact Section Email");
+              }}
             >
               info@agrestorations.com
             </Link>

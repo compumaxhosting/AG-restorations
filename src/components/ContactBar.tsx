@@ -2,7 +2,7 @@
 
 import { Phone, MapPin, Mail } from "lucide-react";
 import Link from "next/link";
-
+import { trackEvent } from "@/lib/analytics";
 const contactItems = [
   {
     href: "tel:+19733424134",
@@ -34,15 +34,25 @@ const ContactBar: React.FC = () => (
   >
     {contactItems.map(({ href, ariaLabel, Icon, text, external }, index) => (
       <Link
-        key={index}
+        key={text}
         href={href}
         aria-label={ariaLabel}
-        target={external ? "_blank" : undefined}
-        rel={external ? "noopener noreferrer" : undefined}
-        className="flex flex-col items-center justify-center py-3 hover:bg-[#b82414] transition-colors font-inter focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-white"
-      >
-        <Icon size={24} aria-hidden="true" />
+        className="flex flex-col items-center justify-center text-white hover:text-[#e63a27] transition-colors duration-300 group"
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        onClick={() => {
+          if (href.startsWith("tel:")) {
+            trackEvent("phone_click", "Contact Bar Phone");
+          }
 
+          if (href.startsWith("mailto:")) {
+            trackEvent("email_click", "Contact Bar Email");
+          }
+        }}
+      >
+        <Icon
+          size={20}
+          className="group-hover:scale-110 transition-transform duration-300"
+        />
         <span className="text-sm font-semibold mt-1">{text}</span>
       </Link>
     ))}
