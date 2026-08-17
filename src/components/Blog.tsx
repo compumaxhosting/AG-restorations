@@ -6,6 +6,14 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
+    slug: "roofing-services-linden-nj-guide-2026",
+    title: "Roofing Services Linden NJ: Roof Repair & Replacement Guide 2026",
+    description:
+      "Explore roofing services in Linden NJ, including roof repair, roof replacement, inspections, maintenance, and hiring the best roofing contractor.",
+    image: "/blog/roofing-services-linden-nj-guide-2026.webp",
+    lastUpdated: "17th August 2026",
+  },
+  {
     slug: "durable-rain-gutter-systems-linden-nj-2026",
     title: "The Complete 2026 Guide to Durable Rain Gutter Systems and Exterior Water Management in Linden, NJ",
     description:
