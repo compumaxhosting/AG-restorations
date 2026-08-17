@@ -259,89 +259,76 @@ export default function GutterInstallationContent() {
             </p>
           </article>
 
-          <article id="faqs" className="scroll-mt-24">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-3">
-              Frequently Asked Questions
-            </h2>
+         <article id="faqs" className="scroll-mt-24">
+  <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-4">
+    Frequently Asked Questions
+  </h2>
 
-            <div className="space-y-3">
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  What is the best type of gutter for homes in Union County?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Aluminum and seamless gutters are the most popular due to
-                  durability and affordability. Copper gutters are also used for
-                  premium homes but come at a higher cost.
-                </p>
-              </div>
+  <div className="w-full md:w-3/4 lg:w-1/2">
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        1. What is the best type of gutter for homes in Union County?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Aluminum and seamless gutters are the most popular due to durability and affordability. Copper gutters are also used for premium homes but come at a higher cost.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  How long does gutter installation take?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Most residential gutter installation projects take one day,
-                  depending on home size and system complexity. Larger or custom
-                  installations may take longer.
-                </p>
-              </div>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        2. How long does gutter installation take?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Most residential gutter installation projects take one day, depending on home size and system complexity. Larger or custom installations may take longer.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  How often should gutters be replaced?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Gutters typically last 20–30 years depending on material and
-                  maintenance. Signs like rust, sagging, or frequent leaks
-                  indicate replacement is needed.
-                </p>
-              </div>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        3. How often should gutters be replaced?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Gutters typically last 20–30 years depending on material and maintenance. Signs like rust, sagging, or frequent leaks indicate replacement is needed.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  Is seamless gutter installation worth it?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Yes, seamless gutters reduce leaks and require less
-                  maintenance compared to sectional systems, making them ideal
-                  for long-term performance.
-                </p>
-              </div>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        4. Is seamless gutter installation worth it?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Yes, seamless gutters reduce leaks and require less maintenance compared to sectional systems, making them ideal for long-term performance.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  Do I need gutter guards?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Gutter guards or leaf protection systems are highly
-                  recommended, especially in areas with heavy tree coverage, as
-                  they reduce clogging and maintenance needs.
-                </p>
-              </div>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        5. Do I need gutter guards?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Gutter guards or leaf protection systems are highly recommended, especially in areas with heavy tree coverage, as they reduce clogging and maintenance needs.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  What happens if gutters are not installed properly?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Improper installation can lead to water damage, foundation
-                  cracks, basement flooding, and roof deterioration.
-                </p>
-              </div>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        6. What happens if gutters are not installed properly?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Improper installation can lead to water damage, foundation cracks, basement flooding, and roof deterioration.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  Can gutters be repaired instead of replaced?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Yes, minor issues like leaks or loose brackets can often be
-                  repaired. However, extensive damage may require full
-                  replacement.
-                </p>
-              </div>
-            </div>
-          </article>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        7. Can gutters be repaired instead of replaced?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Yes, minor issues like leaks or loose brackets can often be repaired. However, extensive damage may require full replacement.
+      </p>
+    </details>
+  </div>
+</article>
 
           <article id="conclusion" className="scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-3">

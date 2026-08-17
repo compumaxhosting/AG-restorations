@@ -50,11 +50,11 @@ export const metadata: Metadata = {
     title: "Roofing Services Linden NJ: Complete Roofing Guide 2026",
     description:
       "Learn about roof repair, roof replacement, inspections, maintenance, and choosing a trusted roofing contractor in Linden NJ.",
-    url: "https://www.agrestorations.com/blog/roofing-services-linden-nj-guide-2026",
+    url: "/blog/roofing-services-linden-nj-guide-2026",
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/blog/roofing-services-linden-nj-2026.webp",
+        url: "/blog/roofing-services-linden-nj-2026.webp",
         width: 1200,
         height: 630,
         alt: "Roofing Services Linden NJ - Roof Repair and Roof Replacement Guide",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Roofing Services Linden NJ: Roof Repair & Replacement Guide 2026",
     description:
       "Discover expert roofing services in Linden NJ, including repairs, replacements, inspections, and emergency roofing solutions.",
-    images: ["https://www.agrestorations.com/blog/roofing-services-linden-nj-2026.webp"],
+    images: ["/blog/roofing-services-linden-nj-2026.webp"],
     site: "@AGrestorationss",
   },
 

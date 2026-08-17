@@ -343,68 +343,58 @@ offers benefits that DIY projects often cannot match.
             </ul>
           </article>
 
-          <article id="faqs" className="scroll-mt-24">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-3">
-              Frequently Asked Questions
-            </h2>
+         <article id="faqs" className="scroll-mt-24">
+  <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-4">
+    Frequently Asked Questions
+  </h2>
 
-            <div className="space-y-3">
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  What is the best gutter material for homes in Linden, NJ?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Aluminum remains one of the most popular choices because it is
-                  lightweight, rust-resistant, durable, and available in many
-                  colors.
-                </p>
-              </div>
+  <div className="w-full md:w-3/4 lg:w-1/2">
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        1. What is the best gutter material for homes in Linden, NJ?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Aluminum remains one of the most popular choices because it is lightweight, rust-resistant, durable, and available in many colors.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  How do I know if I need new gutters?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Common signs include sagging gutters, visible cracks, rust,
-                  water pooling around the foundation, overflowing gutters during
-                  rain, and recurring basement moisture.
-                </p>
-              </div>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        2. How do I know if I need new gutters?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Common signs include sagging gutters, visible cracks, rust, water pooling around the foundation, overflowing gutters during rain, and recurring basement moisture.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  Are seamless gutters worth the investment?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Yes. Seamless systems have fewer joints, reducing leaks and
-                  maintenance requirements while improving appearance and
-                  durability.
-                </p>
-              </div>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        3. Are seamless gutters worth the investment?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Yes. Seamless systems have fewer joints, reducing leaks and maintenance requirements while improving appearance and durability.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  How often should gutters be cleaned?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Most homes benefit from cleaning at least twice each year,
-                  though properties surrounded by trees may need more frequent
-                  care.
-                </p>
-              </div>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        4. How often should gutters be cleaned?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Most homes benefit from cleaning at least twice each year, though properties surrounded by trees may need more frequent care.
+      </p>
+    </details>
 
-              <div className="rounded-xl border border-slate-200 p-4">
-                <h3 className="font-semibold text-[#1b2a41]">
-                  Can gutters help prevent basement flooding?
-                </h3>
-                <p className="mt-2 text-slate-700">
-                  Yes. Properly installed gutters and downspouts direct
-                  rainwater away from foundations, reducing soil saturation and
-                  lowering the likelihood of basement leaks and flooding.
-                </p>
-              </div>
-            </div>
-          </article>
+    <details className="rounded-xl p-1">
+      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+        5. Can gutters help prevent basement flooding?
+      </summary>
+      <p className="mt-2 text-slate-700">
+        <b>Answer:</b> Yes. Properly installed gutters and downspouts direct rainwater away from foundations, reducing soil saturation and lowering the likelihood of basement leaks and flooding.
+      </p>
+    </details>
+  </div>
+</article>
 
           <article id="promotional-section" className="scroll-mt-24">
             <div className="rounded-2xl border border-[#cc4233]/20 bg-[#fdf3f2] p-6">
