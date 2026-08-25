@@ -298,66 +298,66 @@ export default function RoofingServicesLindenContent() {
           </article>
 
           <article id="faqs" className="scroll-mt-24">
-  <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-4">
-    Frequently Asked Questions
-  </h2>
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-4">
+              Frequently Asked Questions
+            </h2>
 
-  <div className="w-full md:w-3/4 lg:w-1/2">
-    <details className="rounded-xl p-1">
-      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
-        1. How often should I schedule a roof inspection in Linden NJ?
-      </summary>
-      <p className="mt-2 text-slate-700">
-        <b>Answer:</b> Most roofing professionals recommend an inspection at least once per year and after major storms. Regular inspections can identify small issues before they develop into larger, more expensive problems.
-      </p>
-    </details>
+            <div className="w-full md:w-3/4 lg:w-1/2">
+              <details className="rounded-xl p-1">
+                <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+                  1. How often should I schedule a roof inspection in Linden NJ?
+                </summary>
+                <p className="mt-2 text-slate-700">
+                  <b>Answer:</b> Most roofing professionals recommend an inspection at least once per year and after major storms. Regular inspections can identify small issues before they develop into larger, more expensive problems.
+                </p>
+              </details>
 
-    <details className="rounded-xl p-1">
-      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
-        2. How do I know if I need roof repair or replacement?
-      </summary>
-      <p className="mt-2 text-slate-700">
-        <b>Answer:</b> A professional inspection can determine whether repairs are sufficient or if replacement is more practical. Factors include roof age, extent of damage, recurring leaks, and overall condition.
-      </p>
-    </details>
+              <details className="rounded-xl p-1">
+                <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+                  2. How do I know if I need roof repair or replacement?
+                </summary>
+                <p className="mt-2 text-slate-700">
+                  <b>Answer:</b> A professional inspection can determine whether repairs are sufficient or if replacement is more practical. Factors include roof age, extent of damage, recurring leaks, and overall condition.
+                </p>
+              </details>
 
-    <details className="rounded-xl p-1">
-      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
-        3. What should I do if my roof starts leaking?
-      </summary>
-      <p className="mt-2 text-slate-700">
-        <b>Answer:</b> Move valuables away from the affected area, contain water if possible, and contact a roofing contractor promptly. Delaying repairs can increase damage to interior building components.
-      </p>
-    </details>
+              <details className="rounded-xl p-1">
+                <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+                  3. What should I do if my roof starts leaking?
+                </summary>
+                <p className="mt-2 text-slate-700">
+                  <b>Answer:</b> Move valuables away from the affected area, contain water if possible, and contact a roofing contractor promptly. Delaying repairs can increase damage to interior building components.
+                </p>
+              </details>
 
-    <details className="rounded-xl p-1">
-      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
-        4. Is emergency roof repair available after storms?
-      </summary>
-      <p className="mt-2 text-slate-700">
-        <b>Answer:</b> Many roofing contractors provide emergency roof repair services to help minimize water intrusion and stabilize damaged roofing systems until permanent repairs can be completed.
-      </p>
-    </details>
+              <details className="rounded-xl p-1">
+                <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+                  4. Is emergency roof repair available after storms?
+                </summary>
+                <p className="mt-2 text-slate-700">
+                  <b>Answer:</b> Many roofing contractors provide emergency roof repair services to help minimize water intrusion and stabilize damaged roofing systems until permanent repairs can be completed.
+                </p>
+              </details>
 
-    <details className="rounded-xl p-1">
-      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
-        5. What is the most common roofing material for homes in New Jersey?
-      </summary>
-      <p className="mt-2 text-slate-700">
-        <b>Answer:</b> Asphalt shingles are among the most widely used residential roofing materials due to their affordability, durability, and suitability for local weather conditions.
-      </p>
-    </details>
+              <details className="rounded-xl p-1">
+                <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+                  5. What is the most common roofing material for homes in New Jersey?
+                </summary>
+                <p className="mt-2 text-slate-700">
+                  <b>Answer:</b> Asphalt shingles are among the most widely used residential roofing materials due to their affordability, durability, and suitability for local weather conditions.
+                </p>
+              </details>
 
-    <details className="rounded-xl p-1">
-      <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
-        6. How long does a roof typically last?
-      </summary>
-      <p className="mt-2 text-slate-700">
-        <b>Answer:</b> Roof lifespan depends on material type, installation quality, maintenance, weather exposure, and environmental conditions. Regular maintenance can help maximize service life.
-      </p>
-    </details>
-  </div>
-</article>
+              <details className="rounded-xl p-1">
+                <summary className="font-semibold cursor-pointer border p-2 rounded-lg">
+                  6. How long does a roof typically last?
+                </summary>
+                <p className="mt-2 text-slate-700">
+                  <b>Answer:</b> Roof lifespan depends on material type, installation quality, maintenance, weather exposure, and environmental conditions. Regular maintenance can help maximize service life.
+                </p>
+              </details>
+            </div>
+          </article>
           <article id="conclusion" className="scroll-mt-24">
             <h2 className="text-2xl md:text-3xl font-semibold text-[#1b2a41] mb-3">
               Conclusion

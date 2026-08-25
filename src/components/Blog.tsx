@@ -6,6 +6,14 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
+    slug: "best-siding-installation-linden-nj",
+    title: "Best Siding Installation in Linden, NJ: Improve Your Home's Protection & Curb Appeal",
+    description:
+      "Learn everything about siding installation in Linden, NJ, including siding materials, signs you need replacement, installation steps, curb appeal benefits, weather protection, and how to choose the right siding contractor.",
+    image: "/blog/siding-installation-linden-nj.webp",
+    lastUpdated: "25th August 2026",
+  },
+  {
     slug: "roofing-services-linden-nj-guide-2026",
     title: "Roofing Services Linden NJ: Roof Repair & Replacement Guide 2026",
     description:
