@@ -6,6 +6,14 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
+    slug: "best-gutter-installation-company-linden-nj",
+    title: "What's the Best Gutter Installation Company in Linden, NJ?",
+    description:
+      "Learn how seamless gutters, proper drainage, installation quality, and local exterior expertise help protect Linden, NJ properties.",
+    image: "/blog/gutter-installation-linden-nj.webp",
+    lastUpdated: "2nd September 2026",
+  },
+  {
     slug: "best-siding-installation-linden-nj",
     title: "Best Siding Installation in Linden, NJ: Improve Your Home's Protection & Curb Appeal",
     description:
