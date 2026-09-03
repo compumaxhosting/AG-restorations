@@ -56,7 +56,7 @@ export default function Headerto() {
             priority
           />
         </Link>
-        <button onClick={openMenu}>
+        <button onClick={openMenu} aria-label="Open navigation menu">
           <Menu size={32} className="text-white" />
         </button>
       </div>
@@ -131,6 +131,7 @@ export default function Headerto() {
                 href="https://www.facebook.com/share/18KcQSnH8d/"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Visit AG Restorations on Facebook"
               >
                 <FaFacebookF className="icon cursor-pointer" />
               </Link>
@@ -141,6 +142,7 @@ export default function Headerto() {
                 href="https://www.instagram.com/ag.restorationslinden"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Visit AG Restorations on Instagram"
               >
                 <FaInstagram className="icon cursor-pointer" />
               </Link>
@@ -151,6 +153,7 @@ export default function Headerto() {
                 href="https://www.tiktok.com/@ag.roofing.siding"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                aria-label="Visit AG Restorations on TikTok"
               >
                 <SiTiktok className="icon cursor-pointer" />
               </Link>
@@ -225,7 +228,7 @@ export default function Headerto() {
           }`}
         >
           <div className="flex justify-end p-4">
-            <button onClick={closeMenu}>
+            <button onClick={closeMenu} aria-label="Close navigation menu">
               <X size={26} />
             </button>
           </div>
@@ -235,6 +238,7 @@ export default function Headerto() {
               src="/logo.avif"
               alt="Logo"
               fill
+              sizes="(max-width: 768px) 85vw, 320px"
               className="object-contain"
             />
           </div>
@@ -245,6 +249,7 @@ export default function Headerto() {
                 <div key={item.path}>
                   <button
                     onClick={() => setMobileDropdown(!mobileDropdown)}
+                    aria-label="Toggle services menu"
                     className="block w-full text-left border-t border-gray-700 px-6 py-4 text-lg"
                   >
                     {item.label} <span className="text-xs ml-1">▼</span>

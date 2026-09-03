@@ -390,6 +390,8 @@ body {
 
 .translate-widget img {
   display: none !important;
+  width: auto !important;
+  height: auto !important;
 }
 
 body {

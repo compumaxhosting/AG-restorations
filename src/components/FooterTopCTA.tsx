@@ -43,7 +43,7 @@ export default function FooterTopCTA() {
               src="/Navbar/Logo-AG.png"
               alt="AG Restorations roofing siding and gutter company logo in Linden, New Jersey"
               width={160}
-              height={160}
+              height={77}
               className="object-contain border-2 cursor-pointer hover:opacity-80 transition"
               priority
             />

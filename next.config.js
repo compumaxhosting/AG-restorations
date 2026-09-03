@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000, // better caching (1 year)
-    qualities: [40, 60, 70, 75],
+    qualities: [35, 40, 60, 70, 75],
   },
 
   async redirects() {
@@ -63,11 +63,9 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
-      {
-        source: "/index.html",
-        destination: "/",
-        permanent: true,
-      },
+      { source: "/$", destination: "/", permanent: true, }, 
+      { source: "/&", destination: "/", permanent: true, },
+      { source: "/masonry-services-brooklyn-ny", destination: "/", permanent: true, },
     ];
   },
 };

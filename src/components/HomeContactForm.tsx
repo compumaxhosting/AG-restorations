@@ -327,7 +327,7 @@ export default function ContactForm() {
             src={captchaImage}
             alt="Security captcha code. Enter the numbers shown in the image."
             width={120}
-            height={40}
+            height={37}
           />
         )}
 

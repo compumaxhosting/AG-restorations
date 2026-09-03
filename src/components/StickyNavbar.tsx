@@ -55,7 +55,7 @@ export default function StickyNavbar() {
           src="/Navbar/Logo-AG.png"
           alt="Company Logo"
           width={210}
-          height={160}
+          height={101}
         />
       </Link>
 

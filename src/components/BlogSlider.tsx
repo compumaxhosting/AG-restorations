@@ -7,7 +7,6 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import BlogSlideCard from "./BlogSlideCard";
 import type { Swiper as SwiperType } from "swiper";
 import type { RefObject } from "react";

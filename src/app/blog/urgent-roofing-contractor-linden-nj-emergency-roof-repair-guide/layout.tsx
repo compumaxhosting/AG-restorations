@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/images/urgent-roofing-contractor-linden-nj.jpg",
+        url: "https://www.agrestorations.com/blog/blog-1.webp",
         alt: "Urgent roofing contractor providing emergency roof repair services in Linden, NJ",
       },
     ],
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     description:
       "Get expert emergency roof repair guidance and learn how AG Restorations helps protect homes and businesses in Linden, NJ.",
     images: [
-      "https://www.agrestorations.com/images/urgent-roofing-contractor-linden-nj.jpg",
+      "https://www.agrestorations.com/blog/blog-1.webp",
     ],
     site: "@AGrestorationss",
   },

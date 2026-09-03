@@ -7,7 +7,6 @@ import "swiper/css";
 import { useEffect, useRef, useState } from "react";
 import type { Swiper as SwiperType } from "swiper";
 import type { RefObject } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -73,9 +72,10 @@ export default function ServicesSlider({ swiperRef }: Props) {
 
   return (
     <div className="flex flex-col items-center px-4 sm:px-6 mb-5">
-      <div className="w-10/12 overflow-hidden">
+      <div className="w-10/12 overflow-hidden h-95 sm:h-105 lg:h-112.5">
         <Swiper
-          loop={false} // ✅ prevents duplicate image loads
+          className="h-95 sm:h-105 lg:h-112.5"
+          loop={false}
           speed={1000}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           allowTouchMove={false}
@@ -116,6 +116,8 @@ export default function ServicesSlider({ swiperRef }: Props) {
                         fill
                         sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 30vw"
                         quality={40}
+                        priority={i === 0}
+                        fetchPriority={i === 0 ? "high" : "auto"}
                         placeholder="empty"
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 will-change-transform"
                       />

@@ -44,7 +44,7 @@ export default function HeroSliderEmbla({
     <>
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
-          {slides.map((slide) => (
+          {slides.map((slide, index) => (
             <div
               key={slide.id}
               className="relative min-w-full max-sm:h-[70vh] sm:h-screen"
@@ -54,8 +54,10 @@ export default function HeroSliderEmbla({
                 alt={slide.alt}
                 fill
                 sizes="100vw"
-                loading="lazy"
-                quality={35} // ✅ more compression
+                priority={index === 0}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                loading="eager"
+                quality={35}
                 placeholder="empty"
                 className="object-cover"
               />
@@ -68,6 +70,7 @@ export default function HeroSliderEmbla({
       {/* ARROWS */}
       <button
         onClick={scrollPrev}
+        aria-label="Previous slide"
         className="hidden md:block absolute left-5 top-1/2 -translate-y-1/2 z-30 bg-black/40 p-4 rounded-full"
       >
         <ChevronLeft className="text-white" />
@@ -75,6 +78,7 @@ export default function HeroSliderEmbla({
 
       <button
         onClick={scrollNext}
+        aria-label="Next slide"
         className="hidden md:block absolute right-5 top-1/2 -translate-y-1/2 z-30 bg-black/40 p-4 rounded-full"
       >
         <ChevronRight className="text-white" />

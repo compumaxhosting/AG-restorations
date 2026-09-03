@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/blog/best-roofing-contractor-linden-nj/blog-1.webp",
+        url: "https://www.agrestorations.com/blog/blog-1.webp",
         width: 1200,
         height: 630,
         alt: "AG Restorations Blog",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description:
       "Learn how to choose the best roofing contractor in Linden, NJ. Discover tips on licensing, reviews, pricing, warranties, and hiring trusted professionals for roof repair or replacement.",
     images: [
-      "https://www.agrestorations.com/blog/best-roofing-contractor-linden-nj/blog-1.webp",
+      "https://www.agrestorations.com/blog/blog-1.webp",
     ],
     site: "@AGrestorationss",
   },

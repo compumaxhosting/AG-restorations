@@ -112,7 +112,7 @@ export default function NavLinks() {
               src="/Navbar/Logo-AG.png"
               alt="AG Restorations Company Logo"
               width={220}
-              height={120}
+              height={106}
               priority
             />
           </Link>
@@ -139,6 +139,7 @@ export default function NavLinks() {
               href="https://www.facebook.com/share/18KcQSnH8d/"
               target="_blank"
               rel="noopener noreferrer nofollow"
+              aria-label="Visit AG Restorations on Facebook"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaFacebookF className="text-white text-lg" />
@@ -148,6 +149,7 @@ export default function NavLinks() {
               href="https://www.instagram.com/ag.restorationslinden"
               target="_blank"
               rel="noopener noreferrer nofollow"
+              aria-label="Visit AG Restorations on Instagram"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaInstagram className="text-white text-lg" />
@@ -157,6 +159,7 @@ export default function NavLinks() {
               href="https://www.tiktok.com/@ag.roofing.siding"
               target="_blank"
               rel="noopener noreferrer nofollow"
+              aria-label="Visit AG Restorations on TikTok"
               className="bg-[#e63a27] hover:bg-red-600 transition rounded-full w-10 h-10 flex items-center justify-center"
             >
               <FaTiktok className="text-white text-lg" />

@@ -20,7 +20,7 @@ export default function DesktopHeader() {
             src="/Navbar/Logo-AG.png"
             alt="AG Restorations Roofing Company Logo"
             width={240}
-            height={120}
+            height={115}
             priority
             className="object-contain"
           />

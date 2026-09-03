@@ -46,6 +46,7 @@ export default function MobileHeaderNew() {
           <Image
             src="/Navbar/Logo-AG.png" // replace with your AG Restorations logo file
             fill
+            sizes="(max-width: 640px) 160px, 240px"
             alt="AG Restorations Roofing & Remodeling Company Logo"
             className="object-contain drop-shadow-md"
             priority

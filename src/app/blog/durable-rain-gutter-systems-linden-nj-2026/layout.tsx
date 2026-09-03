@@ -44,18 +44,18 @@ export const metadata: Metadata = {
     "max-video-preview": -1,
   },
   alternates: {
-    canonical: "https://www.agrestorations.com/durable-rain-gutter-systems-linden-nj-2026",
+    canonical: "https://www.agrestorations.com/blog/durable-rain-gutter-systems-linden-nj-2026",
   },
   openGraph: {
     type: "website",
     title: "Linden NJ Gutter Installation | 2026 Durable Rain Gutter Guide",
     description:
       "Discover expert Linden NJ gutter installation, seamless gutters, and exterior water management solutions to protect your property in 2026.",
-    url: "https://www.agrestorations.com/durable-rain-gutter-systems-linden-nj-2026",
+    url: "https://www.agrestorations.com/blog/durable-rain-gutter-systems-linden-nj-2026",
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/blog/gutter-installation-linden-nj.webp",
+        url: "https://www.agrestorations.com/gutter-installation.webp",
         width: 1200,
         height: 630,
         alt: "Professional seamless gutter installation in Linden NJ by AG Restorations",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Linden NJ Gutter Installation | 2026 Durable Rain Gutter Guide",
     description:
       "Explore expert gutter installation, seamless gutters, and water management solutions for homes and businesses in Linden, NJ.",
-    images: ["https://www.agrestorations.com/blog/gutter-installation-linden-nj.webp"],
+    images: ["https://www.agrestorations.com/gutter-installation.webp"],
     site: "@AGrestorationss",
   },
   referrer: "strict-origin-when-cross-origin",

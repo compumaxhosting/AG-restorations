@@ -165,7 +165,11 @@ export default function Footer() {
                 aria-label="AG Restorations Facebook"
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
-                <FaFacebookF className="text-white text-lg" />
+                <FaFacebookF
+  className="text-white text-lg"
+  aria-hidden="true"
+  focusable="false"
+/>
               </Link>
 
               <Link
@@ -175,23 +179,31 @@ export default function Footer() {
                 aria-label="AG Restorations Instagram"
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
-                <FaInstagram className="text-white text-lg" />
+                <FaInstagram
+  className="text-white text-lg"
+  aria-hidden="true"
+  focusable="false"
+/>
               </Link>
 
               <Link
                 href="https://www.tiktok.com/@ag.roofing.siding"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                aria-label="AG Restorations TikTok"
+                aria-label="AG Restorations on TikTok"
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
-                <FaTiktok className="text-white text-lg" />
+                <FaTiktok
+  className="text-white text-lg"
+  aria-hidden="true"
+  focusable="false"
+/>
               </Link>
               <Link
                 href="https://x.com/AGrestorationss"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                aria-label="AG Restorations TikTok"
+                aria-label="AG Restorations on X"
                 className="bg-[#e63a27] hover:bg-red-600 hover:scale-110 transition duration-300 rounded-full w-10 h-10 flex items-center justify-center"
               >
                 <FaXTwitter className="text-white text-lg" />

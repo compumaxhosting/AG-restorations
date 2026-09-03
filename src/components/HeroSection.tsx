@@ -53,12 +53,12 @@ export default function HeroSection() {
   const currentSlide = slides[index];
 
   return (
-    <section className="relative w-full overflow-hidden bg-black">
+    <section className="relative w-full overflow-hidden bg-black h-[70vh] sm:h-screen">
       {/* 🚀 FAST LCP STATIC HERO */}
       {!mounted && (
-        <div className="relative w-full max-sm:h-[70vh] sm:h-screen">
+        <div className="absolute inset-0">
           <Image
-            src="/hero.webp"
+            src="/Services-Slider/services1.webp"
             alt={slides[0].alt}
             fill
             priority
@@ -74,7 +74,11 @@ export default function HeroSection() {
       )}
 
       {/* 🚀 LOAD CAROUSEL AFTER */}
-      {mounted && <EmblaCarousel slides={slides} setIndex={setIndex} />}
+      {mounted && (
+  <div className="absolute inset-0">
+    <EmblaCarousel slides={slides} setIndex={setIndex} />
+  </div>
+)}
 
       {/* TEXT */}
       <div className="absolute inset-0 z-20 flex flex-col justify-center items-start max-sm:px-4 md:px-20 text-white">

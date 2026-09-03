@@ -147,7 +147,7 @@ export default function MobileDrawer({ isOpen, setIsOpen }: Props) {
             src="/Navbar/Logo-AG.png"
             alt="Company Logo"
             width={260}
-            height={130}
+            height={125}
             className="object-contain"
             priority
           />

@@ -308,6 +308,13 @@ export default function SidebarOverlay({ onClose }: { onClose: () => void }) {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={
+                  href.includes("facebook")
+                    ? "Visit AG Restorations on Facebook"
+                    : href.includes("instagram")
+                      ? "Visit AG Restorations on Instagram"
+                      : "Visit AG Restorations on TikTok"
+                }
                 className="bg-[#e63a27] w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#e63a27] transition"
               >
                 {React.cloneElement(icon, {
