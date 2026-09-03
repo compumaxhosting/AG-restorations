@@ -61,6 +61,7 @@ export default function VideoSection({ margin }: Props) {
               {/* Small Heading */}
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-6 h-px bg-white" />
+
                 <h2 className="text-sm sm:text-md md:text-lg uppercase font-semibold">
                   Our Roofing Services
                 </h2>
@@ -74,19 +75,38 @@ export default function VideoSection({ margin }: Props) {
               {/* List */}
               <ul className="space-y-2">
                 <li>
-                  <SiTicktick className="inline mr-2" />
+                  <SiTicktick
+                    className="inline mr-2"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                   Roof Repair & Roof Replacement
                 </li>
+
                 <li>
-                  <SiTicktick className="inline mr-2" />
+                  <SiTicktick
+                    className="inline mr-2"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                   Residential & Commercial Roofing
                 </li>
+
                 <li>
-                  <SiTicktick className="inline mr-2" />
+                  <SiTicktick
+                    className="inline mr-2"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                   Siding Installation Services
                 </li>
+
                 <li>
-                  <SiTicktick className="inline mr-2" />
+                  <SiTicktick
+                    className="inline mr-2"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                   Seamless Gutter Installation
                 </li>
               </ul>
@@ -107,9 +127,10 @@ export default function VideoSection({ margin }: Props) {
 
             <button
               onClick={() => setIsOpen(false)}
+              aria-label="Close video"
               className="absolute top-2 right-2 text-white text-3xl bg-black/60 rounded-full p-1"
             >
-              <IoClose />
+              <IoClose aria-hidden="true" focusable="false" />
             </button>
           </div>
         </DialogContent>

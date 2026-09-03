@@ -133,7 +133,11 @@ export default function Headerto() {
                 rel="noopener noreferrer nofollow"
                 aria-label="Visit AG Restorations on Facebook"
               >
-                <FaFacebookF className="icon cursor-pointer" />
+                <FaFacebookF
+                  className="icon cursor-pointer"
+                  aria-hidden="true"
+                  focusable="false"
+                />
               </Link>
 
               <div className="divider" />
@@ -144,7 +148,11 @@ export default function Headerto() {
                 rel="noopener noreferrer nofollow"
                 aria-label="Visit AG Restorations on Instagram"
               >
-                <FaInstagram className="icon cursor-pointer" />
+                <FaInstagram
+                  className="icon cursor-pointer"
+                  aria-hidden="true"
+                  focusable="false"
+                />
               </Link>
 
               <div className="divider" />
@@ -155,7 +163,11 @@ export default function Headerto() {
                 rel="noopener noreferrer nofollow"
                 aria-label="Visit AG Restorations on TikTok"
               >
-                <SiTiktok className="icon cursor-pointer" />
+                <SiTiktok
+                  className="icon cursor-pointer"
+                  aria-hidden="true"
+                  focusable="false"
+                />
               </Link>
             </div>
           </div>
