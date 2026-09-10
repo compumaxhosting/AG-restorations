@@ -6,6 +6,14 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
+  slug: "how-to-find-reliable-roofing-contractor-linden-nj",
+  title: "How to Find a Reliable Roofing Contractor in Linden, NJ",
+  description:
+    "Learn how to find a reliable roofing contractor in Linden, NJ. Compare roofers, verify credentials, spot red flags, and get a professional estimate.",
+  image: "/blog/how-to-find-reliable-roofing-contractor-linden-nj.webp",
+  lastUpdated: "9th September 2026",
+},
+  {
     slug: "best-gutter-installation-company-linden-nj",
     title: "What's the Best Gutter Installation Company in Linden, NJ?",
     description:
