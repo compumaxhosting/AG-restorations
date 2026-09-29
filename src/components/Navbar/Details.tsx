@@ -46,8 +46,8 @@ export default function Details() {
 
           {/* Email */}
           <a
-            href="mailto:info@agrestorations.com"
-            aria-label="Email AG Restorations at info@agrestorations.com"
+            href="mailto:agrestoration15@gmail.com"
+            aria-label="Email AG Restorations at agrestoration15@gmail.com"
             className="group flex items-center gap-4 border-b border-gray-200 px-5 py-5 transition-all duration-300 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#cc2a18] focus-visible:ring-inset md:border-b-0 md:border-r sm:px-6"
           >
             <span
@@ -63,7 +63,7 @@ export default function Details() {
               </span>
 
               <span className="block truncate text-base font-bold text-gray-900 sm:text-lg">
-                info@agrestorations.com
+                agrestoration15@gmail.com
               </span>
 
               <span className="mt-0.5 block text-sm text-gray-500">

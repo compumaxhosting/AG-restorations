@@ -124,14 +124,14 @@ export default function Footer() {
           <p className="mt-2">
             Email:{" "}
             <Link
-              href="mailto:info@agrestorations.com"
+              href="mailto:agrestoration15@gmail.com"
               aria-label="Send email to AG Restorations"
               className="text-[#e63a27] hover:underline font-medium"
               onClick={() => {
                 trackEvent("email_click", "Contact Section Email");
               }}
             >
-              info@agrestorations.com
+              agrestoration15@gmail.com
             </Link>
           </p>
 
@@ -230,7 +230,7 @@ export default function Footer() {
             name: "AG Restorations",
             url: "https://agrestorations.com",
             telephone: "+1-973-342-4134",
-            email: "info@agrestorations.com",
+            email: "agrestoration15@gmail.com",
             areaServed: "Union County, New Jersey",
             address: {
               "@type": "PostalAddress",
