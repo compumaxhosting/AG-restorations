@@ -104,9 +104,9 @@ export default function Headerto() {
             <div className="h-4 w-px bg-white/30" />
 
             <a
-              href="mailto:agrestoration15@gmail.com"
+              href="mailto:info@agrestorations.com"
               className="hidden lg:flex items-center gap-2 group"
-              aria-label="Email agrestoration15@gmail.com"
+              aria-label="Email info@agrestorations.com"
               onClick={() => {
                 trackEvent("email_click", "Top Bar Email");
               }}
@@ -116,7 +116,7 @@ export default function Headerto() {
                 className="text-[#e5391c] group-hover:scale-110 transition"
               />
               <span className="font-medium group-hover:underline">
-                agrestoration15@gmail.com
+                info@agrestorations.com
               </span>
             </a>
           </div>

@@ -90,7 +90,7 @@ const jsonLdSchema = {
   name: "AG Restorations",
   url: "https://www.agrestorations.com/",
   telephone: "+1 973 342 4134",
-  email: "agrestoration15@gmail.com",
+  email: "info@agrestorations.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "837 Kennedy Blvd",
