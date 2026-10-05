@@ -6,7 +6,15 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
-  slug: "how-to-find-reliable-roofing-contractor-linden-nj",
+    slug: "vinyl-vs-fiber-cement-siding-linden-nj",
+    title: "Vinyl vs. Fiber Cement Siding in Linden, NJ: Which Is Better for Your Home?",
+    description:
+      "Compare vinyl siding in Linden, NJ with fiber cement siding. Explore costs, durability, maintenance, and the best siding for New Jersey homes.",
+    image: "/blog/vinyl-vs-fiber-cement-siding-linden-nj.webp",
+    lastUpdated: "5th October 2026",
+  },
+  {
+    slug: "how-to-find-reliable-roofing-contractor-linden-nj",
   title: "How to Find a Reliable Roofing Contractor in Linden, NJ",
   description:
     "Learn how to find a reliable roofing contractor in Linden, NJ. Compare roofers, verify credentials, spot red flags, and get a professional estimate.",
