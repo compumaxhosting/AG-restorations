@@ -1,5 +1,5 @@
 import BackToTop from "@/components/BackToTop";
-import EmergencyRoofLeakRepairNjHeavyRain from "@/components/blog/EmergencyRoofLeakRepairNjHeavyRain";
+import EmergencyRoofLeakRepairNjHeavyRain from "../../../components/blog/EmergencyRoofLeakRepairNjHeavyRain";
 import ContactBar from "@/components/ContactBar";
 import FinancingSection from "@/components/FinancingSection";
 import Footer from "@/components/Footer";
