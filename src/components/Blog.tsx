@@ -6,6 +6,14 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
+    slug: "emergency-roof-leak-repair-nj-heavy-rain",
+    title: "What to Do When Your Roof Starts Leaking During Heavy Rain",
+    description:
+      "Discover what to do when your roof leaks during heavy rain, how to minimize water damage, and when to call a New Jersey roofing professional.",
+    image: "/blog/emergency-roof-leak-repair-nj.webp",
+    lastUpdated: "26th October 2026",
+  },
+  {
     slug: "vinyl-vs-fiber-cement-siding-linden-nj",
     title: "Vinyl vs. Fiber Cement Siding in Linden, NJ: Which Is Better for Your Home?",
     description:
