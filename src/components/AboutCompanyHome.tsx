@@ -85,7 +85,7 @@ export default function AboutCompany() {
           <ul className="text-gray-600 space-y-3 mb-6">
             <li>
               • <strong>Local Expertise: </strong> Serving Linden, Elizabeth,
-              and Rahway for [X] years.
+              and Rahway for 15 years.
             </li>
             <li>
               • <strong>Certified Quality:</strong> Fully licensed and insured

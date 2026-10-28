@@ -1,87 +1,110 @@
-import { ShieldCheck, HardHat, BadgeCheck } from "lucide-react";
+"use client";
 
-export default function Certificate() {
-const items = [
+import { useState } from "react";
+import { ShieldCheck, HardHat, BadgeCheck, type LucideIcon } from "lucide-react";
+
+type Item = {
+  title: string;
+  desc: string;
+  Icon: LucideIcon;
+};
+
+const ITEMS: Item[] = [
   {
     title: "Reliable Roofing Services",
     desc: "Our roofing projects follow strict standards to deliver durable roof repair and roof replacement solutions for homes and businesses in Linden, New Jersey.",
-    icon: <ShieldCheck size={40} aria-hidden="true" />,
+    Icon: ShieldCheck,
   },
   {
     title: "Quality Roofing, Siding & Gutters",
     desc: "We install high-quality roofing systems, siding, and seamless gutters designed to protect properties from harsh New Jersey weather conditions.",
-    icon: <BadgeCheck size={40} aria-hidden="true" />,
+    Icon: BadgeCheck,
   },
   {
     title: "Experienced Local Professionals",
     desc: "Our skilled contractors bring years of experience in roofing, siding, and gutter installation for residential and commercial properties in Linden, NJ.",
-    icon: <HardHat size={40} aria-hidden="true" />,
+    Icon: HardHat,
   },
   {
     title: "Honest Pricing & Financing",
     desc: "AG Restorations provides clear estimates with no hidden costs and offers 100% financing options for roofing, siding, and gutter projects.",
-    icon: <BadgeCheck size={40} aria-hidden="true" />,
+    Icon: BadgeCheck,
   },
 ];
+
+function FeatureCard({ title, desc, Icon }: Item) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <section
-      className="w-full bg-[#0f172a] py-16"
-      aria-labelledby="why-choose-ag-restorations"
-      aria-label="Reasons to choose AG Restorations roofing contractor in Linden, New Jersey"
+    <article
+      role="button"
+      tabIndex={0}
+      aria-expanded={open}
+      aria-label={`${title} – ${open ? "collapse" : "expand"} details`}
+      onClick={() => setOpen((v) => !v)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          setOpen((v) => !v);
+        }
+      }}
+      className="group relative flex flex-col gap-4  border border-white/10
+                 bg-white/3 p-7 text-left shadow-lg shadow-black/20
+                 outline-none backdrop-blur-sm transition-all duration-300 ease-out
+                 hover:-translate-y-1 hover:border-orange-500/40 hover:bg-white/6
+                 hover:shadow-xl hover:shadow-orange-950/30
+                 focus-visible:-translate-y-1 focus-visible:ring-2 focus-visible:ring-orange-500
+                 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900
+                 cursor-pointer md:cursor-default"
     >
-      <div className="max-w-6xl mx-auto px-4">
-        {/* Hidden SEO Heading */}
-        <h2 id="why-choose-ag-restorations" className="sr-only">
-          Why Choose AG Restorations Roofing Contractor in Linden, New Jersey
-        </h2>
+      {/* Icon badge */}
+      <div
+        className="flex size-12 items-center justify-center rounded-lg
+                   bg-orange-600/15 text-orange-500 ring-1 ring-orange-500/20
+                   transition-colors duration-300 group-hover:bg-orange-600 group-hover:text-white
+                   group-aria-expanded:bg-orange-600 group-aria-expanded:text-white"
+      >
+        <Icon size={24} aria-hidden />
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {items.map((item, i) => (
-            <article
-              key={i}
-              className="relative group aspect-square flex flex-col items-center justify-center text-center p-6 bg-[#111827] overflow-hidden transition duration-500 hover:bg-black"
-              aria-label={item.title}
-            >
-              {/* orange background */}
-              <div className="absolute top-0 left-0 w-full h-full sm:h-1/2 bg-[#e63a27] transition-all duration-500 sm:group-hover:h-full"></div>
+      <h3 className="text-lg font-semibold tracking-tight text-white">{title}</h3>
 
-              {/* content */}
-              <div className="relative z-10 flex flex-col items-center">
-                {/* icon */}
-                <div className="text-white mb-4">{item.icon}</div>
+      <p className="text-sm leading-relaxed text-slate-400">{desc}</p>
 
-                {/* title */}
-                <h3 className="text-white text-lg font-semibold mb-2">
-                  {item.title}
-                </h3>
+      {/* Accent underline, grows on hover/focus/open */}
+      <span
+        aria-hidden
+        className="mt-auto h-0.5 w-8 rounded-full bg-orange-600
+                   transition-all duration-300 ease-out
+                   group-hover:w-16 group-aria-expanded:w-16"
+      />
+    </article>
+  );
+}
 
-                {/* description */}
-                <p className="text-gray-200 text-sm opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition duration-500">
-                  {item.desc}
-                </p>
+export default function Certificate() {
+  return (
+    <section className="w-full bg-slate-900 py-20" aria-labelledby="why-choose-ag-restorations">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <span className="text-xs font-semibold tracking-[0.2em] text-orange-500 uppercase">
+            Why Choose Us
+          </span>
+          <h2
+            id="why-choose-ag-restorations"
+            className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
+            AG Restorations — Linden, NJ
+          </h2>
+          <p className="mt-3 text-base text-slate-400">
+            Roofing, siding, and gutter work built on standards you can see and
+            pricing you can trust.
+          </p>
+        </div>
 
-                {/* button */}
-                <button
-                  className="mt-4 text-white text-sm font-semibold opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition"
-                  aria-label={`Learn more about ${item.title}`}
-                >
-                  › LEARN MORE
-                </button>
-              </div>
-
-              {/* triangle */}
-              <div className="absolute bottom-0 left-0 w-full flex justify-center">
-                <div
-                  className="w-0 h-0 
-                  border-l-70 border-r-70
-                  border-b-50
-                  border-l-transparent border-r-transparent
-                  border-b-orange-700
-                  sm:group-hover:border-b-black
-                  transition-all duration-500"
-                ></div>
-              </div>
-            </article>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {ITEMS.map((item) => (
+            <FeatureCard key={item.title} {...item} />
           ))}
         </div>
       </div>
