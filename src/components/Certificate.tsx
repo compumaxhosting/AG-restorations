@@ -1,15 +1,18 @@
-"use client";
 
-import { useState } from "react";
-import { ShieldCheck, HardHat, BadgeCheck, type LucideIcon } from "lucide-react";
+import {
+  ShieldCheck,
+  HardHat,
+  BadgeCheck,
+  type LucideIcon,
+} from "lucide-react";
 
-type Item = {
+type Feature = {
   title: string;
   desc: string;
   Icon: LucideIcon;
 };
 
-const ITEMS: Item[] = [
+const ITEMS: Feature[] = [
   {
     title: "Reliable Roofing Services",
     desc: "Our roofing projects follow strict standards to deliver durable roof repair and roof replacement solutions for homes and businesses in Linden, New Jersey.",
@@ -32,51 +35,39 @@ const ITEMS: Item[] = [
   },
 ];
 
-function FeatureCard({ title, desc, Icon }: Item) {
-  const [open, setOpen] = useState(false);
-
+function FeatureCard({ title, desc, Icon }: Feature) {
   return (
     <article
-      role="button"
-      tabIndex={0}
-      aria-expanded={open}
-      aria-label={`${title} – ${open ? "collapse" : "expand"} details`}
-      onClick={() => setOpen((v) => !v)}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          setOpen((v) => !v);
-        }
-      }}
-      className="group relative flex flex-col gap-4  border border-white/10
-                 bg-white/3 p-7 text-left shadow-lg shadow-black/20
-                 outline-none backdrop-blur-sm transition-all duration-300 ease-out
-                 hover:-translate-y-1 hover:border-orange-500/40 hover:bg-white/6
-                 hover:shadow-xl hover:shadow-orange-950/30
-                 focus-visible:-translate-y-1 focus-visible:ring-2 focus-visible:ring-orange-500
-                 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900
-                 cursor-pointer md:cursor-default"
+      className="group flex flex-col items-start gap-4 border border-white/10
+        bg-white/[0.03] p-7 shadow-lg shadow-black/20
+        transition-[transform,border-color,background-color,box-shadow]
+        duration-300 ease-out
+        hover:-translate-y-1 hover:border-orange-500/40
+        hover:bg-white/[0.06] hover:shadow-xl hover:shadow-orange-950/30"
     >
-      {/* Icon badge */}
       <div
-        className="flex size-12 items-center justify-center rounded-lg
-                   bg-orange-600/15 text-orange-500 ring-1 ring-orange-500/20
-                   transition-colors duration-300 group-hover:bg-orange-600 group-hover:text-white
-                   group-aria-expanded:bg-orange-600 group-aria-expanded:text-white"
+        className="flex size-12 shrink-0 items-center justify-center
+          rounded-lg bg-orange-600/15 text-orange-500
+          ring-1 ring-orange-500/20
+          transition-colors duration-300
+          group-hover:bg-orange-600 group-hover:text-white"
       >
-        <Icon size={24} aria-hidden />
+        <Icon size={24} aria-hidden="true" />
       </div>
 
-      <h3 className="text-lg font-semibold tracking-tight text-white">{title}</h3>
+      <h3 className="text-lg font-semibold tracking-tight text-white">
+        {title}
+      </h3>
 
-      <p className="text-sm leading-relaxed text-slate-400">{desc}</p>
+      <p className="text-sm leading-relaxed text-slate-400">
+        {desc}
+      </p>
 
-      {/* Accent underline, grows on hover/focus/open */}
       <span
-        aria-hidden
+        aria-hidden="true"
         className="mt-auto h-0.5 w-8 rounded-full bg-orange-600
-                   transition-all duration-300 ease-out
-                   group-hover:w-16 group-aria-expanded:w-16"
+          transition-[width] duration-300 ease-out
+          group-hover:w-16"
       />
     </article>
   );
@@ -84,23 +75,28 @@ function FeatureCard({ title, desc, Icon }: Item) {
 
 export default function Certificate() {
   return (
-    <section className="w-full bg-slate-900 py-20" aria-labelledby="why-choose-ag-restorations">
+    <section
+      className="w-full bg-slate-900 py-20"
+      aria-labelledby="why-choose-ag-restorations"
+    >
       <div className="mx-auto max-w-6xl px-4">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <span className="text-xs font-semibold tracking-[0.2em] text-orange-500 uppercase">
+        <header className="mx-auto mb-12 max-w-2xl text-center">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-orange-500">
             Why Choose Us
           </span>
+
           <h2
             id="why-choose-ag-restorations"
             className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl"
           >
             AG Restorations — Linden, NJ
           </h2>
+
           <p className="mt-3 text-base text-slate-400">
-            Roofing, siding, and gutter work built on standards you can see and
-            pricing you can trust.
+            Roofing, siding, and gutter work built on standards you can see
+            and pricing you can trust.
           </p>
-        </div>
+        </header>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {ITEMS.map((item) => (
