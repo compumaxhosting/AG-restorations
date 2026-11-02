@@ -6,6 +6,14 @@ import Image from "next/image";
 /* ================= BLOG DATA ================= */
 const blogs = [
   {
+    slug: "choose-roofing-contractor-union-county-nj",
+    title: "How to Choose a Roofing Contractor in Union County, NJ",
+    description:
+      "Learn how to choose a roofing contractor in Union County, NJ. Compare credentials, insurance, warranties, estimates, and local roofing expertise.",
+    image: "/blog/roofing-contractor-union-county-nj.webp",
+    lastUpdated: "2nd November 2026",
+  },
+  {
     slug: "emergency-roof-leak-repair-nj-heavy-rain",
     title: "What to Do When Your Roof Starts Leaking During Heavy Rain",
     description:
@@ -23,12 +31,12 @@ const blogs = [
   },
   {
     slug: "how-to-find-reliable-roofing-contractor-linden-nj",
-  title: "How to Find a Reliable Roofing Contractor in Linden, NJ",
-  description:
-    "Learn how to find a reliable roofing contractor in Linden, NJ. Compare roofers, verify credentials, spot red flags, and get a professional estimate.",
-  image: "/blog/how-to-find-reliable-roofing-contractor-linden-nj.webp",
-  lastUpdated: "9th September 2026",
-},
+    title: "How to Find a Reliable Roofing Contractor in Linden, NJ",
+    description:
+      "Learn how to find a reliable roofing contractor in Linden, NJ. Compare roofers, verify credentials, spot red flags, and get a professional estimate.",
+    image: "/blog/how-to-find-reliable-roofing-contractor-linden-nj.webp",
+    lastUpdated: "9th September 2026",
+  },
   {
     slug: "best-gutter-installation-company-linden-nj",
     title: "What's the Best Gutter Installation Company in Linden, NJ?",
