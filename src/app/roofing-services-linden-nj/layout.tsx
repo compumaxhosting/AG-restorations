@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/Roofing-Services-in-Linden,-NJ.webp",
+        url: "https://www.agrestorations.com/roofing-services-in-linden-nj.webp",
         width: 1200,
         height: 630,
         alt: "Roofing Services Linden, NJ",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description:
       "Expert roof repair and replacement services in Linden, NJ. Free estimates available.",
     images: [
-      "https://www.agrestorations.com/Roofing-Services-in-Linden,-NJ.webp",
+      "https://www.agrestorations.com/roofing-services-in-linden-nj.webp",
     ],
     site: "@AGrestorationss",
   },

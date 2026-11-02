@@ -14,7 +14,7 @@ export default function SidingInstallationContent() {
           <div className="w-full h-full">
             <div className="relative w-full h-full min-h-100 overflow-hidden rounded-lg ">
               <Image
-                src="/Professional-Siding-Installation-in-Linden,-NJ.webp"
+                src="/professional-siding-installation-in-linden-nj.webp"
                 alt="Professional Siding Installation in Linden, NJ"
                 fill
                 sizes="(max-width:768px) 100vw, 50vw"

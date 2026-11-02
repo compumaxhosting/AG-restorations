@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: "AG Restorations",
     images: [
       {
-        url: "https://www.agrestorations.com/gutter-installation.webp",
+        url: "https://www.agrestorations.com/professional-siding-installation-in-linden-nj.webp",
         width: 1200,
         height: 630,
         alt: "Siding Installation Linden, NJ",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Siding Installation Linden, NJ | AG Restorations",
     description:
       "Professional siding installation and repair in Linden, NJ. Improve your home’s exterior with trusted local experts.",
-    images: ["https://www.agrestorations.com/gutter-installation.webp"],
+    images: ["https://www.agrestorations.com/professional-siding-installation-in-linden-nj.webp"],
     site: "@AGrestorationss",
   },
 };
