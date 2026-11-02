@@ -39,11 +39,11 @@ function FeatureCard({ title, desc, Icon }: Feature) {
   return (
     <article
       className="group flex flex-col items-start gap-4 border border-white/10
-        bg-white/[0.03] p-7 shadow-lg shadow-black/20
+        bg-white/3 p-7 shadow-lg shadow-black/20
         transition-[transform,border-color,background-color,box-shadow]
         duration-300 ease-out
         hover:-translate-y-1 hover:border-orange-500/40
-        hover:bg-white/[0.06] hover:shadow-xl hover:shadow-orange-950/30"
+        hover:bg-white/6 hover:shadow-xl hover:shadow-orange-950/30"
     >
       <div
         className="flex size-12 shrink-0 items-center justify-center
