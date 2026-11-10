@@ -15,6 +15,8 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
+const WHATSAPP_NUMBER = "19737475564";
+
 function generateRandomNumber(len = 6) {
   let s = "";
   for (let i = 0; i < len; i++) s += Math.floor(Math.random() * 10);
@@ -139,12 +141,31 @@ export default function ContactForm() {
       const result = await response.json();
 
       if (response.ok) {
+        const finalName = String(formData.get("name") || "");
+        const finalEmail = String(formData.get("email") || "");
+        const finalMessage = String(formData.get("message") || "");
+        const whatsappMessage = [
+          "New Contact Request",
+          `Name: ${finalName}`,
+          `Email: ${finalEmail}`,
+          `Phone: ${phoneNumber}`,
+          `Service: ${service}`,
+          "",
+          "Message:",
+          finalMessage,
+        ].join("\n");
+        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+          whatsappMessage
+        )}`;
+
         Swal.fire({
           icon: "success",
           title: "Message Sent!",
           text: "Your request has been sent successfully.",
           confirmButtonColor: "#e63a27",
         });
+
+        window.location.href = whatsappUrl;
 
         form.reset();
         setPhoneNumber("");
