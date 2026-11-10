@@ -158,14 +158,19 @@ export default function ContactForm() {
           whatsappMessage
         )}`;
 
-        Swal.fire({
+        await Swal.fire({
           icon: "success",
-          title: "Message Sent!",
-          text: "Your request has been sent successfully.",
+          title: "Form Submitted!",
+          text: "Opening WhatsApp with your details. You can also continue now.",
           confirmButtonColor: "#e63a27",
+          confirmButtonText: "Continue to WhatsApp",
+          timer: 2500,
+          timerProgressBar: true,
+          allowOutsideClick: false,
+          allowEscapeKey: false,
         });
 
-        window.location.href = whatsappUrl;
+        window.location.assign(whatsappUrl);
 
         form.reset();
         setPhoneNumber("");
