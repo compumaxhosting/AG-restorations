@@ -111,7 +111,7 @@ export default function BlogLayout() {
               and humidity. This helps them recommend the best materials for
               durability.
             </p>
-            <p className="font-semibold text-lg md:text-xl mt-3 text-[#cc4233]">
+            <p className="font-semibold text-lg md:text-xl mt-2 text-[#cc4233]">
               Faster Response Times
             </p>
             <p className="text-md md:text-lg">
