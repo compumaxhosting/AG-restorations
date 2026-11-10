@@ -15,7 +15,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const WHATSAPP_NUMBER = "19737475564";
+const WHATSAPP_NUMBER = "19733424134";
 
 function generateRandomNumber(len = 6) {
   let s = "";
@@ -145,14 +145,21 @@ export default function ContactForm() {
         const finalEmail = String(formData.get("email") || "");
         const finalMessage = String(formData.get("message") || "");
         const whatsappMessage = [
-          "New Contact Request",
-          `Name: ${finalName}`,
-          `Email: ${finalEmail}`,
-          `Phone: ${phoneNumber}`,
-          `Service: ${service}`,
+          "🏠 *AG RESTORATIONS*",
+          "📋 *NEW APPOINTMENT REQUEST*",
           "",
-          "Message:",
+          "👤 *CONTACT DETAILS*",
+          `• Name: ${finalName}`,
+          `• Email: ${finalEmail}`,
+          `• Phone: ${phoneNumber}`,
+          "",
+          "🛠️ *SERVICE*",
+          service,
+          "",
+          "💬 *HOW CAN WE HELP?*",
           finalMessage,
+          "",
+          "Thank you for choosing AG Restorations!",
         ].join("\n");
         const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
           whatsappMessage
